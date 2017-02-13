@@ -1,0 +1,28 @@
+{
+	"_Rule":[{
+		"Name":"Prototypes",
+		"View":"docs.ejs",
+		"Data":"./prototypes",
+		"Controller":"detail"
+	},{
+		"Name":"Prototypes_List",
+		"View":"list.ejs",
+		"Data":"./prototypes",
+		"Controller":"list"
+	}],
+	"Nav":{
+		"Prototypes":"../prototypes/"
+	},
+	"_page_item_num":10,
+	"_page_btn_num":10,	
+	"_page_for_index":true,
+	"Source_css":"./css/",
+	"Source_js":"./js/",
+	"Source_img":"./img/",
+	"Source_img_atricle":"./img_data/",
+	"filename":"./_view/controls",
+	"_Path_ViewFolder":"./_view/",
+	"_Path_DataFolder":"./_data/",
+	"_Path_ControllerFolder":"./_controller/",
+	"_Path_OutputFolder":"./"
+}
