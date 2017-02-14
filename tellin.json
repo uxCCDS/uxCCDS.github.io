@@ -5,18 +5,13 @@
 		"Data":"./prototypes",
 		"Controller":"detail"
 	},{
-		"Name":"Prototypes_List",
-		"View":"list.ejs",
-		"Data":"./prototypes",
-		"Controller":"list"
-	},{
 		"Name":"Guide",
 		"View":"docs.ejs",
 		"Data":"./guide",
 		"Controller":"detail"
 	}],
 	"Nav":{
-		"Prototypes":"../prototypes/",
+		"Prototypes":"../prototypes/spark-pairing.html",
 		"Guide":"../guide/clear-cache.html"
 	},
 	"_page_item_num":10,
