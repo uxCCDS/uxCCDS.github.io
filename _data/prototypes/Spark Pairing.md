@@ -4,6 +4,10 @@ Desc: Spark Prototype
 
 # Mobile
 
+### screen shot
+
+![pairing prototype mobile](../../img_data/prototypes/spark-pairing1.png)
+
 ## link
 
 [https://uxccds.github.io/SparkMobile/SparkMobilePairing/sparkMobilePair.html](https://uxccds.github.io/SparkMobile/SparkMobilePairing/sparkMobilePair.html)

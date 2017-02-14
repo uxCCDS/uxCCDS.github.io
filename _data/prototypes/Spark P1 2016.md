@@ -5,6 +5,10 @@ Date: 2016-9-1
 
 To let users accept our new design for spark more smooth, UXCCDS team defined 5 steps to update spark app's style. This is the P1 prototype.
 
+## screen shot
+
+![Spark P1 2016](../../img_data/prototypes/Spark P1 2016.png)
+
 # launch the prototype
 
 You can launch this prototype through the following ways. 

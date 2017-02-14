@@ -5,6 +5,10 @@ Date: 2016-9-20
 
 To let users accept our new design for spark more smooth, UXCCDS team defined 5 steps to update spark app's style. This is the P5 prototype. We use react.js to build this prototype and many parts of this prototypes is based on some dynamic data.
 
+## screen shot
+
+![Spark P5 2016](../../img_data/prototypes/Spark P5 2016.png)
+
 # launch the prototype
 
 You can launch this prototype through the following ways. 
