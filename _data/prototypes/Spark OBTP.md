@@ -1,5 +1,5 @@
 Title: Spark OBTP 2017
-Desc: Spark Prototype 
+Desc: OBTP prototype.
 SortIndex: 1
 ---
 
