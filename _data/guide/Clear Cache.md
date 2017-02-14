@@ -1,4 +1,5 @@
 Title: Clear Cache
+IndexPage: true
 SortIndex: 1
 ---
 

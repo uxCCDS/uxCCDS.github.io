@@ -56,8 +56,8 @@ td,th{border:1px solid #ccc; padding: 0 14px;}
 .pagination .next{right:-20px;}
 
 .list_item{margin: 40px auto; cursor: pointer; width: 80%;  border-bottom: 1px solid #EEEEEE; display: block;}
-.list_item h1{font-weight:normal; font-size:20px; color: #212121; }
+.list_item h1{font-weight:normal; font-size:20px; color: #4F5051; }
 .list_item p{margin-top:20px; font-size: 14px; color: #757575;}
-.list_item .list_item_footer{margin-bottom: 10px;}
+.list_item .list_item_footer{margin-bottom: 10px; color: #999999;}
 
 

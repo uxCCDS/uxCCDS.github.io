@@ -14,15 +14,10 @@
 		"View":"docs.ejs",
 		"Data":"./guide",
 		"Controller":"detail"
-	},{
-		"Name":"Guide_List",
-		"View":"list.ejs",
-		"Data":"./guide",
-		"Controller":"list"
 	}],
 	"Nav":{
 		"Prototypes":"../prototypes/",
-		"Guide":"../guide/"
+		"Guide":"../guide/clear-cache.html"
 	},
 	"_page_item_num":10,
 	"_page_btn_num":10,	
