@@ -1,6 +1,5 @@
 Title: Spark Pairing 2017
-Desc: Spark Prototype 
-SortIndex: 1
+Desc: Spark Prototype
 ---
 
 ## Mobile

@@ -9,9 +9,20 @@
 		"View":"list.ejs",
 		"Data":"./prototypes",
 		"Controller":"list"
+	},{
+		"Name":"Guide",
+		"View":"docs.ejs",
+		"Data":"./guide",
+		"Controller":"detail"
+	},{
+		"Name":"Guide_List",
+		"View":"list.ejs",
+		"Data":"./guide",
+		"Controller":"list"
 	}],
 	"Nav":{
-		"Prototypes":"../prototypes/"
+		"Prototypes":"../prototypes/",
+		"Guide":"../guide/"
 	},
 	"_page_item_num":10,
 	"_page_btn_num":10,	
