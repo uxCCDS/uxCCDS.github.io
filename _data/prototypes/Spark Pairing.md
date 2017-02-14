@@ -2,13 +2,13 @@ Title: Spark Pairing 2017
 Desc: Spark Prototype
 ---
 
-## Mobile
+# Mobile
 
-### link
+## link
 
 [https://uxccds.github.io/SparkMobile/SparkMobilePairing/sparkMobilePair.html](https://uxccds.github.io/SparkMobile/SparkMobilePairing/sparkMobilePair.html)
 
-### usage
+## usage
 
 1) Please use Chrome (mobile mode) or Iphone (webapp mode) to view the prototype.
 
@@ -16,23 +16,23 @@ Desc: Spark Prototype
 
 3) Choose a version to continue.
 
-## Desktop
+# Desktop
 
-### link
+## link
 
 [https://uxccds.github.io/Spark-Hype-MVO/devicepairing-desktop.html](https://uxccds.github.io/Spark-Hype-MVO/devicepairing-desktop.html)
 
-### usage
+## usage
 
 1) Please use Chrome to view this prototype.
 
-## SparkBoard
+# SparkBoard
 
-### link
+## link
 
 [https://uxccds.github.io/SparkMobile/pair/page/mxpair.html](https://uxccds.github.io/SparkMobile/pair/page/mxpair.html)
 
-### usage
+## usage
 
 1) Please use Chrome to view this prototype.
 

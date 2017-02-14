@@ -3,13 +3,13 @@ Desc: OBTP prototype.
 Date: 2017-1-20
 ---
 
-## Mobile
+# Mobile
 
-### link
+## link
 
 [https://uxccds.github.io/SparkMobile/SparkMobileP5/](https://uxccds.github.io/SparkMobile/SparkMobileP5/)
 
-### usage
+## usage
 
 1) Please use Chrome (mobile mode) or Iphone (webapp mode) to view the prototype.
 
@@ -17,23 +17,23 @@ Date: 2017-1-20
 
 3) Choose a version to continue.
 
-## Desktop
+# Desktop
 
-### link
+## link
 
 [https://uxccds.github.io/Spark-Hype-MVO/OBTP-Prototype.html](https://uxccds.github.io/Spark-Hype-MVO/OBTP-Prototype.html)
 
-### usage
+## usage
 
 1) Please use Chrome to view this prototype.
 
 ## MX
 
-### link
+## link
 
 [https://uxccds.github.io/SparkMobile/pair/page/mx.html](https://uxccds.github.io/SparkMobile/pair/page/mx.html)
 
-### usage
+## usage
 
 1) Please use Chrome to view this prototype.
 

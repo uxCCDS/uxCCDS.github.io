@@ -2,11 +2,9 @@ Title: Install Web App
 SortIndex: 2
 ---
 
-# Install Web App
-
 To achieve the best experience of our mobile prototypes, we recommand you installing the prototypes as web apps on your mobile devices.
 
-### Install web apps on iPhone
+# Install web apps on iPhone
 
 The following steps show how you can install web apps on your iPhone.
 
