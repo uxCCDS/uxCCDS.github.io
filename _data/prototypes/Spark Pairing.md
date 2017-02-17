@@ -34,7 +34,7 @@ Desc: Spark Prototype
 
 ## link
 
-[https://uxccds.github.io/SparkMobile/pair/page/mxpair.html](https://uxccds.github.io/SparkMobile/pair/page/mxpair.html)
+[https://uxccds.github.io/SparkMobile/pair/page/sparkboardpair.html](https://uxccds.github.io/SparkMobile/pair/page/sparkboardpair.html)
 
 ## usage
 
