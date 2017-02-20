@@ -25,15 +25,15 @@ You can use Insta360Player to watch the 360° live. It's not a sized video any m
 
 ### Normal View 
 
-![live](../../img_data/research/360°VR3.png)
+![live](../../img_data/research/360°VR3.PNG)
 
 ### Full Fcreen View
 
-![live](../../img_data/research/360°VR4.png)
+![live](../../img_data/research/360°VR4.PNG)
 
 ### Zoom Out View
 
-![live](../../img_data/research/360°VR6.png)
+![live](../../img_data/research/360°VR6.PNG)
 
 ## VR View
 
@@ -41,7 +41,7 @@ If you have any VR glass, you can watch the life in VR mode.
 
 ![live](../../img_data/research/360°VR8.jpg)
 
-![live](../../img_data/research/360°VR5.png)
+![live](../../img_data/research/360°VR5.PNG)
 
 # HTML prototype
 
