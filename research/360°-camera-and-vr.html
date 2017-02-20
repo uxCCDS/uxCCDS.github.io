@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  		<title>360° Camera and VR</title>
+<meta charset='utf-8'>
+<link rel="icon" type="image/x-icon" href="../img/fav.ico">
+<meta name="viewport" content="width=device-width,minimal-ui"  >
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="../css/public.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../css/github_gist.css" media="screen">
+<script type="text/javascript" src="../js/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="../js/highlight.pack.js"></script>
+<style type="text/css"></style>
+<script type="text/javascript">
+$(function(){
+});
+</script>
+  </head>
+  <body>
+  		<nav class='nav'>
+	<a  href='../prototypes/spark-pairing.html' >Prototypes</a><a  href='../guide/clear-cache.html' >Guide</a><a class=current href='../research/360°-camera-and-vr.html' >Research</a>
+</nav>
+<div class='board'></div>
+      	<div class='container'>
+      		<aside class='aside'>
+	
+		<a class=current  href='360°-camera-and-vr.html'>360° Camera and VR</a>
+	
+		<a   href='webgl.html'>WebGL</a>
+	
+		<a   href='3d-gyroscope.html'>3D Gyroscope</a>
+	
+		<a   href='firebase.html'>Firebase</a>
+	
+</aside>
+          	<div class='main'>
+          		<article class='article'>
+	<header class='article_header'>
+		<h1>360° Camera and VR</h1>
+	</header>
+	<div class='article_body'>
+		<p>We started to learn AR/VR technology years ago. It should be able to improve our meeting experience.</p>
+<h1 id="camera">Camera</h1>
+<p>In order to get VR video, we should take 360° view video at first. We bought <a href="https://www.giroptic.com/us/en/360cam">Giroptic&#39;s 360cam</a> and its PoE Ethernet Adapter Base to set up the IP camera system.</p>
+<p><img src="../img_data/research/360°VR1.jpg" alt="Giroptic&#39;s 360° Camera"/></p>
+<h1 id="streaming-server">Streaming server</h1>
+<p>You can get a RTSP stream from the IP camera directly. However, lots of media player does not support RTSP stream. RTSP is designed for Flash only, so we need a server to convert the stream to other formats.</p>
+<p><a href="https://www.wowza.com/products">Wowza Streaming Engine</a> is best solution I can find. Here is the dash board for Wowza Stream Enginer.</p>
+<p><img src="../img_data/research/360°VR2.png" alt="Wowza Streaming Engine"/></p>
+<h1 id="watch-the-live-on-iphone">Watch the live on iPhone</h1>
+<h2 id="360-view">360° View</h2>
+<p>You can use Insta360Player to watch the 360° live. It&#39;s not a sized video any more. You can swipe to choose best view. </p>
+<h3 id="normal-view">Normal View</h3>
+<p><img src="../img_data/research/360°VR3.png" alt="live"/></p>
+<h3 id="full-fcreen-view">Full Fcreen View</h3>
+<p><img src="../img_data/research/360°VR4.png" alt="live"/></p>
+<h3 id="zoom-out-view">Zoom Out View</h3>
+<p><img src="../img_data/research/360°VR6.png" alt="live"/></p>
+<h2 id="vr-view">VR View</h2>
+<p>If you have any VR glass, you can watch the life in VR mode.</p>
+<p><img src="../img_data/research/360°VR8.jpg" alt="live"/></p>
+<p><img src="../img_data/research/360°VR5.png" alt="live"/></p>
+<h1 id="html-prototype">HTML prototype</h1>
+<p>It&#39;s also possible to display the 360° View video with HTML5. The following is a screenshot for our simple demo.</p>
+<p><img src="../img_data/research/360°VR7.png" alt="live"/></p>
+		
+	</div>
+	<footer class='article_footer'>
+		<div class="pagination">
+			
+			<a  class="next" href="webgl.html">Next →</a> 	 	
+		</div>		
+	</footer>
+</article>
+       	
+          	</div>
+      	</div>	
+      <footer class='copyright'>
+	<p>©2016-2017 <a target="_blank" href="https://en.wikipedia.org/wiki/MIT_License" class='license'>MIT license</a></p>
+</footer>
+<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
