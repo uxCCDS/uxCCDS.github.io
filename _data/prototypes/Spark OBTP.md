@@ -11,9 +11,9 @@ Date: 2017-1-20
 
 ## usage
 
-1) Please use Chrome (mobile mode) or Iphone (webapp mode) to view the prototype.
+1) Please use Chrome (mobile mode) or IPhone (webapp mode) to view the prototype.
 
-2) Do clear the cache if you see any issues at first.
+2) Clear browser cache first if you see any issues.
 
 3) Choose a version to continue.
 
@@ -60,7 +60,7 @@ The link for MX
 The parameter's name is 'room'.
 The parameter's value should be 'CCDS', 'UE', 'UT', 'private' or 'public'.
 
-4) Only when the mx prototype and mobile/desktop prototype use the same name , they will be paired.
+4) Only when the mx prototype and mobile/desktop prototype use the same name will they be paired.
 
 
 
