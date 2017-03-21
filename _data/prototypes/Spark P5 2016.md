@@ -3,7 +3,7 @@ Desc: Spark P1 prototype.
 Date: 2016-9-20
 ---
 
-To let users accept our new design for spark more smooth, UXCCDS team defined 5 steps to update spark app's style. This is the P5 prototype. We use react.js to build this prototype and many parts of this prototypes is based on some dynamic data.
+To let the users adapt to our new Spark design more smoothly, the UXCCDS team defined 5 steps to update the Spark app's style. This is the P5 prototype. We use react.js to build this prototype and many parts of this prototypes are based on some dynamic data.
 
 ## screen shot
 
@@ -11,11 +11,11 @@ To let users accept our new design for spark more smooth, UXCCDS team defined 5 
 
 # launch the prototype
 
-You can launch this prototype through the following ways. 
+You can launch this prototype through the following ways: 
 
-1) Open the prototype in Chrome's mobile simulator. Click [here](../guide/chrome's-mobile-simulator.html) to get more.
+1) Open the prototype in Chrome's mobile simulator. Click [here](../guide/chrome's-mobile-simulator.html) to learn more.
 
-2) Install the prototype on your iPhone as a web app. Click [here](../guide/install-web-app.html) to get more.
+2) Install the prototype on your iPhone as a web app. Click [here](../guide/install-web-app.html) to learn more.
 
 ## Here is the link 
 
@@ -23,11 +23,11 @@ You can launch this prototype through the following ways.
 
 # Aim
 
-This prototype aims to displays the following things.
+This prototype aims to displays the following goals:
 
-1) Make the full experience of Spark app.
+1) Demostrate the full experience of Spark app.
 
-2) Smoonth animation for transition between pages.
+2) Smoonther transition animation between pages.
 
 3) Apply PIP to Spark.
 
@@ -39,7 +39,7 @@ This prototype aims to displays the following things.
 
 3) Click each ball on the activity board to experience each feature.
 
-4) Each room has its own data for the chat panel. You can send messages here and a robert will reply sometimes.
+4) Each room has its own data for the chat panel. You can send messages here and a robot will reply sometimes.
 
 
 
