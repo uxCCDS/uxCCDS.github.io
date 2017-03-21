@@ -2,7 +2,7 @@ Title: Spark Pairing 2017
 Desc: Spark Prototype
 ---
 
-# Mobile
+# Mobile Prototype
 
 ### screen shot
 
