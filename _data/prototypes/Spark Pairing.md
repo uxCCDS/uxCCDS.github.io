@@ -14,9 +14,9 @@ Desc: Spark Prototype
 
 ## usage
 
-1) Please use Chrome (mobile mode) or Iphone (webapp mode) to view the prototype.
+1) Please use Chrome (mobile mode) or IPhone (webapp mode) to view the prototype.
 
-2) Do clear the cache if you see any issues at first.
+2) If you see any issues, try clearing your browser cache first.
 
 3) Choose a version to continue.
 
