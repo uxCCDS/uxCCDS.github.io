@@ -1,4 +1,4 @@
-Title: Spark External Participant Space Privacy
+Title: Spark Space Privacy
 Desc: Mobile prototype for space privacy in chatting involved with expernal participants.
 Date: 2017-5-11
 Cover: prototypes/cover/Spark OBTP_Cover.png
