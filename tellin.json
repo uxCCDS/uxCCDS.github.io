@@ -16,7 +16,7 @@
 		"Controller":"detail"
 	}],
 	"Nav":{
-		"Prototypes":"../prototypes/spark-space-privacy.html",
+		"Prototypes":"../prototypes/spark-message-list.html",
 		"Guide":"../guide/clear-cache.html",
 		"Research":"../research/360°-camera-and-vr.html"
 	},
