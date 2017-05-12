@@ -9,6 +9,7 @@ Date: 2017-5-11
 
 
 # Instuctions 
+![Mobile](../../img_data/prototypes/Mobile-2x.png)
 1) Please use Chrome (mobile mode) or IPhone (webapp mode) to view the prototype.
 
 2) Try clear browser cache first if you see any issues.
