@@ -1,4 +1,31 @@
-<nav class='nav'>
-	<% for(var name in Nav){ %><a <%= RuleName.toLowerCase().indexOf(name.toLowerCase()) !== -1 ? 'class=current' :'' %> href='<%= Nav[name] %>' ><%= name %></a><% } %>
-</nav>
-<div class='board'></div>
+<header class="header">
+  	<div class="NavContent">
+	    <a href="/" class="logo"><img src="<%= Source_img %>logo.png"></a>
+	    <input class="menu-btn" type="checkbox" id="menu-btn" />
+	    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+		<ul class="Nav">
+			<% for(var name in Nav){ %>
+				<li>
+					<a <%= RuleName.toLowerCase().indexOf(name.toLowerCase()) !== -1 ? 'class=current' :'' %> href='<%= Source_nav %><%= Nav[name].Url %>' ><%= name %></a>
+					<% if(Nav[name].SubNav){ %>
+						<ul class="subMenu">
+							<% for (var subName in Nav[name].SubNav){ %>
+								<% var ifCurrent = false; %>
+								<% for(var bname in BreadCrumbs){ %>
+									<% if(bname.toLowerCase() === subName.toLowerCase()) {ifCurrent = true; break; }%>
+								<% } %>
+								<li>
+									<a <%= ifCurrent ? 'class=current' :'' %>  href='<%= Source_nav %><%= Nav[name].SubNav[subName].Url %>' ><%= subName %></a>
+								</li>
+							<% } %>
+						</ul>
+					<% } %>	
+				</li>
+			<% } %>
+		</ul>    
+    </div>
+</header>
+
+
+
+

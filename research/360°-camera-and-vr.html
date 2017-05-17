@@ -1,45 +1,132 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  		<title>360° Camera and VR</title>
+<head>
+  <title>360° Camera and VR</title>
 <meta charset='utf-8'>
 <link rel="icon" type="image/x-icon" href="../img/fav.ico">
-<meta name="viewport" content="width=device-width,minimal-ui"  >
+<meta name="viewport" content="width=device-width,minimal-ui,initial-scale=1.0" />
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link rel="stylesheet" type="text/css" href="../css/public.css" media="screen">
-<link rel="stylesheet" type="text/css" href="../css/github_gist.css" media="screen">
+<!--
+<link rel="stylesheet" type="text/css" href="../css/github_gist.css" media="screen"> -->
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 <script type="text/javascript" src="../js/jquery-2.0.0.min.js"></script>
 <script type="text/javascript" src="../js/highlight.pack.js"></script>
 <style type="text/css"></style>
-<script type="text/javascript">
-$(function(){
-});
-</script>
-  </head>
-  <body>
-  		<nav class='nav'>
-	<a  href='../prototypes/spark-message-list.html' >Prototypes</a><a  href='../guide/clear-cache.html' >Guide</a><a class=current href='../research/360°-camera-and-vr.html' >Research</a>
-</nav>
-<div class='board'></div>
-      	<div class='container'>
-      		<aside class='aside'>
+
+  <link rel="stylesheet" type="text/css" href="../css/detail.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../css/monokai_sublime.css" media="screen">
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+</head>
+<body>
+  <!-- nav -->
+  <header class="header">
+  	<div class="NavContent">
+	    <a href="/" class="logo"><img src="../img/logo.png"></a>
+	    <input class="menu-btn" type="checkbox" id="menu-btn" />
+	    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+		<ul class="Nav">
+			
+				<li>
+					<a  href='../index.html' >Home</a>
+						
+				</li>
+			
+				<li>
+					<a  href='../prototypes/index.html' >Prototypes</a>
+					
+						<ul class="subMenu">
+							
+								
+								
+									
+								
+									
+								
+								<li>
+									<a   href='../prototypes/current/index.html' >Current</a>
+								</li>
+							
+								
+								
+									
+								
+									
+								
+								<li>
+									<a   href='../prototypes/experimental/index.html' >Experimental</a>
+								</li>
+							
+								
+								
+									
+								
+									
+								
+								<li>
+									<a   href='../prototypes/archived/index.html' >Archived</a>
+								</li>
+							
+								
+								
+									
+								
+									
+								
+								<li>
+									<a   href='../prototypes/FAQ/index.html' >FAQ</a>
+								</li>
+							
+						</ul>
+						
+				</li>
+			
+				<li>
+					<a class=current href='../research/index.html' >Research</a>
+						
+				</li>
+			
+				<li>
+					<a  href='../team/index.html' >Team</a>
+						
+				</li>
+			
+		</ul>    
+    </div>
+</header>
+
+
+
+
+
+  <div class='container'>
+  <div class="wrapper">
+  <ul class="breadcrumbs">
+	<li><a href="../index.html">Home</a></li> 
 	
-		<a class=current  href='360°-camera-and-vr.html'>360° Camera and VR</a>
+		<li>
+				<a href='../research/' >Research</a>
+		</li>
 	
-		<a   href='speech-recognition.html'>Speech Recognition</a>
+		<li>
+				<a href='../research/360°-camera-and-vr.html' >360° Camera And Vr</a>
+		</li>
 	
-		<a   href='webgl.html'>WebGL</a>
-	
-		<a   href='3d-gyroscope.html'>3D Gyroscope</a>
-	
-		<a   href='firebase.html'>Firebase</a>
-	
-</aside>
-          	<div class='main'>
-          		<article class='article'>
+</ul>
+
+    <!--main content -->
+   <div class="main">
+      
+      <!-- article -->
+      <div class="content">     
+        <div class="section">
+          <article class='article'>
 	<header class='article_header'>
 		<h1>360° Camera and VR</h1>
+		
+			<p><i style="background-image:url('../img_data/avatar/Arthus Huang.png')"></i>Arthus Huang</p>
+		
 	</header>
 	<div class='article_body'>
 		<p>We started to learn AR/VR technology years ago. It should be able to improve our meeting experience.</p>
@@ -68,19 +155,50 @@ $(function(){
 <p><img src="../img_data/research/360°VR7.png" alt="live"/></p>
 		
 	</div>
+	<!-- hiding pagination per Damon's feedback 
 	<footer class='article_footer'>
+
 		<div class="pagination">
-			
-			<a  class="next" href="speech-recognition.html">Next →</a> 	 	
+			<a  class="prev" href="webgl.html">← Prev</a>
+			<a  class="next" href="3d-gyroscope.html">Next →</a> 	 	
 		</div>		
-	</footer>
+	</footer>-->
 </article>
        	
-          	</div>
-      	</div>	
-      <footer class='copyright'>
-	<p>©2016-2017 <a target="_blank" href="https://en.wikipedia.org/wiki/MIT_License" class='license'>MIT license</a></p>
+        </div>
+      </div>
+    </div>
+    <!--
+    <ul class='sideMenu'>
+	
+	
+		<li><a   href='write-a-music-score-by-html5.html'>Write music by HTML5</a></li>
+	
+		<li><a   href='animation-physics.html'>Animation Physics</a></li>
+	
+		<li><a   href='animation-in-browser.html'>Animation in browser</a></li>
+	
+		<li><a   href='webgl.html'>WebGL</a></li>
+	
+		<li><a class=current  href='360°-camera-and-vr.html'>360° Camera and VR</a></li>
+	
+		<li><a   href='3d-gyroscope.html'>3D Gyroscope</a></li>
+	
+		<li><a   href='motion.html'>Motion</a></li>
+	
+		<li><a   href='face-detection.html'>Face Detection.</a></li>
+	
+		<li><a   href='firebase.html'>Firebase</a></li>
+	
+	
+</ul>-->
+ </div>   
+  </div>
+ <!-- footer --> 
+ <footer class='copyright'>
+	<p>UX Prototype Team ©2016-2017 <a target="_blank" href="https://en.wikipedia.org/wiki/MIT_License" class='license'>MIT license</a></p>
 </footer>
 <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
-  </body>
+ <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</body>
 </html>

@@ -2,23 +2,34 @@
 <html>
   <head>
       <%- include('controls/head') %>
+      <link rel="stylesheet" type="text/css" href="<%= Source_css %>list.css" media="screen">
   </head>
   <body>
       <%- include('controls/header') %>
         <div class='container'>
+            <div class="wrapper">
             <div class='main'>
+             <%- include('controls/breadcrumbs') %>
+             <!-- article list below -->
               <% for(var i in List){ %>
-                <a class='list_item' target='_blank' href='<%= List[i].RenderData.NameHTML %>'>
-                  <h1><%= List[i].RenderData.Title %></h1>
-                  <p><%= List[i].RenderData.Desc %></p>
-                  <p class='list_item_footer'><%= List[i].RenderData.Date %></p>
-                </a>
+              <a class="articleBlock" style="background-image: url('<%= Source_img_atricle %><%= List[i].RenderData.Cover %>');" target='_self' href='<%= List[i].RenderData.NameHTML %>'>
+                  <div class='articleBlock_cover'>
+                      <p class='list_space'></p>
+                      <p class="list_title"><%= List[i].RenderData.Title %></p>
+                      <p class='list_item_date'><%= List[i].RenderData.Date %></p>
+                      <p class='list_item_desc'><%= List[i].RenderData.Desc %></p>
+                  </div>
+              </a>  
+                 <!-- <hr class="divider" />   -->
               <% } %> 
+              <!-- end of list items -->    
+              <div style="clear:both;"></div>          
               <div class='pagination'>
-                <%- PageFirst %><%- PagePre %><%- PageGroup %><%- PageNext %><%- PageLast %>
+               Page <%- PageFirst %><%- PagePre %><%- PageGroup %><%- PageNext %><%- PageLast %>
               </div>    
             </div>
-        </div>  
+            </div>
+        </div>
       <%- include('controls/footer') %>
   </body>
 </html>

@@ -1,0 +1,8 @@
+<ul class="breadcrumbs">
+	<li><a href="<%= Source_nav %>index.html">Home</a></li> 
+	<% for(var name in BreadCrumbs){ %>
+		<li>
+				<a href='<%= BreadCrumbs[name] %>' ><%= name %></a>
+		</li>
+	<% } %>
+</ul>

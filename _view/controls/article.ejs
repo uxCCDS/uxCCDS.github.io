@@ -1,14 +1,19 @@
 <article class='article'>
 	<header class='article_header'>
 		<h1><%= Title %></h1>
+		<% if(Author != '') { %>
+			<p><i style="background-image:url('<%= Source_img_atricle %>avatar/<%= Author %>.png')"></i><%= Author %></p>
+		<% } %>
 	</header>
 	<div class='article_body'>
 		<%- Content %>		
 	</div>
+	<!-- hiding pagination per Damon's feedback 
 	<footer class='article_footer'>
+
 		<div class="pagination">
 			<%- List_Prev %>
 			<%- List_Next %> 	 	
 		</div>		
-	</footer>
+	</footer>-->
 </article>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- include('controls/head') %>
+  <link rel="stylesheet" type="text/css" href="<%= Source_css %>prototype.css" media="screen">
+</head>
+<body>
+  <!-- nav -->
+  <%- include('controls/header') %>
+  <div class='container'>
+  <div class="wrapper">
+    <!--main content -->
+    <div class="container_left"></div>
+    <div class="main">
+    <%- include('controls/breadcrumbs') %>
+      <!-- intro text 
+      <div class="intro"><span>Find the latest prototypes and test resultes here. Get to know the team and the limitless future of Cisco Spark.</span></div>-->
+      <!--content blocks -->
+      <div class="block-wrapper">
+      <a class="sectionBlock" href="./current/index.html">
+        <div class="block-l"  style="background-image:url('<%= Source_img %>project.jpg')">
+        <div class="block_cover">
+        <p class="list_title">Current Projects</p>
+        </div>
+        </div>
+      </a>
+      <a class="sectionBlock" href="./experimental/index.html">
+        <div class="block-r" style="background-image:url('<%= Source_img %>experimental.jpg')"> 
+        <div class="block_cover">
+          <p class="list_title">Experimental Concepts</p></div>
+          </div>
+      </a>
+      <a class="sectionBlock" href="./archived/index.html">
+        <div class="block-l" style="background-image:url('<%= Source_img %>archiving.jpeg')"> 
+        <div class="block_cover">
+          <p class="list_title">Archived Projects</p></div></div>
+      </a>
+      <a class="sectionBlock" href="./guide/index.html">
+        <div class="block-r" style="background-image:url('<%= Source_img %>faq.jpg')"> 
+        <div class="block_cover">
+        <p class="list_title">FAQ & Troubleshoot</p>
+        </div>
+        </div>
+      </div>
+      </a>
+    </div>
+    <div class="container_left"></div>
+  </div>
+ </div>
+</div>
+ <!-- footer -->
+ <%- include('controls/footer') %>
+</body>
+</html>

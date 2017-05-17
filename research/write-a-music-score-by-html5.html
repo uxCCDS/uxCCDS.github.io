@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Write music by HTML5</title>
+<meta charset='utf-8'>
+<link rel="icon" type="image/x-icon" href="../img/fav.ico">
+<meta name="viewport" content="width=device-width,minimal-ui,initial-scale=1.0" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="../css/public.css" media="screen">
+<!--
+<link rel="stylesheet" type="text/css" href="../css/github_gist.css" media="screen"> -->
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+<script type="text/javascript" src="../js/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="../js/highlight.pack.js"></script>
+<style type="text/css"></style>
+
+  <link rel="stylesheet" type="text/css" href="../css/detail.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../css/monokai_sublime.css" media="screen">
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+</head>
+<body>
+  <!-- nav -->
+  <header class="header">
+  	<div class="NavContent">
+	    <a href="/" class="logo"><img src="../img/logo.png"></a>
+	    <input class="menu-btn" type="checkbox" id="menu-btn" />
+	    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+		<ul class="Nav">
+			
+				<li>
+					<a  href='../index.html' >Home</a>
+						
+				</li>
+			
+				<li>
+					<a  href='../prototypes/index.html' >Prototypes</a>
+					
+						<ul class="subMenu">
+							
+								
+								
+									
+								
+									
+								
+								<li>
+									<a   href='../prototypes/current/index.html' >Current</a>
+								</li>
+							
+								
+								
+									
+								
+									
+								
+								<li>
+									<a   href='../prototypes/experimental/index.html' >Experimental</a>
+								</li>
+							
+								
+								
+									
+								
+									
+								
+								<li>
+									<a   href='../prototypes/archived/index.html' >Archived</a>
+								</li>
+							
+								
+								
+									
+								
+									
+								
+								<li>
+									<a   href='../prototypes/FAQ/index.html' >FAQ</a>
+								</li>
+							
+						</ul>
+						
+				</li>
+			
+				<li>
+					<a class=current href='../research/index.html' >Research</a>
+						
+				</li>
+			
+				<li>
+					<a  href='../team/index.html' >Team</a>
+						
+				</li>
+			
+		</ul>    
+    </div>
+</header>
+
+
+
+
+
+  <div class='container'>
+  <div class="wrapper">
+  <ul class="breadcrumbs">
+	<li><a href="../index.html">Home</a></li> 
+	
+		<li>
+				<a href='../research/' >Research</a>
+		</li>
+	
+		<li>
+				<a href='../research/write-a-music-score-by-html5.html' >Write A Music Score By Html5</a>
+		</li>
+	
+</ul>
+
+    <!--main content -->
+   <div class="main">
+      
+      <!-- article -->
+      <div class="content">     
+        <div class="section">
+          <article class='article'>
+	<header class='article_header'>
+		<h1>Write music by HTML5</h1>
+		
+			<p><i style="background-image:url('../img_data/avatar/Arthus Huang.png')"></i>Arthus Huang</p>
+		
+	</header>
+	<div class='article_body'>
+		<h2 id="background">Background</h2>
+<p>Before a baby opens his eyes, he knows the word by his ears at the very begining. This shows that sound is a very improtant element of interaction. But designers and engineers usually pay more attention to the visual than the sound. As we all know, sound wave is a kind of mechanical wave. By the physical propreties of wave, we can do many interesting things.</p>
+<h2 id="compose-music">Compose Music</h2>
+<p>Software engineers are tinking with 1 and 0 to build their utopia while musicians play with music notes to construct their Garden of Eden. It should be fantastical when coding meets with music. Music will enrich the user experience of software, and coding will make people learn more about the struct of music.</p>
+<p>A melody consists of a variety of music notes, while time value and pitch are the most important propreties of music notes. In the following paragraph, I will introduce how to create a music note with Javascript.</p>
+<p>People can identify music notes of different pitches because every music note has its own frequency. According to the  Web Audio Api, we can create an oscillator node. This node can create a sound wave with a specified frequency. You can do some tests refer to the following code.</p>
+<pre><code>var context = new webkitAudioContext(),
+     osc  = context.createOscillator();
+    osc.frequency.value = 440;
+    osc.connect(context.destination);
+    osc.start(0);
+</code></pre><p>The code above created an osicallator with a freqency of 440 hz.  According to equal temperament, 440 hz is the frequency of &#39;LA&#39;. In twelve-tone equal temperament, which divides the octave into 12 equal parts, the width of a semitone, i.e. the frequency ratio of the interval between two adjacent notes, is the twelfth root of two. So we can get the freqency of other notes refer to the following code.</p>
+<pre><code>var MusicalAlphabet = [&#39;C&#39;,&#39;C#&#39;,&#39;D&#39;,&#39;D#&#39;,&#39;E&#39;,&#39;F&#39;,&#39;F#&#39;,&#39;G&#39;,&#39;G#&#39;,&#39;A&#39;,&#39;A#&#39;,&#39;B&#39;],
+    freqChat={},
+    freqRange=3,
+    i,j,base;
+
+for(i=1;i&lt;freqRange;i++){
+    freqChat[i]={};
+    base = (i-1)*12;
+    for(j=0;j&lt;12;j++){
+        freqChat[i][MusicalAlphabet[j]]=440*Math.pow(2,(base+j-9)/12);
+    }
+}
+</code></pre><p>I recommend to calculate all the notes&#39; frequency at the beginning of script.  Now, we can get the pitch of every note. The next step is to deal with the time value. The most simple way is to use the function &#39;stop&#39; and &#39;start&#39; of the instance of the oscillator node. You can refer to the following code.</p>
+<pre><code>var context = new webkitAudioContext();
+var osc  = context.createOscillator();
+osc.frequency.value = 440;
+osc.connect(context.destination);
+var _c = context.currentTime;
+osc.start(_c+1);
+osc.stop(_c+2);
+</code></pre><p>You may have noticed the variable _c . In the context of web audio, it has its own timeline. The property &#39;currentTime&#39; of context is the only way to access to this timeline. All the nodes of the context play according to this timeline. The funtion &#39;start&#39; need an argument to define the start time of the oscillator node. If this argument is smaller than contecxt.currentTime, the function &#39;start&#39; will execute immediately.  </p>
+<p>Unfortunately, the function &#39;start&#39; of each instance can only be called only once.  It means that once you have called the function &#39;stop&#39;, you will have to create a new instance to play the same note. So I recommand another solution to you. The key is the gain node. With gain node, you can control the signal strength of the osciallator node. If you have ever played the guitar amp, you can understand this node better.</p>
+<p><img src="../img_data/research/Write a music score by HTML51.jpg" alt="AMP"/></p>
+<p>Let&#39;s back to the coding world.</p>
+<pre><code>var context = new webkitAudioContext(),
+    gain = _ctx.createGain(),
+    osc  = context.createOscillator(),
+    _c= context.currentTime;
+osc.frequency.value =440; 
+gain.gain.value=0;
+osc.connect(gain); 
+gain.connect(context .destination); 
+osc.start(_c);
+gain.gain.setValueAtTime(1,_c+1);
+gain.gain.setValueAtTime(0,_c+2);
+</code></pre><p>The code above can play a music note &#39;La&#39; (at c major) from 1s to 2s. You can set the value of gain.gain.value from 0 to 1. When this value is set to 0, it works like that you call the function &#39;stop&#39;. The following picture shows the change of the signal.</p>
+<p><img src="../img_data/research/Write a music score by HTML52.jpg" alt="signal"/></p>
+<p>Besides the function &#39;setValueAtTime&#39; , gain node has some other methods to change its value. You can find them in the web audio api.</p>
+<p>By now, you should be able to play a music note during some time by javascript. But it still has a lot of things to do to achieve a music score. In the following part of this article, I will teach you how to create a music score with a javascript framework named &#39;Jsonic&#39;.</p>
+<p>Play a music score with Jsonic</p>
+<p>Jsonic is a small and feature-rich javascript library. With Jsonic, you can compose music, transfer data by ultrasound, make sound wave visualible, do speech recognition and so on. You can get Jsonic from <a href="https://jsonic.net">jsonic.net</a> jsonic.net or <a href="https://github.com/ArthusLiang/jsonic">github</a>.</p>
+<p><img src="../img_data/research/Write a music score by HTML53.jpg" alt="Music Score"/></p>
+<p>The picture above shows the struct of Jsonic&#39;s melody module. You need create an instance of Track of TrackGain to play a music score. The music score consists of many notes. Let&#39;s move on to the detail code.</p>
+<h3 id="create-notes">create notes</h3>
+<pre><code>var note = new Jsonic.Melody.Note(1,1/4,0,false);
+</code></pre><p>You can create a music note according to the code above. In Jsonic, every instance of Jsonic.Melody.Note refers to a music note. The constructor of Note could accept 4 arguments. The first one is rollcall while the third argument defined which octave this note is in. Jsonic.Melody.Note use rollcall (0,1,2,3,4,5,6,7) to create instances so that you can change the tone in MusicScore easily. If you want to get a central C, the third argument should be 0. The second argument defines the time value(1,1/2,1/4,1/8,1/16) of notes. The speed of MusicScore is another element which affects the real time value of the note .The 4th argument  defines whether this note has a dot.</p>
+<h3 id="create-music-score">create music score</h3>
+<pre><code>var musicScore = new Jsonic.Melody.MusicScore(&#39;C&#39;,&#39;major&#39;,&#39;4/4&#39;);
+</code></pre><p>When you create an instance of MusicScore, you can define it&#39;s tone and beat. The code above create a 4/4 c major music score. You should use musical alphabet here.</p>
+<p>After you have created a music score, you could add notes to the music score according to the following code.</p>
+<pre><code>musicScore.w(new Jsonic.Melody.Note(3),new Jsonic.Melody.Note(4));
+</code></pre><p>The function &#39;w&#39; will append all its arguments to the end of the music score. The next step is to create an instance of Track or TrackGain to play the music score. But you should call the function &#39;compile&#39; firstly.</p>
+<pre><code>musicScore.compile();
+</code></pre><h3 id="play-music">play music</h3>
+<p>As what I mentioned at the begining of this atricle, we have two ways to control the time value of notes. Track and TrackGain are corresponding to these two ways.</p>
+<pre><code>var track = new Jsonic.Melody.Track();
+track.play(musicScore,90);
+</code></pre><p>The code above created a track and played a music score with the speed 90. The value of the speed refers to the data in metronome.</p>
+<p>If you still feel confuse, please click the <a href="http://jsonic.net/demo/index.html">demo</a>. (Click the start button)</p>
+<h2 id="summary">Summary</h2>
+<p>Web audio offers a lot of nodes. You can connect them to here and there. It is like playing the guitar amp. Hope you can find some interesting effects with web audio.</p>
+		
+	</div>
+	<!-- hiding pagination per Damon's feedback 
+	<footer class='article_footer'>
+
+		<div class="pagination">
+			
+			<a  class="next" href="animation-physics.html">Next →</a> 	 	
+		</div>		
+	</footer>-->
+</article>
+       	
+        </div>
+      </div>
+    </div>
+    <!--
+    <ul class='sideMenu'>
+	
+	
+		<li><a class=current  href='write-a-music-score-by-html5.html'>Write music by HTML5</a></li>
+	
+		<li><a   href='animation-physics.html'>Animation Physics</a></li>
+	
+		<li><a   href='animation-in-browser.html'>Animation in browser</a></li>
+	
+		<li><a   href='webgl.html'>WebGL</a></li>
+	
+		<li><a   href='360°-camera-and-vr.html'>360° Camera and VR</a></li>
+	
+		<li><a   href='3d-gyroscope.html'>3D Gyroscope</a></li>
+	
+		<li><a   href='motion.html'>Motion</a></li>
+	
+		<li><a   href='face-detection.html'>Face Detection.</a></li>
+	
+		<li><a   href='firebase.html'>Firebase</a></li>
+	
+	
+</ul>-->
+ </div>   
+  </div>
+ <!-- footer --> 
+ <footer class='copyright'>
+	<p>UX Prototype Team ©2016-2017 <a target="_blank" href="https://en.wikipedia.org/wiki/MIT_License" class='license'>MIT license</a></p>
+</footer>
+<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+ <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

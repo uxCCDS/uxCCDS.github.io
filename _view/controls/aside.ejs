@@ -1,5 +1,7 @@
-<aside class='aside'>
+<ul class='sideMenu'>
+	
 	<% for(var i in List){ %>
-		<a <%= List[i].RenderData.Title=== Title ? 'class=current' :'' %>  href='<%= List[i].NameHTML %>'><%= List[i].RenderData.Title %></a>
+		<li><a <%= List[i].RenderData.Title=== Title ? 'class=current' :'' %>  href='<%= List[i].NameHTML %>'><%= List[i].RenderData.Title %></a></li>
 	<% } %>
-</aside>
+	
+</ul>

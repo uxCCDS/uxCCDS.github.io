@@ -1,4 +1,7 @@
 Title: 3D Gyroscope
+Cover: research/Firebase1.png
+Date: 2017-1-19
+Author: Arthus Huang
 ---
 
 Most of the model mobile has a 3D [Gyroscope](https://en.wikipedia.org/wiki/Gyroscope) in it. With the Gyroscope, we can trace the movement of the device to some extent.
@@ -9,7 +12,7 @@ Most of the model mobile has a 3D [Gyroscope](https://en.wikipedia.org/wiki/Gyro
 
 ### link
 
-[https://uxccds.github.io/SparkMobile/pair/page/wall.html](https://uxccds.github.io/SparkMobile/pair/page/wall.html)
+[wall.html](https://uxccds.github.io/SparkMobile/pair/page/wall.html)
 
 ### usage
 
@@ -24,7 +27,7 @@ Most of the model mobile has a 3D [Gyroscope](https://en.wikipedia.org/wiki/Gyro
 
 ### link
 
-[https://uxccds.github.io/SparkMobile/pair/page/phone.html](https://uxccds.github.io/SparkMobile/pair/page/phone.html)
+[phone.html](https://uxccds.github.io/SparkMobile/pair/page/phone.html)
 
 ### usage
 

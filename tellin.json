@@ -5,20 +5,79 @@
 		"Data":"./prototypes",
 		"Controller":"detail"
 	},{
-		"Name":"Guide",
-		"View":"docs.ejs",
-		"Data":"./guide",
-		"Controller":"detail"
-	},{
 		"Name":"Research",
 		"View":"docs.ejs",
 		"Data":"./research",
 		"Controller":"detail"
+	},{
+		"Name":"Research",
+		"View":"list.ejs",
+		"Data":"./research",
+		"Controller":"list"
+	},{
+		"Name":"Prototypes",
+		"View":"list.ejs",
+		"Data":"./prototypes/current",
+		"Controller":"list"
+	},{
+		"Name":"Prototypes",
+		"View":"list.ejs",
+		"Data":"./prototypes/faq",
+		"Controller":"list"
+	},{
+		"Name":"Prototypes",
+		"View":"list.ejs",
+		"Data":"./prototypes/archived",
+		"Controller":"list"
+	},{
+		"Name":"Prototypes",
+		"View":"list.ejs",
+		"Data":"/prototypes/experimental",
+		"Controller":"list"
+	},
+	{
+		"Name":"Prototypes",
+		"View":"prototypes.ejs",
+		"Data":"./prototypes",
+		"Controller":"index"
+	},{
+		"Name":"Team",
+		"View":"team.ejs",
+		"Data":"./team",
+		"Controller":"index"
+	},{
+		"Name":"Home",
+		"View":"index.ejs",
+		"Data":"./",
+		"Controller":"index"
 	}],
 	"Nav":{
-		"Prototypes":"../prototypes/spark-message-list.html",
-		"Guide":"../guide/clear-cache.html",
-		"Research":"../research/360°-camera-and-vr.html"
+		"Home":{
+			"Url":"index.html"
+		},
+		"Prototypes":{
+			"Url":"prototypes/index.html",
+			"SubNav":{
+				"Current":{
+					"Url":"prototypes/current/index.html"
+				},
+				"Experimental":{
+					"Url":"prototypes/experimental/index.html"
+				},
+				"Archived":{
+					"Url":"prototypes/archived/index.html"
+				},
+				"FAQ":{
+					"Url":"prototypes/FAQ/index.html"
+				}
+			}
+		},
+		"Research":{
+			"Url":"research/index.html"
+		},
+		"Team":{
+			"Url":"team/index.html"
+		}
 	},
 	"_page_item_num":10,
 	"_page_btn_num":10,	
@@ -27,6 +86,7 @@
 	"Source_js":"./js/",
 	"Source_img":"./img/",
 	"Source_img_atricle":"./img_data/",
+	"Source_nav":"./",
 	"filename":"./_view/controls",
 	"_Path_ViewFolder":"./_view/",
 	"_Path_DataFolder":"./_data/",

@@ -1,4 +1,7 @@
 Title: 360° Camera and VR
+Cover: research/360°VR6.PNG
+Date: 2017-2-29
+Author: Arthus Huang
 ---
 
 We started to learn AR/VR technology years ago. It should be able to improve our meeting experience.

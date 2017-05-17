@@ -1,5 +1,7 @@
 Title: WebGL
-Date: 2017-02-19
+Date: 2017-4-19
+Cover: research/WebGL2.png
+Author: Arthus Huang
 ---
 
 WebGL let browsers have the ablility to render 3D things. 
@@ -10,7 +12,7 @@ Years ago, Apple was going to publish the iwatch. Our company was asked to build
 
 ## link (Cisco VPN Required)
 
-[https://uxprototype.cisco.com/projects/Reskin/wap/iwatch_draft/pages/3d.php](https://uxprototype.cisco.com/projects/Reskin/wap/iwatch_draft/pages/3d.php)
+[iwatch3d.php](https://uxprototype.cisco.com/projects/Reskin/wap/iwatch_draft/pages/3d.php)
 
 ## usage
 
@@ -32,7 +34,7 @@ After that I made a prototype to display all the prototypes I made for windows p
 
 ## link (Cisco VPN Required)
 
-[https://uxprototype.cisco.com/projects/Reskin/wap/3D/pages/3d.php](https://uxprototype.cisco.com/projects/Reskin/wap/3D/pages/3d.php)
+[3d.php](https://uxprototype.cisco.com/projects/Reskin/wap/3D/pages/3d.php)
 
 ## usage
 

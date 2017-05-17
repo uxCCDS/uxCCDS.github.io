@@ -1,0 +1,12 @@
+
+
+.sectionBlock .list_space{display: block;width: 100%; height: 15px; margin: 0px;}
+.sectionBlock .list_title{font-size:16px; line-height:40px; height: 40px; font-weight:500; margin-top:0px; text-align: center;  }
+
+.block_cover{width: 100%; height: 40px; line-height: 40px; position: absolute; left: 0px; bottom:0px; color: #292929; background-color: rgba(235,235,236,0.95);}
+
+.sectionBlock:hover .block_cover{
+    transition: height 0.2s; height: 240px; background-color: rgba(235,235,236,0.95); 
+}
+.sectionBlock:hover .list_title{line-height:240px; height:240px;}
+
