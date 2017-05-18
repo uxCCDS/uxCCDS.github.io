@@ -2,7 +2,8 @@
 <html>
 <head>
   <%- include('controls/head') %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="<%= Source_css %>team.css" media="screen">
+  <script type="text/javascript" src='<%= Source_js %>team.js'></script>
 </head>
 <body>
   <!-- nav -->
@@ -14,12 +15,10 @@
     <div class="main">
      <%- include('controls/breadcrumbs') %>   
       <!-- intro text -->
-      <div class="intro"><span>Meet the team members behind the Spark portotypes.</span></div>
+      <div class="intro"><h1>Meet the team members behind the Spark portotypes.</h1></div>
+      <%- include('controls/map') %> 
       <!--content blocks -->
      <!-- how to add the members.ejs here??? -->
-      <div class="block-wrapper">
-        <div class="block-a" style="background-image:url('<%= Source_img %>team.jpg')"><a href="./team/index.html"><span>Team</span></a></div>
-      </div>
     </dir>
   </div>
 </div>
