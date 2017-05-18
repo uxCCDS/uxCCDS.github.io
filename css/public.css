@@ -111,7 +111,7 @@ ul,li{list-style: none; margin: 0px;}
   .NavContent .Nav{ margin-left: 0%; width:100%; height: 60px; text-align: center;}
   .NavContent .Nav>li{ margin-right: 5px; margin-left: 5px;height: 60px; line-height: 60px; }
   .NavContent .Nav>li>a{ height: 60px; line-height: 60px; padding: 0 10px;  font-size: 16px;}
-  .NavContent .Nav>li:hover>a,.NavContent .Nav>li .current{ border-bottom: 1px solid #049fd9; height: 59px;}
+  .NavContent .Nav>li:hover>a,.NavContent .Nav>li .current{ border-bottom: 1px solid #07C1E4; height: 59px;}
 
 }
 @media only screen and ( max-width: 500px) {
@@ -122,14 +122,14 @@ ul,li{list-style: none; margin: 0px;}
   .NavContent .Nav>li:hover .subMenu{display: none;}
   
   .wrapper {padding: 0 20px;}
-  .breadcrumbs{ padding: 0 20px; margin: 0px; margin-top:30px;}
+  .breadcrumbs{ padding: 0 20px; margin: 0px; margin-top:30px; height: 50px;}
   .breadcrumbs li{ display: inline; font-size: 12px; margin-right: 3px; }
 
   .NavContent{ height: 40px;}
   .NavContent .Nav{ margin-left: 0; width:100%; height: 40px; text-align: center; }
   .NavContent .Nav>li{ margin-right: 2px; margin-left: 3px; height: 40px; line-height: 40px; }
   .NavContent .Nav>li>a{ height: 40px; line-height: 40px; padding: 0 7px;  font-size: 14px;}
-  .NavContent .Nav>li:hover>a,.NavContent .Nav>li .current{ border-bottom: 1px solid #049fd9; height: 39px;}
+  .NavContent .Nav>li:hover>a,.NavContent .Nav>li .current{ border-bottom: 1px solid #07C1E4; height: 39px;}
 }
 
 
