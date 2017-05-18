@@ -1,4 +1,4 @@
-Title: Write music by HTML5
+Title: Write music with HTML5
 Desc: This article will tell you how to write a tune with pure Javascript and introduce an interesting Javascript framework to you.
 Date: 2015-2-11
 Cover: research/Write a music score by HTML51.jpg

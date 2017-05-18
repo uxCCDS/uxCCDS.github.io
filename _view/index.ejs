@@ -3,6 +3,11 @@
 <head>
   <%- include('controls/head') %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+  @media only screen and ( max-width: 500px) {
+.breadcrumbs {display: none;}
+  }
+  </style>
 </head>
 <body>
   <!-- nav -->
@@ -20,29 +25,30 @@
       <!--content blocks -->
       <div class="block-wrapper">
       <a class="sectionBlock" href="./prototypes/index.html">
-        <div class="block-l" style="background-image:url('<%= Source_img %>prototype.jpeg')"> 
+        <div class="block-a" style="background-image:url('<%= Source_img %>prototype.jpeg')"> 
         <div class="block_cover">
         <p class="list_title">Prototypes</p>
         </div>
       </div>
       </a>
+      </div>
+      <div class="block-wrapper">
       <a class="sectionBlock" href="./research/index.html">
-        <div class="block-r" style="background-image:url('<%= Source_img %>research.jpg')"> 
+        <div class="block-l" style="background-image:url('<%= Source_img %>research.jpg')"> 
         <div class="block_cover">
         <p class="list_title">Research</p>
         </div>
         </div>
       </a>
-      </div>
-      <div class="block-wrapper">
       <a class="sectionBlock" href="./team/index.html">
-        <div class="block-a" style="background-image:url('<%= Source_img %>team.jpg')">
+        <div class="block-r" style="background-image:url('<%= Source_img %>team.jpg')">
         <div class="block_cover">
         <p class="list_title">Team</p>
         </div>
       </div>
       </a>
       </div>
+      
     </div>
     
   </div>

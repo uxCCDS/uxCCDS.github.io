@@ -21,7 +21,7 @@
 
   .article_con_list .articleBlock:hover .list_title{color: #4f5051;}
 
-  .article_con_thumbnail .articleBlock{ display: inline-block; border-radius: 5px; width: 27%; height: 180px; margin: 14px; position: relative; background-repeat: no-repeat; background-position: center;  background-size: cover; overflow: hidden; box-shadow: 0 0 2px 2px #ccc;  }
+  .article_con_thumbnail .articleBlock{ display: inline-block; border-radius: 5px; width: 27%; height: 180px; margin: 14px; position: relative; background-repeat: no-repeat; background-position: center;  background-size: cover; overflow: hidden; border:1px solid #ccc;  }
   .article_con_thumbnail .articleBlock_cover{ width: 100%; height: 100%;  position: absolute; left: 0px; top: 120px; color: #292929; background-color: rgba(235,235,236,0.95); }
   .article_con_thumbnail .articleBlock_cover .list_space{display: block;width: 100%; height: 10px; margin: 0px;}
   .article_con_thumbnail .articleBlock_cover .list_title{font-size:16px; line-height: 20px; font-weight:500; padding: 0 20px;}
