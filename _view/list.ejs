@@ -3,6 +3,7 @@
   <head>
       <%- include('controls/head') %>
       <link rel="stylesheet" type="text/css" href="<%= Source_css %>list.css" media="screen">
+      <script type="text/javascript" src='<%= Source_js %>list.js'></script>
   </head>
   <body>
       <%- include('controls/header') %>
@@ -11,19 +12,20 @@
             <div class='main'>
              <%- include('controls/breadcrumbs') %>
              <!-- article list below -->
-              <% for(var i in List){ %>
-              <a class="articleBlock" style="background-image: url('<%= Source_img_atricle %><%= List[i].RenderData.Cover %>');" target='_self' href='<%= List[i].RenderData.NameHTML %>'>
-                  <div class='articleBlock_cover'>
-                      <p class='list_space'></p>
-                      <p class="list_title"><%= List[i].RenderData.Title %></p>
-                      <p class='list_item_date'><%= List[i].RenderData.Date %></p>
-                      <p class='list_item_desc'><%= List[i].RenderData.Desc %></p>
-                  </div>
-              </a>  
-                 <!-- <hr class="divider" />   -->
-              <% } %> 
-              <!-- end of list items -->    
-              <div style="clear:both;"></div>          
+              <div class='article_con_thumbnail' id='article_con'>
+                <div class='article_view_btn'><a class='btn_thumbnail' title="thumbnail view" id='btn_thumbnail'></a><a class='btn_list' title='list view' id='btn_list'></a></div>
+                <% for(var i in List){ %>
+                <a class="articleBlock" style="background-image: url('<%= Source_img_atricle %><%= List[i].RenderData.Cover %>');" target='_self' href='<%= List[i].RenderData.NameHTML %>'>
+                    <div class='articleBlock_cover'>
+                        <p class='list_space'></p>
+                        <p class="list_title"><%= List[i].RenderData.Title %></p>
+                        <p class='list_item_date'><%= List[i].RenderData.Date %></p>
+                        <p class='list_item_desc'><%= List[i].RenderData.Desc %></p>
+                    </div>
+                </a>
+                <% } %> 
+              </div>
+              <!-- end of list items -->        
               <div class='pagination'>
                Page <%- PageFirst %><%- PagePre %><%- PageGroup %><%- PageNext %><%- PageLast %>
               </div>    

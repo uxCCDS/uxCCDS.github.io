@@ -126,8 +126,13 @@ ul,li{list-style: none; margin: 0px;}
   .breadcrumbs li{ display: inline; font-size: 12px; margin-right: 3px; }
 
   .NavContent{ height: 40px;}
-  .NavContent .Nav{ margin-left: 0; width:100%; height: 40px; text-align: center; padding:0 20px;}
+  .NavContent .Nav{ margin-left: 0; width:100%; height: 40px; text-align: center; }
   .NavContent .Nav>li{ margin-right: 2px; margin-left: 3px; height: 40px; line-height: 40px; }
   .NavContent .Nav>li>a{ height: 40px; line-height: 40px; padding: 0 7px;  font-size: 14px;}
   .NavContent .Nav>li:hover>a,.NavContent .Nav>li .current{ border-bottom: 1px solid #049fd9; height: 39px;}
+}
+
+
+@media only screen and ( max-width: 350px) {
+  .NavContent .Nav>li>a{  padding: 0 2px;}
 }

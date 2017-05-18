@@ -21,6 +21,8 @@ Before diving in the browser, let's figure out the difference between CPU and GP
 
 In the browser, CPU does the the traditional DOM operation and 2D animation calculation while GPU take the response of rendering WebGL and 3D things. There are many APIs in the traditional DOM for Javascript calls, Dom's data structure can be repeatedly read and modified, which is more dependent on the cache. In WebGl, the content of the Canvas can not be read once it is rendered, and the programmer usually creates other data structures to store the data model, and each rendering is relatively independent. The real scence of browser's rendering, CPU and GPU are usually used together.
 
+![browsers](../../img_data/research/Animation in browser2.jpg)
+
 ### CSS animiation
 
 In CSS3, there are 2 new properties, transition and animation. We can only use CSS3 to build some simple animation. But more importantly, we can get a glimpse of some of the basic elements of animation. Duration, delay, time-function, and property are necessary elements. Compared to Javascript animation, CSS3 animation rendering process is the browser automatically, the code level of the control ability is more weak. In a browser that supports matrix transformations, transform's animated browser optimizes itself and the browser automatically use GPU to do the hardware acceleration .
