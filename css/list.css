@@ -23,7 +23,7 @@
 
   .article_con_list .articleBlock:hover .list_title{color: #4f5051;}
 
-  .article_con_thumbnail .articleBlock{ display: inline-block; border-radius: 4px; width: 27%; height: 240px; margin: 14px; position: relative; overflow: hidden; box-shadow: 1px 1px 1px 1px #d7d7d8;  }
+  .article_con_thumbnail .articleBlock{ display: inline-block; border-radius: 4px; width: 27%; height: 240px; margin: 14px; position: relative; overflow: hidden; border:1px solid #ccc; }
   .article_con_thumbnail .list_img{display: block; width: 90%; height: 90%; margin: 5%; background-repeat: no-repeat; background-position: center;  background-size: contain; box-shadow: 2px 2px 2px 2px #f5f5f6; }
   .article_con_thumbnail .articleBlock_cover{ width: 100%; height: 100%;  position: absolute; left: 0px; top: 175px; color: #292929; background-color: rgba(235,235,236,0.95); z-index: 5; }
   .article_con_thumbnail .articleBlock_cover .list_space{display: block;width: 100%; height: 10px; margin: 0px;}
