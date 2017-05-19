@@ -15,13 +15,14 @@
               <div class='article_con_thumbnail' id='article_con'>
                 <div class='article_view_btn'><a class='btn_thumbnail' title="thumbnail view" id='btn_thumbnail'></a><a class='btn_list' title='list view' id='btn_list'></a></div>
                 <% for(var i in List){ %>
-                <a class="articleBlock" style="background-image: url('<%= Source_img_atricle %><%= List[i].RenderData.Cover %>');" target='_self' href='<%= List[i].RenderData.NameHTML %>'>
+                <a class="articleBlock"  target='_self' href='<%= List[i].RenderData.NameHTML %>'>
                     <div class='articleBlock_cover'>
                         <p class='list_space'></p>
                         <p class="list_title"><%= List[i].RenderData.Title %></p>
                         <p class='list_item_date'><%= List[i].RenderData.Date %></p>
                         <p class='list_item_desc'><%= List[i].RenderData.Desc %></p>
                     </div>
+                    <div class="list_img" style="background-image: url('<%= Source_img_atricle %><%= List[i].RenderData.Cover %>');"></div>
                 </a>
                 <% } %> 
               </div>
