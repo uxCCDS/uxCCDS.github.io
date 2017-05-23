@@ -13,19 +13,19 @@
 			}
 		</style>
 		<amcharts:ammap projection="mercator" leftLongitude="-169.6" topLatitude="83.68" rightLongitude="190.25" bottomLatitude="-55.55"></amcharts:ammap>
-		<pattern id='parrten_damon' x="0" y="0" width="1" height="1" patternUnits="objextBoundingBox">
+		<pattern id='parrten_damon' x="0" y="0" width="1" height="1">
 			<image xlink:href='<%= Source_img_atricle %>avatar/Damon Daood.png' x='0' y='0' width='70' height='70' />
 		</pattern>
-		<pattern id='parrten_arthus' x="0" y="0" width="1" height="1" patternUnits="objextBoundingBox">
+		<pattern id='parrten_arthus' x="0" y="0" width="1" height="1">
 			<image xlink:href='<%= Source_img_atricle %>avatar/Arthus Huang.png' x='0' y='0' width='70' height='70' />
 		</pattern>
-		<pattern id='parrten_azure' x="0" y="0" width="1" height="1" patternUnits="objextBoundingBox">
+		<pattern id='parrten_azure' x="0" y="0" width="1" height="1" >
 			<image xlink:href='<%= Source_img_atricle %>avatar/Azure Wang.png' x='0' y='0' width='70' height='70' />
 		</pattern>
-		<pattern id='parrten_kevin' x="0" y="0" width="1" height="1" patternUnits="objextBoundingBox">
+		<pattern id='parrten_kevin' x="0" y="0" width="1" height="1" >
 			<image xlink:href='<%= Source_img_atricle %>avatar/Kevin Cheong.png' x='0' y='0' width='70' height='70' />
 		</pattern>
-		<pattern id='parrten_fiona' x="0" y="0" width="1" height="1" patternUnits="objextBoundingBox">
+		<pattern id='parrten_fiona' x="0" y="0" width="1" height="1" >
 			<image xlink:href='<%= Source_img_atricle %>avatar/Fiona Wu.png' x='0' y='0' width='70' height='70' />
 		</pattern>
 		<!-- All areas are listed in the line below. You can use this list in your script. -->
@@ -210,10 +210,47 @@
 		<path id="ZM" title="Zambia" class="land" d="M567.11,489.21L568.43,490.47L569.14,492.87L568.66,493.64L568.1,495.94L568.64,498.3L567.76,499.29L566.91,501.95L568.38,502.69L559.87,505.07L560.14,507.12L558.01,507.52L556.42,508.67L556.08,509.68L555.07,509.9L552.63,512.3L551.08,514.19L550.13,514.26L549.22,513.92L546.09,513.6L545.59,513.38L545.56,513.14L544.46,512.48L542.64,512.31L540.34,512.98L538.51,511.16L536.62,508.78L536.75,499.62L542.59,499.66L542.35,498.67L542.77,497.6L542.28,496.27L542.6,494.89L542.3,494.01L543.27,494.08L543.43,494.96L544.74,494.89L546.52,495.15L547.46,496.44L549.7,496.84L551.42,495.94L552.05,497.43L554.2,497.83L555.23,499.05L556.38,500.62L558.53,500.65L558.29,497.57L557.52,498.08L555.56,496.98L554.8,496.47L555.15,493.62L555.65,490.27L555.02,489.02L555.82,487.22L556.57,486.89L560.34,486.41L561.44,486.7L562.61,487.41L563.73,487.89L565.51,488.36z"/>
 		<path id="ZW" title="Zimbabwe" class="land" d="M562.71,527L561.22,526.7L560.27,527.06L558.92,526.55L557.78,526.52L555.99,525.16L553.82,524.7L553,522.8L552.99,521.75L551.79,521.43L548.62,518.18L547.73,516.47L547.17,515.95L546.09,513.6L549.22,513.92L550.13,514.26L551.08,514.19L552.63,512.3L555.07,509.9L556.08,509.68L556.42,508.67L558.01,507.52L560.14,507.12L560.32,508.2L562.66,508.14L563.96,508.75L564.56,509.47L565.9,509.68L567.35,510.62L567.36,514.31L566.81,516.35L566.69,518.55L567.14,519.43L566.83,521.17L566.4,521.44L565.66,523.59z"/>
 	</g>
-	<circle cx='862' cy='372' r='35' fill='url(#parrten_arthus)' stroke='#C5E9F7' stroke-width='4'></circle>
-	<circle cx='937' cy='372' r='35' fill='url(#parrten_azure)' stroke='#C5E9F7' stroke-width='4'></circle>
-	<circle cx='110' cy='390' r='35' fill='url(#parrten_kevin)' stroke='#C5E9F7' stroke-width='4'></circle>
-	<circle cx='75' cy='320' r='35' fill='url(#parrten_fiona)' stroke='#C5E9F7' stroke-width='4'></circle>
-	<circle cx='290' cy='375' r='35' fill='url(#parrten_damon)' stroke='#C5E9F7' stroke-width='4'></circle>
+	<g id='tf_arthus' style='display:none;'>
+		<path fill="#049fd9" fill-opacity='0.9' stroke="#f5f5f6" stroke-width="2" d="M827 337 l -15 -35 h 15 q 10 0 10 -10 v -100 q 0 -10 -10 -10 h -174 q -10 0 -10 10 v 100 q 0 10 10 10 h 139 l 35 35"></path>
+		<switch>
+        <foreignObject x="653" y="192" width="174" height="100">
+            <p xmlns="http://www.w3.org/1999/xhtml" class='svg_bubble'>I'm programming like a composer. Are you ready to rock?</p>
+            <p xmlns="http://www.w3.org/1999/xhtml" class='svg_bubble2'>Arthus Huang</p>
+        </foreignObject>
+	</g>
+	<g id='tf_azure' style='display:none;'>
+		<path fill="#43a942" fill-opacity='0.9' stroke="#f5f5f6" stroke-width="2" d="M902 337 l -15 -35 h 15 q 10 0 10 -10 v -100 q 0 -10 -10 -10 h -174 q -10 0 -10 10 v 100 q 0 10 10 10 h 139 l 35 35"></path>
+		<switch>
+        <foreignObject x="728" y="192" width="174" height="100">
+            <p xmlns="http://www.w3.org/1999/xhtml" class='svg_bubble'>Hi All!</p>
+            <p xmlns="http://www.w3.org/1999/xhtml" class='svg_bubble2'>Azure Wang</p>
+        </foreignObject>
+	</g>
+	<g id='tf_kevin' style='display:none;'>
+		<path fill="#F5A623" fill-opacity='0.9' stroke="#f5f5f6" stroke-width="2" d="M145 355 l 15 -35 h -15 q -10 0 -10 -10 v -100 q 0 -10 10 -10 h 174 q 10 0 10 10 v 100 q 0 10 -10 10 h -139 l -35 35"></path>
+        <foreignObject x="145" y="210" width="174" height="100">
+            <p xmlns="http://www.w3.org/1999/xhtml" class='svg_bubble'>Hi All!</p>
+            <p xmlns="http://www.w3.org/1999/xhtml" class='svg_bubble2'>Kevin Cheong</p>
+        </foreignObject>
+	</g>
+	<g id='tf_fiona' style='display:none;'>
+		<path fill="#f5483f" fill-opacity='0.9' stroke="#f5f5f6" stroke-width="2" d="M110 285 l 15 -35 h -15 q -10 0 -10 -10 v -100 q 0 -10 10 -10 h 174 q 10 0 10 10 v 100 q 0 10 -10 10 h -139 l -35 35"></path>
+        <foreignObject x="110" y="140" width="174" height="100">
+            <p xmlns="http://www.w3.org/1999/xhtml" class='svg_bubble'>Hi All!</p>
+            <p xmlns="http://www.w3.org/1999/xhtml" class='svg_bubble2'>Fiona Wu</p>
+        </foreignObject>
+	</g>
+	<g id='tf_damon' style='display:none;'>
+		<path fill="#14A792" fill-opacity='0.9' stroke="#f5f5f6" stroke-width="2" d="M325 330 l 15 -35 h -15 q -10 0 -10 -10 v -100 q 0 -10 10 -10 h 174 q 10 0 10 10 v 100 q 0 10 -10 10 h -139 l -35 35"></path>
+        <foreignObject x="325" y="185" width="174" height="100">
+            <p xmlns="http://www.w3.org/1999/xhtml" class='svg_bubble'>Hi All!</p>
+            <p xmlns="http://www.w3.org/1999/xhtml" class='svg_bubble2'>Damon Daood</p>
+        </foreignObject>
+	</g>
+	<circle data-tf='arthus' cx='862' cy='372' r='35' fill='url(#parrten_arthus)' stroke='#C5E9F7' stroke-width='4'></circle>
+	<circle data-tf='azure' cx='937' cy='372' r='35' fill='url(#parrten_azure)' stroke='#C5E9F7' stroke-width='4'></circle>
+	<circle data-tf='kevin' cx='110' cy='390' r='35' fill='url(#parrten_kevin)' stroke='#C5E9F7' stroke-width='4'></circle>
+	<circle data-tf='fiona' cx='75' cy='320' r='35' fill='url(#parrten_fiona)' stroke='#C5E9F7' stroke-width='4'></circle>
+	<circle data-tf='damon' cx='290' cy='375' r='35' fill='url(#parrten_damon)' stroke='#C5E9F7' stroke-width='4'></circle>
 </svg>
 </div>

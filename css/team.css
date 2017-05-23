@@ -1,12 +1,12 @@
-.svg_con{margin: 40px auto;width: 100%; position: relative;}
+.svg_con{margin: 30px auto 20px auto;width: 100%; position: relative;}
 
-.intro {margin-top: 20px;}
-.intro h1{text-align: center; font-size: 24px; color: #858688;font-weight: normal;}
+.intro {margin-top: 20px; height: 30px; line-height: 30px; min-height: 30px;}
+.intro h1{text-align: center; font-size: 24px; color: #858688;font-weight: normal; height: 30px; line-height: 30px;}
 .svg_map{display: block; width: 100%; }
+.svg_bubble{width: 100%; height: 75%; font-size: 17px; color: white; overflow: hidden; }
+.svg_bubble2{width: 100%; height: 25%; font-size: 17px; color: white; overflow: hidden; text-align: right; }
 
-
-#CN,#US{fill:#858688; }
-#CN:hover,#US:hover{fill:#07C1E4; cursor: pointer;}
+#CN,#US{fill:#07C1E4; }
 
 @media only screen and (max-width: 768px) {
 	.intro h1{font-size: 20px; }
