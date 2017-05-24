@@ -12,22 +12,77 @@
     <div class="wrapper">
       <!-- breadcrumb-->
       <!--main content -->
-        <div class="main">
+      
         <%- include('controls/breadcrumbs') %>   
         <!-- intro text -->
         <h1 class='part_h1'><a>Members</a></h1>
-        <%- include('controls/map') %> 
-        <!--content blocks -->
-       <!-- how to add the members.ejs here??? -->
+
+        <div class="desktopBio">
+          <%- include('controls/map') %> 
         </div>
+        <!-- mobile bio -->
+        <div class="mobileBio">
+          <!-- Damon -->
+          <div class="teamBio">
+            <div class="bioImg"><img src="<%= Source_img_atricle %>avatar/Damon Daood.png"></div>
+            <blockquote>
+            <footer>
+            <q>When the path comes to an end, change.</q>
+            <span><strong> - Damon Daood</strong><br>Ninja Prototype Manager</span>
+            </footer>
+           </blockquote>
+          </div>
+          <!-- KC -->
+          <div class="teamBio">
+          <div class="bioImg"><img src="<%= Source_img_atricle %>avatar/Kevin Cheong.png"></div>
+          <blockquote>
+          <q>Doing what you like is freedom, liking what you do is happiness.</q>
+          <footer>
+            <span><strong>- "KC" Kevin Cheong</strong><br>UX Designer/Mobile Prototype</span></footer>
+           </blockquote>
+          </div>
+          <!-- Arthus -->
+          <div class="teamBio">
+          <div class="bioImg"><img src="<%= Source_img_atricle %>avatar/Arthus Huang.png"></div>
+          <blockquote>
+          <q>I'm programming like a composer. Are you ready to rock?</q>
+          <footer>
+            <span><strong> - Arthus Huang</strong><br>Front End Developer/Mobile Prototype</span></footer>
+            </blockquote>
+          </div>
+          <!-- Azure -->
+          <div class="teamBio">
+          <div class="bioImg"><img src="<%= Source_img_atricle %>avatar/Azure Wang.png"></div>
+            <blockquote>
+            <q>I like prototyping, video games and tortoises.</q>
+            <footer>
+            <span><strong> - Azure Wang</strong><br>Front End Developer/Desktop Prototype</span>
+            </footer>
+            </blockquote>
+          
+          </div>
+          <!-- Fiona -->
+          <div class="teamBio">
+          <div class="bioImg"><img src="<%= Source_img_atricle %>avatar/Fiona Wu.png"></div>
+          <blockquote>
+          <q>I appreciate good food, light music, thriller books and action movies.</q>
+          <footer>
+            <span><strong> - Fiona Wu</strong><br>UX Designer/Desktop Prototype</span>
+            </footer>
+            </blockquote>
+          </div>
+
+        </div>
+
+    
     </div>
   </div>    
   <div class='team_project'>
-      <h1 class='part_h1'><a>Projects</a></h1>
-      <div class='team_project_logos'><a class='logo_webex'></a><a class='logo_spark'></a><a class='logo_jabber'></a></div>
+    <h1 class='part_h1'><a>Projects</a></h1>
+    <div class='team_project_logos'><a class='logo_webex'></a><a class='logo_spark'></a><a class='logo_jabber'></a></div>
   </div>
   <div class='team_project_photo'></div>
-   <!-- footer -->
-   <%- include('controls/footer') %>
+  <!-- footer -->
+  <%- include('controls/footer') %>
 </body>
 </html>
