@@ -1,6 +1,7 @@
 .article{position: relative;}
 .article_header{ height: 70px; line-height: 70px; width: 100%; margin-top: 40px;}
 .article_header h1{font-weight:300; font-size:48px; text-align: left; color: #212121; width: 100%;height: 40px; line-height: 40px;}
+.article_header .article_inprogress{font-size: 18px; height: 48px; line-height: 48px;  color: #F5A623;text-align: left;margin-right: 0%;}
 .article_header p{height: 30px; line-height: 60px; width: 80%; font-size: 18px; color: #858688;margin-right: 20%; text-align: right;  position: relative;}
 .article_header p i{display: block; width: 30px; height: 30px; border-radius: 50%; position: absolute; /* top: 0px; right: -40px;*/ top:15px; left: 0; background-repeat: no-repeat; background-position: center;background-size: cover; }
 .article_header p span{position: absolute;left: 45px; top:0;}
@@ -35,6 +36,7 @@ td,th{border:1px solid #ccc; padding: 0 14px;}
 	.article_header{ height: 65px;line-height: 65px;}
 	.article_header h1{font-size:32px; line-height: 32px;}
 	.article_header p{font-size: 18px;height: 25px; line-height: 25px;}
+	.article_header .article_inprogress{font-size: 16px; height: 30px; line-height: 30px;}
 	/*.article_header p i{ width: 25px; height: 25px;  right: -30px; }*/
 	.article_header p i{display: block; width: 25px; height: 25px; top:5px; left: 0; }
 	.article_header p span{position: absolute;left: 30px; top:5px;}
@@ -45,6 +47,7 @@ td,th{border:1px solid #ccc; padding: 0 14px;}
 	.article_header{ padding:0 20px; margin-top: 0; height: 50px;line-height: 50px;}
 	.article_header h1{font-size:35px;  line-height: 30px;margin-top: 0px;}
 	.article_header p{font-size: 14px;height: 20px; line-height: 20px;}
+	.article_header .article_inprogress{font-size: 16px; height: 20px; line-height: 20px;}
 	/*.article_header p i{ width: 20px; height: 20px;  right: -25px; }*/
 	.article_header p i{display: block; width: 20px; height: 20px; top:5px; left: 0; }
 	.article_header p span{position: absolute;left: 25px; top:5px;}

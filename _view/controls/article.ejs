@@ -1,6 +1,7 @@
 <article class='article'>
 	<header class='article_header'>
 		<h1><%= Title %></h1>
+		<% if(IS_DRAFT != '') { %><p class='article_inprogress'>Work in Progress</p><% } %>
 		<% if(Author != '') { %>
 			<p><i style="background-image:url('<%= Source_img_atricle %>avatar/<%= Author %>.png')"></i><span><%= Author %></span></p>
 		<% } %>
