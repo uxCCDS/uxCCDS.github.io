@@ -7,6 +7,7 @@ IS_DRAFT: true
 
 #### Desktop Prototype
 
+[https://uxccds.github.io/Spark-Hype-MVO/IA.html](https://uxccds.github.io/Spark-Hype-MVO/IA.html)
 
 # Instructions 
 ![Desktop](../../../img_data/prototypes/Desktop-2x.png)
