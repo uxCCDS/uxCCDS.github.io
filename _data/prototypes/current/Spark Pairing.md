@@ -25,15 +25,23 @@ Cover: prototypes/cover/Spark Pairing_Cover.png
 
 ### On Mobile
 
-1. For the most optimal experience, use Chrome (mobile mode) or IPhone (webapp mode) to view this prototype.
+1) For the most optimal experience, use Chrome (mobile mode) or IPhone (webapp mode) to view this prototype.
 
-2. Select a scenario and continue.
+2) Open the Spark Board prototype and then open the mobile prototype. Press the plus icon on the top right to begin pairing. Click on the blue bar that says, “connecting…” to mimic the prototypes being paired.
 
-3. If you encounter any issues, clear the  browser cache and reload page.
+3) Select a scenario and continue.
+
+4) If you encounter any issues, clear the browser cache and reload page.
  
 ### On Desktop
 
-1. Please use Chrome browser to view this prototype.
+1) Please use Chrome browser to view this prototype.
+
+2) Open the Spark Board prototype and then open the desktop prototype. Press the search icon on the top right to begin pairing.
+
+3) Select a scenario and continue.
+
+4) If you encounter any issues, clear the browser cache and reload page.
 
 ### On Spark Board
 *Disclaimer: This is simulating an experience on the Sparkboard by using a secondary desktop (e.g. Laptop)*
