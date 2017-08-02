@@ -1,4 +1,4 @@
-Title: Information Architecture Phase 1
+Title: IA (Phase 1)
 Desc: Information Architecture for Spark
 Date: 2017-8-01
 Cover: prototypes/cover/Information Architecture.jpg
