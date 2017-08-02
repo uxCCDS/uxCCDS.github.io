@@ -1,6 +1,6 @@
 Title: Information Architecture
 Desc: Information Architecture for Spark
-Date: 2017-6-20
+Date: 2017-8-01
 Cover: prototypes/cover/Information Architecture.jpg
 IS_DRAFT: true
 ---
