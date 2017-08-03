@@ -1,5 +1,5 @@
 Title: IA (Phase 1)
-Desc: Information Architecture for Spark
+Desc: Information Architecture for phase 1 release of Cisco Spark
 Date: 2017-8-01
 Cover: prototypes/cover/Information Architecture.jpg
 IS_DRAFT: true
@@ -7,7 +7,7 @@ IS_DRAFT: true
 
 #### Mobile Prototype 
 
-[https://uxprototype.cisco.com/projects/Reskin/wap/IA2/page/spark.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA2/page/spark.html)
+[https://uxccds.github.io/IA2-P1/page/spark.html](https://uxccds.github.io/IA2-P1/page/spark.html)
 
 #### Desktop Prototype 
 
