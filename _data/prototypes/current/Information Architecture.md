@@ -7,7 +7,7 @@ IS_DRAFT: true
 
 #### Mobile Prototype (VPN required)
 
-[https://uxccds.github.io/IA2/page/spark.html](https://uxccds.github.io/IA2/page/spark.html)
+[https://uxccds.github.io/IA2-P1/page/spark.html](https://uxccds.github.io/IA2-P1/page/spark.html)
 
 #### Desktop Prototype (VPN required)
 
