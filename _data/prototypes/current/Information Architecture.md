@@ -11,7 +11,7 @@ IS_DRAFT: true
 
 #### Desktop Prototype (VPN required)
 
-[https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA.html)
+[https://uxccds.github.io/Spark-Hype-MVO/IA-phase1.html](https://uxccds.github.io/Spark-Hype-MVO/IA-phase1.html)
 
 # Instructions
 
