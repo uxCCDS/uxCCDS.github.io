@@ -7,11 +7,15 @@ IS_DRAFT: true
 
 #### Mobile Prototype (VPN required)
 
-[https://uxprototype.cisco.com/projects/Reskin/wap/IA2/page/spark.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA2/page/spark.html)
+[https://uxccds.github.io/IA2-P1/page/spark.html](https://uxccds.github.io/IA2-P1/page/spark.html)
 
 #### Desktop Prototype (VPN required)
 
+<<<<<<< HEAD
 [https://uxccds.github.io/Spark-Hype-MVO/IA-phase1.html](https://uxccds.github.io/Spark-Hype-MVO/IA-phase1.html)
+=======
+[https://uxccds.github.io/Spark-Hype-MVO/IA.html](https://uxccds.github.io/Spark-Hype-MVO/IA.html)
+>>>>>>> origin/master
 
 # Instructions
 
