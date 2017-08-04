@@ -1,7 +1,7 @@
 Title: IA (Phase 1)
 Desc: Information Architecture for phase 1 release of Cisco Spark
 Date: 2017-8-01
-Cover: prototypes/cover/Information Architecture.jpg
+Cover: prototypes/cover/IA phase1.png
 IS_DRAFT: true
 ---
 

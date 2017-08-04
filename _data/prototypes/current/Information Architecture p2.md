@@ -1,7 +1,7 @@
 Title: IA (Flagpole) 
 Desc: Information Architecture for the future release of Cisco Spark
 Date: 2017-8-01
-Cover: prototypes/cover/Information Architecture.jpg
+Cover: prototypes/cover/IA flagpole.png
 IS_DRAFT: true
 ---
 
