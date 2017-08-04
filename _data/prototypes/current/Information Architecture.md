@@ -5,11 +5,11 @@ Cover: prototypes/cover/Information Architecture.jpg
 IS_DRAFT: true
 ---
 
-#### Mobile Prototype 
+#### Mobile Prototype (VPN Required)
 
 [https://uxprototype.cisco.com/projects/Reskin/wap/IA2-P1/page/spark.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA2-P1/page/spark.html)
 
-#### Desktop Prototype 
+#### Desktop Prototype (VPN Required)
 
 [https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-phase1.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-phase1.html)
 
