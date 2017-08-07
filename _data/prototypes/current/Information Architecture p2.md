@@ -5,11 +5,11 @@ Cover: prototypes/cover/IA flagpole.png
 IS_DRAFT: true
 ---
 
-#### Future release
+#### Future release (VPN Required)
 
 [https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-phase2.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-phase2.html)
 
-#### Phase 1 release
+#### Phase 1 release (VPN Required)
 
 [https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-phase1.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-phase1.html)
 
