@@ -1,0 +1,46 @@
+.part_h1{ line-height: 70px;   text-align: center; font-weight: normal;}
+.part_h1 a{height: 68px; display: inline-block; font-size: 24px;border-bottom: 2px solid #aeaeaf; color:#aeaeaf;text-align: center; padding: 0 20px; }
+.part_h1:hover a{border-bottom: 2px solid #07C1E4; color:#07C1E4; }
+
+.svg_con{margin: 50px auto 20px auto;width: 100%; position: relative;}
+.svg_map{display: block; width: 100%; }
+.svg_bubble{width: 100%; height: 75%; font-size: 17px; color: white; overflow: hidden; }
+.svg_bubble2{width: 100%; height: 25%; font-size: 17px; color: white; overflow: hidden; text-align: right; }
+
+#CN,#US{fill:#07C1E4; }
+
+.team_project{width: 100%; background:linear-gradient(#ffffff, #F8F8F8); margin-top: 20px;}
+
+.team_project_logos{width: 100%; text-align: center; margin-top: 60px; height: 150px;}
+.team_project_logos a{vertical-align: top; display: inline-block; width: 80px; height: 80px; background-size: contain; background-repeat: no-repeat;background-position: center; margin:0 60px;}
+.logo_webex{background-image: url('../img/logo_webex_128.png');}
+.logo_spark{background-image: url('../img/logo_spark_128.png');}
+.logo_jabber{background-image: url('../img/logo_jabber_128.png');}
+
+.team_project_photo{ width: 100%; height: 40vw; background:#F8F8F8 url('../img/team_project_spark.jpg') no-repeat center; background-size: contain; }
+/*---- Mobile Version ----*/
+.mobileBio{display: none;}
+.desktopBio{display: block;}
+.teamBio{width: 100%; border-bottom: 1px dotted #ccc; display: flex;padding: 20px 0;}
+.teamBio img {width:70px; border: 1px solid #fff; border-radius: 50%; flex: 1; margin-right: 18px;}
+.teamBio q{display:block;margin-bottom: 10px;font-size: 20px; font-weight: 300;}
+.teamBio span{font-size: 13px; color: #666;}
+.teamBio span strong{font-weight: 500; font-size: 18px;}
+
+@media only screen and (max-width: 768px) {
+	.part_h1{ line-height: 50px; }
+	.part_h1 a{ height: 48px; font-size: 20px; }
+	.team_project_logos a{width: 60px; height: 60px;margin:0 30px;}
+}
+
+@media only screen and (max-width: 350px) {
+	.part_h1{ line-height: 30px; }
+	.part_h1 a{height: 28px;font-size: 14px;}
+	.team_project_logos a{width: 40px; height: 40px;margin:0 20px;}
+	
+}
+@media only screen and (max-width: 500px) {
+	.desktopBio{display: none;}
+	.mobileBio{display: block;}
+
+}

@@ -2,11 +2,19 @@
 .article_con_thumbnail,.article_con_list{width: 100%; position: relative;}
 
 .pagination a{display: inline-block; width: 40px; height: 40px; line-height: 40px; text-align: center; font-size: 16px; color: #4f5051;  text-decoration: none; cursor: pointer; border-radius: 50%; position: relative;}
-.pagination .current{color: white;background:#07C1E4;}
-.pagination a:hover{ color: #07C1E4; top:-2px;}
+.pagination .current{color: white;background:#16C6CC;}
+.pagination a:hover{ color: #16C6CC; top:-2px;}
 .pagination .current:hover{color: white;}
 
+
+
 @media only screen and (min-width: 769px) {
+  
+  .article_con_thumbnail .articleBlock:hover p{color: white;}
+  .article_con_thumbnail .articleBlock:hover .research_articleBlock_cover,.article_con_thumbnail .articleBlock:hover .experimental_articleBlock_cover{background-color: #17C5CD;}
+  .article_con_thumbnail .articleBlock:hover .current_articleBlock_cover{background-color: #F05424;}
+  .article_con_thumbnail .articleBlock:hover .faq_articleBlock_cover{background-color: #242D3C;}
+  .article_con_thumbnail .articleBlock:hover .archived_articleBlock_cover{background-color: #FFBB33;}
 
   .articleBlock{text-decoration: none;}
 

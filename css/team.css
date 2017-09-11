@@ -21,6 +21,7 @@
 /*---- Mobile Version ----*/
 .mobileBio{display: none;}
 .desktopBio{display: block;}
+.desktopBio .mapWrap{margin: 20px auto; width: 800px; padding: 0 100px; align-self: center;}
 .teamBio{width: 100%; border-bottom: 1px dotted #ccc; display: flex;padding: 20px 0;}
 .teamBio img {width:70px; border: 1px solid #fff; border-radius: 50%; flex: 1; margin-right: 18px;}
 .teamBio q{display:block;margin-bottom: 10px;font-size: 20px; font-weight: 300;}

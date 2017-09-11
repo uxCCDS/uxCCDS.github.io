@@ -15,16 +15,18 @@
       
         <%- include('controls/breadcrumbs') %>   
         <!-- intro text -->
-        <h1 class='part_h1'><a>Members</a></h1>
+        <!--<h1 class='part_h1'><a>Members</a></h1> -->
 
         <div class="desktopBio">
+        <div class="mapWrap">
           <%- include('controls/map') %> 
+        </div>
         </div>
         <!-- mobile bio -->
         <div class="mobileBio">
           <!-- Damon -->
           <div class="teamBio">
-            <div class="bioImg"><img src="<%= Source_img_atricle %>avatar/Damon Daood.png"></div>
+            <div class="bioImg"><img src="<%= Source_img_atricle %>avatar/damon.png"></div>
             <blockquote>
             <footer>
             <q>When the path comes to an end, change.</q>
@@ -68,11 +70,7 @@
     
     </div>
   </div>    
-  <div class='team_project'>
-    <h1 class='part_h1'><a>Projects</a></h1>
-    <div class='team_project_logos'><a class='logo_webex'></a><a class='logo_spark'></a><a class='logo_jabber'></a></div>
-  </div>
-  <div class='team_project_photo'></div>
+  
   <!-- footer -->
   <%- include('controls/footer') %>
 </body>

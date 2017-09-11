@@ -4,12 +4,12 @@ Date: 2017-8-01
 Cover: prototypes/cover/IA phase1.png
 IS_DRAFT: true
 ---
-
-#### Mobile Prototype (VPN Required)
+![vpn_required](../../../img_data/prototypes/VPN.svg)
+#### Mobile Prototype 
 
 [https://uxprototype.cisco.com/projects/Reskin/wap/IA2-P1/page/spark.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA2-P1/page/spark.html)
 
-#### Desktop Prototype (VPN Required)
+#### Desktop Prototype 
 
 [https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-phase1.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-phase1.html)
 

@@ -16,7 +16,7 @@
                 <div class='article_view_btn'><a class='btn_thumbnail' title="thumbnail view" id='btn_thumbnail'></a><a class='btn_list' title='list view' id='btn_list'></a></div>
                 <% for(var i in List){ %>
                 <a class="articleBlock"  target='_self' href='<%= List[i].RenderData.NameHTML %>'>
-                    <div class='articleBlock_cover'>
+                    <div class='articleBlock_cover <%= FolderName%>_articleBlock_cover'>
                         <p class='list_space'></p>
                         <p class="list_title"><%= List[i].RenderData.Title %></p>
                         <p class='list_item_date'><%= List[i].RenderData.Date %></p>
@@ -31,6 +31,8 @@
             </div>
             </div>
         </div>
+        
       <%- include('controls/footer') %>
+  
   </body>
 </html>
