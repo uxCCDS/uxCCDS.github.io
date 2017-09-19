@@ -10,7 +10,7 @@ IS_DRAFT: true
 [https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-interstitial.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-interstitial.html)
 
 
-#Instructions
+# Instructions
 
 ![Desktop](../../../img_data/prototypes/Desktop-2x.png)
 
