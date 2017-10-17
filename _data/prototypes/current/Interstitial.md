@@ -1,28 +1,14 @@
-Title: IA User Testing
-Desc: Testing for multiple features with the new IA
-Date: 2017-10-17
-Cover: prototypes/cover/IA-user-testing.png
+Title: Interstitial Page
+Desc: New interstitial structure before users join a meeting
+Date: 2017-9-19
+Cover: prototypes/cover/Interstitial.png
 IS_DRAFT: true
 ---
-
+![vpn_required](../../../img_data/prototypes/VPN.svg)
 #### Desktop 
 
-[uxccds.github.io/Spark-Hype-MVO/IA-UserTesting.html](uxccds.github.io/Spark-Hype-MVO/IA-UserTesting.html)
+[https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-interstitial.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-interstitial.html)
 
-# Summary
-With this prototype, we tested the following features in two different user testing sessions, each with 4 to 6 participants. All participants have prior experience with web conferencing tools such as Skype for Business, Webex, and Gotomeetings.
-
-**Tested Features:**
-
-1) Coachmarks (First use scenario) - whether people read the coachmarks and whether the coachmarks help them to navigate through the app easier
-
-2) Global v.s. Local activities concept
-
-3) Getting to understand how easy/difficult it is for the users to contact someone through the app as a first-time user
-
-4) Overall experience for OBTP and PSTN
-
-5) OBTP Toast - Whether the toast makes sense to the users
 
 # Instructions
 
@@ -32,26 +18,12 @@ With this prototype, we tested the following features in two different user test
 
 1) Use Chrome browser to view the prototype to see the self-view video working
 
-2) Choose Day 1 to test the coachmark experience
+2) Press 1 to trigger OBTP
 
-3) Choose Day 2 to experience OBPT and PSTN (press 1 to trigger OBTP)
+3) Hover over the "Join meeting with video" button to see an un-blurred self view
 
-# Findings
-(Coming soon)
+4) Hover over the "Join meeting with audio" button to see the self-view video background disappear
 
-# Related Resources
+# Goals	
 
-## Test 1 Session Recording Links (Main focus: FTE)
-
-* [https://go.webex.com/go/lsr.php?RCID=b595e0d316d841c3b6b13840a6cb294c](https://go.webex.com/go/lsr.php?RCID=b595e0d316d841c3b6b13840a6cb294c)
-*  [https://go.webex.com/go/lsr.php?RCID=bcd2e8e9bd5249f9a9995f8baaab2858](https://go.webex.com/go/lsr.php?RCID=bcd2e8e9bd5249f9a9995f8baaab2858)
-*  [https://go.webex.com/go/lsr.php?RCID=6e3b417673304e6faf438049554f1870](https://go.webex.com/go/lsr.php?RCID=6e3b417673304e6faf438049554f1870)
-*  [https://go.webex.com/go/lsr.php?RCID=fde8d0c24de5447ca3bf63befde4d2f2](https://go.webex.com/go/lsr.php?RCID=fde8d0c24de5447ca3bf63befde4d2f2)
-* [https://go.webex.com/go/lsr.php?RCID=9b2955deca28446a8972ab888d971277](https://go.webex.com/go/lsr.php?RCID=9b2955deca28446a8972ab888d971277)
-* [https://go.webex.com/go/lsr.php?RCID=4cf90d3b58a34afc84264d497ecdef70](https://go.webex.com/go/lsr.php?RCID=4cf90d3b58a34afc84264d497ecdef70)
-
-## Test 2 Session Recording Links (Main Focus: OBPT and PSTN)
-* [https://go.webex.com/go/lsr.php?RCID=49d0cfe29ca8434b9b167e8600cf3aaa](https://go.webex.com/go/lsr.php?RCID=49d0cfe29ca8434b9b167e8600cf3aaa) 
-* [https://go.webex.com/go/lsr.php?RCID=12cd885009574440b1b41b74c4df9d92](https://go.webex.com/go/lsr.php?RCID=12cd885009574440b1b41b74c4df9d92)
-* [https://go.webex.com/go/lsr.php?RCID=00f33893c79747f4a8fe2a34d2252b98](https://go.webex.com/go/lsr.php?RCID=00f33893c79747f4a8fe2a34d2252b98)
-* [https://go.webex.com/go/lsr.php?RCID=6181271aaeba44a39f926e62783e946f](https://go.webex.com/go/lsr.php?RCID=6181271aaeba44a39f926e62783e946f)
+To test new design for Spark.
