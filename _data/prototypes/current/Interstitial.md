@@ -1,5 +1,5 @@
-Title: Interstitial Page
-Desc: New interstitial structure before users join a meeting
+Title: IA User Testing
+Desc: Testing for multiple features with the new IA
 Date: 2017-10-17
 Cover: prototypes/cover/IA-user-testing.png
 IS_DRAFT: true
