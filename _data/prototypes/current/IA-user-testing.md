@@ -7,7 +7,7 @@ IS_DRAFT: true
 
 #### Desktop 
 
-[uxccds.github.io/Spark-Hype-MVO/IA-UserTesting.html](uxccds.github.io/Spark-Hype-MVO/IA-UserTesting.html)
+[https://uxccds.github.io/Spark-Hype-MVO/IA-UserTesting.html](https://uxccds.github.io/Spark-Hype-MVO/IA-UserTesting.html)
 
 # Summary
 With this prototype, we tested the following features in two different user testing sessions, each with 4 to 6 participants. All participants have prior experience with web conferencing tools such as Skype for Business, Webex, and Gotomeetings.
