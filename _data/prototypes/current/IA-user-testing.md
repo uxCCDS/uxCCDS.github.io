@@ -39,9 +39,13 @@ With this prototype, we tested the following features in two different user test
 # Key Findings
 
 1) Users defined Cisco Spark as a collaboration tool
+
 2) Confusion still exists in diffrienciating "Space" v.s. "Activities"
+
 3) Switching spaces during a call caused confusion for first time users
+
 4) Join meeting with video fits the users' mental model
+
 5) Join with audio, especially in PSTN situation confused the users
 
 # Related Resources
