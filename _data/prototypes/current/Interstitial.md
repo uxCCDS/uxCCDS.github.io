@@ -7,7 +7,7 @@ IS_DRAFT: true
 ![vpn_required](../../../img_data/prototypes/VPN.svg)
 #### Desktop 
 
-2) New IA Version 2
+* New IA Version 2 (Most recent)
 
 [https://uxccds.github.io/Spark-Hype-MVO/IA-UserTesting.html](https://uxccds.github.io/Spark-Hype-MVO/IA-UserTesting.html)
 
@@ -17,7 +17,7 @@ This version compares 3 different interaction elements with either 1 or 2 action
 ![v2-option3](../../../img_data/prototypes/PSTN-3-1-1.jpg)
 ![v2-option4](../../../img_data/prototypes/PSTN-4-1-1.jpg)
 
-1) New IA version 1
+* New IA version 1
 
 [https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-interstitial.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-interstitial.html)
 
