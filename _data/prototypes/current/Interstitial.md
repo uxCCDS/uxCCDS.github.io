@@ -13,11 +13,20 @@ IS_DRAFT: true
 
 This version compares 3 differnt visual layouts with 2 action buttons
 
+![v1-option1](../../../img_data/prototypes/PSTN-option1.jpg)
+![v1-option2](../../../img_data/prototypes/PSTN-option2.jpg)
+![v1-option3](../../../img_data/prototypes/PSTN-option3.jpg)
+
+
 2) New IA Version 2
 
 [https://uxccds.github.io/Spark-Hype-MVO/IA-UserTesting.html](https://uxccds.github.io/Spark-Hype-MVO/IA-UserTesting.html)
 
 This version compares 3 different interaction elements with either 1 or 2 action buttons
+
+![v2-option2](../../../img_data/prototypes/PSTN-2-1-1.jpg)
+![v2-option3](../../../img_data/prototypes/PSTN-3-1-1.jpg)
+![v2-option4](../../../img_data/prototypes/PSTN-4-1-1.jpg)
 
 
 # Instructions
