@@ -7,7 +7,7 @@ IS_DRAFT: true
 ![vpn_required](../../../img_data/prototypes/VPN.svg)
 #### Mobile Prototype 
 
-[https://uxprototype.cisco.com/projects/Reskin/wap/IA2-P1/page/spark.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA2-P1/page/spark.html)
+[https://uxprototype.cisco.com/projects/Reskin/wap/IA2/page/spark.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA2/page/spark.html)
 
 #### Desktop Prototype 
 
