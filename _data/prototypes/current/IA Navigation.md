@@ -13,7 +13,7 @@ With this prototype, we tested the following features in two different user test
 
 ### Desktop 
 
-[https://uxccds.github.io/Spark-Hype-MVO/IA-UserTesting.html](https://uxccds.github.io/Spark-Hype-MVO/IA-UserTesting.html)
+[https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-UserTesting.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-UserTesting.html)
 
 ### Mobile
 [https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html](https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html)
