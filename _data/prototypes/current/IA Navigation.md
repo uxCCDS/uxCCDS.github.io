@@ -52,7 +52,7 @@ For the mobile prototype, we had on-site testees to test the new IA navigation. 
 
 3) Long tap (at least 2 seconds) on the empty space in Day 1 view (or move cursor if using a browser Simulator) to get to the Day 2 flow.
 
-4) Note to Simulator users: elemement alignment might be off using the simuulator, as we modified the prototype to adapt to a better experience on iOS devices.
+4) Note to Simulator users: element alignment might be slightly off in the simuulator, as we modified the prototype to adapt to a better experience on iOS devices.
 
 # Key Findings
 
@@ -65,6 +65,15 @@ For the mobile prototype, we had on-site testees to test the new IA navigation. 
 4) Join meeting with video fits the users' mental model
 
 5) Join with audio, especially in PSTN situation confused the users
+
+6) Team v.s. Space concept is confusing to some users
+
+7) Global scheduling didn't get to utilize as much as the users tend to schedule the meetings within space
+
+8) People understand where to find "meetings" under "My Stuff" on both desktop and mobile
+
+9) Mobile navigation seemed confusing at times when the users were asked to perform out-of-space tasks (e.g. chat) during a call
+
 
 # User Testing
 
