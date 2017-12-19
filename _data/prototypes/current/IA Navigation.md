@@ -1,12 +1,18 @@
 Title: IA Navigation
 Desc: User testing for multiple features in the new IA
-Date: 2017-10-24
+Date: 2017-12-15
 Cover: prototypes/cover/IA-user-testing.png
 IS_DRAFT: true
 ---
 
 # Summary
-With this prototype, we tested the following features in two different user testing sessions, each with 4 to 6 participants. All participants have prior experience with web conferencing tools such as Skype for Business, Webex, and Gotomeetings.
+With the desktop prototype, we tested the following features in different user testing sessions, each with 4 to 6 participants. All participants have prior experience with web conferencing tools such as Skype for Business, Webex, and Gotomeetings. The tasks including Frist time experiece (FTE), use phone for audio (PSTN), scheduling flow, and the filter functions
+
+We also tested the idea of "team" and "space" to see whether the design fits the users mental model. Most users were able to utilize the filter to facilitate the Team, but the "team" v.s. "space" idea still seemed confusing to others. 
+
+In tasks testing whether the users understand the global scheduling function v.s. the in-space scheduling function, we found that most users tend to schedule the meeting from existing spaces, rather than starting with the global activity button.
+
+For the mobile prototype, we had on-site testees to test the new IA navigation. With a lot less elements available in the new IA (comparing to the existing app), some users found it took them longer to navigate through the app smoothly. We also tested the idea of jumping in and out of a spaces for different tasks. 
 
 # Links
 ![vpn_required](../../../img_data/prototypes/VPN.svg)
@@ -24,7 +30,7 @@ With this prototype, we tested the following features in two different user test
 # Platform
 
 ![Desktop](../../../img_data/prototypes/Desktop-2x.png)
-![Desktop](../../../img_data/prototypes/Desktop-2x.png)
+![Desktop](../../../img_data/prototypes/Mobile-2x.png)
 
 # Instructions
 
@@ -32,21 +38,21 @@ With this prototype, we tested the following features in two different user test
 
 1) Use Chrome browser to view the prototype to see the self-view video working
 
-2) Choose Day 1 to test the coachmark experience
+2) Choose Day 1 to test first time experience (FTE)
 
-3) Choose Day 2 to experience OBPT and PSTN (press 1 to trigger OBTP)
+3) Choose Day 2 to experience OBPT, PSTN (press 1 to trigger OBTP), and joining a team space
 
 ## On Mobile
 
-1) You can visit this prototype by using Chrome(Mobile Simulator) or installing it as a web app on IOS  
+1) You can visit this prototype by using Chrome(Mobile Simulator) or installing it as a web app on iOS devices (The prototype currently only works for 4.7" and 5.5" devices) 
 *[How to use Chrome Mobile Simulator](https://uxccds.github.io/prototypes/faq/chrome's-mobile-simulator.html)*  
 *[How to Install Web App](https://uxccds.github.io/prototypes/faq/install-web-app.html)*
 
-2) The prototype is set up for a new user defaultly.
+2) The users can experience the brief sign-on flow and get to the Day1 Scenario.
 
-3) Keep pressing(mousemoving in Simulator) for 2 seconds at the buttom of the space list will add spaces for Day 2 flow.
+3) Long tap (at least 2 seconds) on the empty space in Day 1 view (or move cursor if using a browser Simulator) to get to the Day 2 flow.
 
-4) Some screens with input box will have some position issue on Simulator, because we want it runs better on IOS.
+4) Note to Simulator users: elemement alignment might be off using the simuulator, as we modified the prototype to adapt to a better experience on iOS devices.
 
 # Key Findings
 
@@ -64,7 +70,9 @@ With this prototype, we tested the following features in two different user test
 
 ## Tested Features:
 
-1) Coachmarks (First use scenario) - whether people read the coachmarks and whether the coachmarks help them to navigate through the app easier
+**Desktop**
+
+1) Coachmarks (First use scenario) - whether people read the coachmarks and whether the coachmarks help them to navigate through the app easier **(feature not shown in this current PT)**
 
 2) Global v.s. Local activities concept
 
@@ -73,6 +81,21 @@ With this prototype, we tested the following features in two different user test
 4) Overall experience for OBTP and PSTN
 
 5) OBTP Toast - Whether the toast makes sense to the users
+
+6) Filters - Discoverablility and whether the user understand the concept differences between teams and spaces
+
+7) Scheduling - Global scheduling v.s. In-space scheduling
+
+8) Meeting List / My Stuff
+
+
+**Mobile**
+
+1) Navigation
+
+2) Global v.s In-Space activities
+
+3) My Stuff and teams
 
 ## Test 1 Session Recording Links (Main focus: FTE)
 
@@ -91,3 +114,6 @@ With this prototype, we tested the following features in two different user test
 [https://go.webex.com/go/lsr.php?RCID=12cd885009574440b1b41b74c4df9d92](https://go.webex.com/go/lsr.php?RCID=12cd885009574440b1b41b74c4df9d92)  
 [https://go.webex.com/go/lsr.php?RCID=00f33893c79747f4a8fe2a34d2252b98](https://go.webex.com/go/lsr.php?RCID=00f33893c79747f4a8fe2a34d2252b98)  
 [https://go.webex.com/go/lsr.php?RCID=6181271aaeba44a39f926e62783e946f](https://go.webex.com/go/lsr.php?RCID=6181271aaeba44a39f926e62783e946f)
+
+## Test 3 Mobile Navigation
+**[Findings Report](https://cisco.box.com/s/1hwhuw38s1yty9tqdz1thee214dfylli)**
