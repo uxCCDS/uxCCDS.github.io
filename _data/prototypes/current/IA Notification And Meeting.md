@@ -20,18 +20,16 @@ We updated the mobile prototype to MVVM mode. You can use mobile prototype to ch
 
 [https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html](https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html)
 
-# Sign in as different users
+## Sign in as different users
 
-Change the parameter 'user' to switch user. Default value is ‘Barbara German’. Please check the account list at the buttom of the page.
-
+Change the parameter 'user' to switch user. Default value is ‘Barbara German’. Please check the account list at the buttom of the page.  
 eg. sign in as ‘Linda sinu’ （％20 means space）
 
 [https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html?user=Linda Sinu](https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html?user=Linda%20Sinu)
 
-# Use private session to test prototype.
+## Use private session to test prototype
 
-Change the parameter 'key' to switch session. Default value is ‘public’. You can input any string as the value of 'key'.
-
+Change the parameter 'key' to switch session. Default value is ‘public’. You can input any string as the value of 'key'.  
 eg. use session 'private'
 
 [https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html?user=Linda Sinu&key=private](https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html?user=Linda%20Sinu&key=private)
