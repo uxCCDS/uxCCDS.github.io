@@ -2,7 +2,6 @@ Title: IA Navigation
 Desc: User testing for multiple features in the new IA
 Date: 2017-12-15
 Cover: prototypes/cover/IA-user-testing.png
-IS_DRAFT: true
 ---
 
 # Summary
@@ -22,10 +21,8 @@ For the mobile prototype, we had on-site testees to test the new IA navigation. 
 [https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-UserTesting.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-UserTesting.html)
 
 ### Mobile
-[https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html](https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html)
 
-### Mobile New Activity Animation
-[https://uxprototype.cisco.com/projects/Reskin/wap/IA2-P1/page/spark.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA2-P1/page/spark.html)
+[https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA2-P1/page/spark.html)
 
 # Platform
 
