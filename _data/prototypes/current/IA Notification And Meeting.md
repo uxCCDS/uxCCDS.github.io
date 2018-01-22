@@ -34,6 +34,18 @@ eg. use session 'private'
 
 [https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html?user=Linda Sinu&key=private](https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html?user=Linda%20Sinu&key=private)
 
+## Choose the initial data
+
+Use the parameter 'initMode' to force the data to update
+
+if the parameter 'initMode' equals 1, the prototype will init the data for day1  
+if the parameter 'initMode' equals 2, the prototype will init the data for day2  
+if you do not use the parameter 'initMode', the prototype will use the data from database or init the data for day1
+
+eg. init the data for day1
+
+[https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html?initMode=1](https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html?initMode=1)
+
 # Platform
 
 ![Desktop](../../../img_data/prototypes/Desktop-2x.png)
