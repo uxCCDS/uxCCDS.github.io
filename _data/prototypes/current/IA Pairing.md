@@ -10,19 +10,21 @@ IS_DRAFT: true
 In this user testing session, we tested two versions of pairing function with different element placement
 
 # Links
-![Version A](../../../img_data/prototypes/IA-DevicePairingA.png)
-![Version b](../../../img_data/prototypes/IA-DevicePairingB.png)
+
 
 ### Desktop 
 
 [https://uxccds.github.io/Spark-Hype-MVO/IA-DevicePairingA.html](https://uxccds.github.io/Spark-Hype-MVO/IA-DevicePairingA.html)
+
 [https://uxccds.github.io/Spark-Hype-MVO/IA-DevicePairingB.html](https://uxccds.github.io/Spark-Hype-MVO/IA-DevicePairingB.html)
 
+![Version A](../../../img_data/prototypes/IA-DevicePairingA.png)
+![Version B](../../../img_data/prototypes/IA-DevicePairingB.png)
 
 # Platform
 
 ![Desktop](../../../img_data/prototypes/Desktop-2x.png)
-![Desktop](../../../img_data/prototypes/Mobile-2x.png)
+
 
 # Instructions
 
@@ -43,5 +45,4 @@ In this user testing session, we tested two versions of pairing function with di
 
 **Desktop**
 
-**Mobile**
 
