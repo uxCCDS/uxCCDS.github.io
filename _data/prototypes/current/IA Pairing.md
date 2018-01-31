@@ -30,19 +30,13 @@ In this user testing session, we tested two versions of pairing function with di
 
 ## On Desktop
 
-1) Use Chrome browser to view the prototype to see the self-view video working
+1) Version A - click on the pairing icon next to the user Avatar, and follow the flow to connect to a device (Toyshop)
 
-2) Choose Day 1 to test first time experience (FTE)
-
-3) Choose Day 2 to experience OBPT, PSTN (press 1 to trigger OBTP), and joining a team space
+2) Version B - Click on the pairing function button at the bottom of the space list, and follow the flow to connect to a device (Toyshop)
 
 
 # User Testing
 (Coming soon)
 
-## Tested Features:
-
-
-**Desktop**
 
 
