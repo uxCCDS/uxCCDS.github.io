@@ -12,10 +12,6 @@ We updated the mobile prototype to MVVM (Model–View–ViewModel) mode. This pr
 # Links
 ![vpn_required](../../../img_data/prototypes/VPN.svg)
 
-### Desktop 
-
-[https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-UserTesting.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-UserTesting.html)
-
 ### Mobile
 
 [https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html](https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html)
