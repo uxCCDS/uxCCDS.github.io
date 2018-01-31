@@ -1,6 +1,6 @@
-Title: IA Notification And Meeting
+Title: IA Mobile Notification & Meeting
 Desc: User testing for multiple features in the new IA
-Date: 2018-01-10
+Date: 2018-01-24
 Cover: prototypes/cover/IA Notification And Meeting.png
 IS_DRAFT: true
 ---
@@ -67,9 +67,6 @@ eg. init the data for day1
 # User Testing
 
 ## Tested Features:
-
-
-**Desktop**
 
 **Mobile**
 
