@@ -10,8 +10,8 @@ IS_DRAFT: true
 In this user testing session, we tested two versions of pairing function with different element placement
 
 # Links
-![Version A](../../../img_data/IA-DevicePairingA.png)
-![Version A](../../../img_data/IA-DevicePairingB.png)
+![Version A](../../../img_data/prototypes/IA-DevicePairingA.png)
+![Version b](../../../img_data/prototypes/IA-DevicePairingB.png)
 
 ### Desktop 
 
