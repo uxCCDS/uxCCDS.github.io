@@ -7,7 +7,9 @@ IS_DRAFT: true
 
 # Summary
 
-We updated the mobile prototype to MVVM (Model–View–ViewModel) mode. This prototype allows more than one user to interact with each other using the chat function.
+For the mobile prototype, we had on-site testees to test the new IA navigation. With a lot less elements available in the new IA (comparing to the existing app), some users found it took them longer to navigate through the app smoothly. We also tested the idea of jumping in and out of a spaces for different tasks. 
+
+We also updated the latest mobile prototype (first link below) to MVVM (Model–View–ViewModel) mode. This update allows more than one user to interact with each other using the chat function.
 
 # Links
 ![vpn_required](../../../img_data/prototypes/VPN.svg)

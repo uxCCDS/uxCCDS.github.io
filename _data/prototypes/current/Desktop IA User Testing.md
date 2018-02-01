@@ -11,7 +11,7 @@ We also tested the idea of "team" and "space" to see whether the design fits the
 
 In tasks testing whether the users understand the global scheduling function v.s. the in-space scheduling function, we found that most users tend to schedule the meeting from existing spaces, rather than starting with the global activity button.
 
-For the mobile prototype, we had on-site testees to test the new IA navigation. With a lot less elements available in the new IA (comparing to the existing app), some users found it took them longer to navigate through the app smoothly. We also tested the idea of jumping in and out of a spaces for different tasks. 
+In the task testing the invite people function, most users first clicked on the global action button since that was the most familiar button to them right after the FTE. No users thought about finding the invite function under "Mystuff" in the first try. The in-meeting panel and roster seemed to also match users' mental model without much struggle. The filter was however not an easy to find feature, that almost all testee missed it on the first try.
 
 # Links
 ![vpn_required](../../../img_data/prototypes/VPN.svg)
@@ -62,6 +62,9 @@ For the mobile prototype, we had on-site testees to test the new IA navigation. 
 
 8) The users understand where to find "meetings" under "My Stuff" on desktop
 
+9) Filter under search was hard to find for the testees
+
+10) Most users clicked on global action button first when being asked to invite more users to join Cisco Spark
 
 
 # User Testing
@@ -85,6 +88,12 @@ For the mobile prototype, we had on-site testees to test the new IA navigation. 
 7) Scheduling - Global scheduling v.s. In-space scheduling
 
 8) Meeting List / My Stuff
+
+9) New In-meeting panel
+
+10) Invite people to Cisco Spark
+
+11) New Search/Filter Interface
 
 
 
