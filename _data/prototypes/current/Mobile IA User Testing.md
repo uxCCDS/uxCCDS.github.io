@@ -1,5 +1,5 @@
-Title: IA Mobile Notification & Meeting
-Desc: User testing for multiple features in the new IA
+Title: (Mobile) IA User Testing
+Desc: User testing for notification and meeting list for mobile new IA
 Date: 2018-01-24
 Cover: prototypes/cover/IA Notification And Meeting.png
 IS_DRAFT: true
@@ -15,6 +15,10 @@ We updated the mobile prototype to MVVM (Model–View–ViewModel) mode. This pr
 ### Mobile
 
 [https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html](https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html)
+
+Phase 1 version
+
+[https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA2-P1/page/spark.html)
 
 ## Sign in as different users
 
@@ -48,7 +52,7 @@ eg. init the data for day1
 
 # Platform
 
-![Desktop](../../../img_data/prototypes/Mobile-2x.png)
+![Mobile](../../../img_data/prototypes/Mobile-2x.png)
 
 # Instructions
 
@@ -59,12 +63,49 @@ eg. init the data for day1
 *[How to use Chrome Mobile Simulator](https://uxccds.github.io/prototypes/faq/chrome's-mobile-simulator.html)*  
 *[How to Install Web App](https://uxccds.github.io/prototypes/faq/install-web-app.html)*
 
+* For phase 1 version
 
-# User Testing
+1) The users can experience the brief sign-on flow and get to the Day1 Scenario.
+
+2) Long tap (at least 2 seconds) on the empty space in Day 1 view (or move cursor if using a browser Simulator) to get to the Day 2 flow.
+
+3) Note to Simulator users: element alignment might be slightly off in the simuulator, as we modified the prototype to adapt to a better experience on iOS devices.
+
+
+# Key Findings
+
+1) The users knows where to find "meetings" under "My Stuff" on the mobile interface
+
+2) Mobile navigation seemed confusing at times when the users were asked to perform out-of-space tasks (e.g. chat) during a call
 
 ## Tested Features:
 
-**Mobile**
+1) Navigation
+
+2) Global v.s In-Space activities
+
+3) My Stuff and teams
+
+## Test 1 Mobile Navigation
+
+* [Findings Report](https://cisco.box.com/s/1hwhuw38s1yty9tqdz1thee214dfylli)
+
+1. [https://cisco.box.com/s/bvb5bt3q12zrfj8bzeuhhrdr2tg5pf0h](https://cisco.box.com/s/bvb5bt3q12zrfj8bzeuhhrdr2tg5pf0h)  
+2. [https://cisco.box.com/s/mty0mkiqdw3y9usul22pzu1nf55gzu67](https://cisco.box.com/s/mty0mkiqdw3y9usul22pzu1nf55gzu67)  
+3. [https://cisco.box.com/s/zcp226m80k72s0a0avq2bhnz607dx8kp](https://cisco.box.com/s/zcp226m80k72s0a0avq2bhnz607dx8kp)  
+4. [https://cisco.box.com/s/utftbss2vlnoqafi2n7huttizlzii6ko](https://cisco.box.com/s/utftbss2vlnoqafi2n7huttizlzii6ko)  
+5. [https://cisco.box.com/s/pzc71oezu0zxa7r9w335ypnb1dxkoe6q](https://cisco.box.com/s/pzc71oezu0zxa7r9w335ypnb1dxkoe6q)  
+
+
+## Test 2 Navigation / Meeting List / Schadule Meeting
+
+1. [https://cisco.box.com/s/ezp9a5uhkdoayttd8wo4z0ya3iepdt12](https://cisco.box.com/s/ezp9a5uhkdoayttd8wo4z0ya3iepdt12)
+2. [https://cisco.box.com/s/ladpqrebtz197keq5q5r06bukhpk0evh](https://cisco.box.com/s/ladpqrebtz197keq5q5r06bukhpk0evh)
+3. [https://cisco.box.com/s/jq7uym0rcocjgbrysaqjcxwz0n9zzg0e](https://cisco.box.com/s/jq7uym0rcocjgbrysaqjcxwz0n9zzg0e)
+4. [https://cisco.box.com/s/2m06w7qhvgo1w4a8cfpllvy761gsge48](https://cisco.box.com/s/2m06w7qhvgo1w4a8cfpllvy761gsge48)
+5. [https://cisco.box.com/s/lvyzjubx6imc65o0u83sink22fpdpp1m](https://cisco.box.com/s/lvyzjubx6imc65o0u83sink22fpdpp1m)
+6. [https://cisco.box.com/s/crwgmut8q883cb7ocranl1htf16demq3](https://cisco.box.com/s/crwgmut8q883cb7ocranl1htf16demq3)
+
 
 # Available User Account list
 

@@ -1,4 +1,4 @@
-Title: IA Pairing
+Title: (Desktop) IA Pairing
 Desc: A/B Testing for two pairing function placement on Desktop application
 Date: 2018-01-14
 Cover: prototypes/cover/IA pairing.png
