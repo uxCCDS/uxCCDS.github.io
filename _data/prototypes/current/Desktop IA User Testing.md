@@ -36,13 +36,6 @@ In the task testing the invite people function, most users first clicked on the 
 
 3) Choose Day 2 to experience OBPT, PSTN (press 1 to trigger OBTP), and joining a team space
 
-## On Mobile
-
-1) You can visit this prototype by using Chrome(Mobile Simulator) or installing it as a web app on iOS devices (The prototype currently only works for 4.7" and 5.5" devices) 
-*[How to use Chrome Mobile Simulator](https://uxccds.github.io/prototypes/faq/chrome's-mobile-simulator.html)*  
-*[How to Install Web App](https://uxccds.github.io/prototypes/faq/install-web-app.html)*
-
-2) 
 
 # Key Findings
 
