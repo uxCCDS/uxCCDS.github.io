@@ -7,7 +7,7 @@ IS_DRAFT: true
 
 # Summary
 
-In this user testing session, we tested a new design of WebEx Meeting Client.
+In this user testing session, we tested the WebEx Meeting Client with new UI design and functions.
 
 # Links
 
