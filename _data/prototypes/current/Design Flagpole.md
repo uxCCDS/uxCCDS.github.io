@@ -7,7 +7,7 @@ IS_DRAFT: true
 
 # Summary
 
-This page marks the latest design goals for Cisco Spark desktop app. Our intention is to use this page to serve as a reference of how we plan to design the future Cisco Spark.
+This page marks the latest design goals for Webex Teams (formerly Cisco Spark) desktop app. Our intention is to use this page to serve as a reference of how we plan to design the future Webex Teams.
 
 The link content will be updated regularly.
 
