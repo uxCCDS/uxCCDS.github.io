@@ -18,19 +18,20 @@ The link content will be updated regularly.
 
 [https://uxccds.github.io/Spark-Hype-MVO/IA-flagPole.html](https://uxccds.github.io/Spark-Hype-MVO/IA-flagPole.html)
 
-# Platform
-
-![Desktop](../../../img_data/prototypes/Desktop-2x.png)
-
 
 # Instructions
-
-## On Desktop
 
 1) Press key 1 to trigger OBTP
 
 2) Press Alt + P to trigger auto pairing
 
+# Change logs
+Date | Section | Notes
+--- | --- | ---
+Mar-26-2018 | Meeting List | Update meeting details popup to include accordions
+Mar-26-2018 | In-meeting roster| Changed in-meeting roster layout and panel behaviors (opens only 1 panel at a time)
+Mar-15-2018 | Interstitial | Added avatar bubble heads
+Mar-02-2018 | Copy edits | Wording updated to latest copy 
 
 
 
