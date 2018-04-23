@@ -28,6 +28,7 @@ The link content will be updated regularly.
 # Change logs
 Date | Section | Notes
 --- | --- | ---
+Apr-23-2018 | Onboarding Flow | onboarding flow removed awaiting new updates
 Mar-26-2018 | Meeting List | Update meeting details popup to include accordions
 Mar-26-2018 | In-meeting roster| Changed in-meeting roster layout and panel behaviors (opens only 1 panel at a time)
 Mar-15-2018 | Interstitial | Added avatar bubble heads
