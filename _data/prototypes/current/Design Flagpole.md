@@ -18,6 +18,10 @@ The link content will be updated regularly.
 
 [https://uxccds.github.io/Spark-Hype-MVO/IA-flagPole.html](https://uxccds.github.io/Spark-Hype-MVO/IA-flagPole.html)
 
+Alternative Design:
+
+[https://uxccds.github.io/Spark-Hype-MVO/IA-InMeetingNav.html](https://uxccds.github.io/Spark-Hype-MVO/IA-InMeetingNav.html)
+
 
 # Instructions
 
@@ -28,6 +32,7 @@ The link content will be updated regularly.
 # Change logs
 Date | Section | Notes
 --- | --- | ---
+Jun-04-2018 | Alternative In Meeting Interaction | New link added for an alternative design where the call controls are laid out differently. 
 May-10-2018 | Call Flow | Update call flow to work with calling phone number on both global menu and search field
 Apr-23-2018 | Onboarding Flow | onboarding flow removed awaiting new updates
 Mar-26-2018 | Meeting List | Update meeting details popup to include accordions
