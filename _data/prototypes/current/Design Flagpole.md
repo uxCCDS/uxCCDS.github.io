@@ -18,7 +18,7 @@ The link content will be updated regularly.
 
 [https://uxccds.github.io/Spark-Hype-MVO/IA-flagPole.html](https://uxccds.github.io/Spark-Hype-MVO/IA-flagPole.html)
 
-Alternative Design:
+Alternative Design (with in-meeting call control interaction exploration):
 
 [https://uxccds.github.io/Spark-Hype-MVO/IA-InMeetingNav.html](https://uxccds.github.io/Spark-Hype-MVO/IA-InMeetingNav.html)
 
