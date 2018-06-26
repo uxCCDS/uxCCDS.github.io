@@ -50,11 +50,6 @@
 		"View":"index.ejs",
 		"Data":"./",
 		"Controller":"index"
-	},{
-		"Name":"Motion",
-		"View":"motion_docs.ejs",
-		"Data":"./motion",
-		"Controller":"detail"
 	}],
 	"Nav":{
 		"Home":{
