@@ -3,6 +3,6 @@ Desc: Guide
 ---
 # Activity Menu
 
-#### Desktop
+#### TBD
 
 #### Mobile
