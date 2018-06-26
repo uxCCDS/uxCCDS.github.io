@@ -13,10 +13,12 @@ ul,li{list-style: none; margin: 0px;}
 
 .container_left{ width: 40px; -webkit-flex:none; flex:none;}
 .main{  -webkit-flex:1; flex:1; margin-top: 0px; }
+.motion_main{margin-left: 40px;}
 
-.sideMenu{ width: 220px; -webkit-flex:none; flex:none; padding: 20px 0px 20px 0px; }
+.sideMenu{ width: 180px; -webkit-flex:none; flex:none; padding: 40px 40px 20px 0px; border-right: 1px solid #EEEEEE; }
 .sideMenu li { list-style: none;}
-.sideMenu a { display: block; padding: 10px 15px; text-align: left; }
+.sideMenu a { display: block; padding: 0px 0px; text-align: right; height: 44px; line-height: 44px; color: #9E9E9E; cursor: pointer; font-size: 13px; text-decoration: none; }
+.sideMenu .current{color: #4A90E2;}
 
 .breadcrumbs{ padding: 0; margin-top:20px; height: 30px; max-width: 100%; overflow: hidden;}
 .breadcrumbs li{ display: inline; font-size: 12px; margin-right: 10px; }

@@ -17,7 +17,7 @@ The link content will be updated regularly.
 
 ### Mobile 
 
-[https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html](https://uxprototype.cisco.com/projects/Reskin/wap/IAM_P2/page/spark.html)
+[https://uxprototype.cisco.com/projects/Reskin/wap/WebexTeams/page/spark.html](https://uxprototype.cisco.com/projects/Reskin/wap/WebexTeams/page/spark.html)
 
 
 

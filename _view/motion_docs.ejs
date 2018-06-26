@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- include('controls/head') %>
+  <link rel="stylesheet" type="text/css" href="<%= Source_css %>detail.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="<%= Source_css %>motion_detail.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="<%= Source_css %>monokai_sublime.css" media="screen">
+  <script type="text/javascript" src="<%= Source_js %>highlight.pack.js"></script>
+</head>
+<body>
+  <!-- nav -->
+  <%- include('controls/motion/header') %>
+  <div class='container'>
+    <!--main content -->
+    <%- include('controls/aside') %> 
+    <div class="main motion_main">
+      <!-- <%- include('controls/breadcrumbs') %> -->
+      <!-- article -->
+      <div class="content">     
+        <div class="section">
+          <%- include('controls/article') %>       	
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- footer --> 
+ <div class="footerWrap">
+ <%- include('controls/footer') %>
+ </div>
+ <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

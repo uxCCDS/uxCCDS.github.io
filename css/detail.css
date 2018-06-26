@@ -22,6 +22,7 @@
 .article_body h4{font-size: 16px; color: #343537; line-height: 20px; margin-top: 20px;} /*margin-bottom: -10px;*/
 .article_body ol ul li{text-indent:15px;list-style: circle; list-style-position: inside;}
 
+.article_body video{width: 80%;}
 .article_body pre{background: #23241F; color: #fff; display: block; padding: 5px 10px; font-size: 16px; line-height: 21px; margin: 15px 0; white-space: pre-wrap; word-wrap: break-word;}
 
 
