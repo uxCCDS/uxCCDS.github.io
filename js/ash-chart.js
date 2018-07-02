@@ -202,7 +202,7 @@
 			ctx.stroke();
 		},
 		_drawLine:function(ctx,obj,y,txtHeight,txtGap){
-			var middleX = obj.x+(obj.w+ctx.measureText(obj.tween).width)/2>>0,
+			var middleX = obj.x+obj.w/2>>0,
 				bottomY = y + txtGap;
 			ctx.textAlign="left";
 			ctx.fillText(obj.rawData0,obj.x+txtGap,y - txtHeight -txtGap);
