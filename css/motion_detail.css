@@ -1,5 +1,6 @@
 .article_body pre{display: none;}
 .article_body .demo_con{margin-top: 14px;}
+.article_body table{margin-left: 30px;}
 
 .ash_chart_con{position: relative;}
 .ash_chart_con canvas{min-width: 500px; }

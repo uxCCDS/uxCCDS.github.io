@@ -99,6 +99,8 @@
 
 			this.generateTitle();
 			this.generateBg();
+
+			this.generateTable();
 		},
 		static:function(){
 			this.generateFront(this.DeadTime);
@@ -115,11 +117,64 @@
 					me.generateFront(time);
 					me._drawLineTimeProgress(time);
 				}
+			},{
+				dom:'',
+				time:this.DeadTime+60,//stop time
+				delegate:function(time) {
+
+				}
 			}]);
 			_ash.repeat(Infinity);
 		},
 		stop:function(){
 
+		},
+		_generateTagStr:function(tag,content){
+			return ['<',tag,'>',content,'</',tag,'>'].join('');
+		},
+		generateTable:function(){
+			this.ConTable = document.createElement('DIV');
+			var me=this,
+				el = this.Data.El,
+				strTable,
+				strTHead,
+				strTBody=[],
+				c = function(content){
+					return me._generateTagStr('td',content);
+				},
+				ch = function(content){
+					return me._generateTagStr('th',content);
+				};
+
+			var _eName,
+				_pName,
+				_pProperty,
+				_pPropertyArrObj,
+				_fromData,
+				_toData;
+
+			strTHead = ['<thead><tr>',ch('Element'),ch('Property'),ch('From'),ch('To'),ch('Start Time'),ch('Duration'),ch('Easing'),'</tr></thead>'].join('');
+
+			strTBody.push('<tbody>');
+
+			for(_eName in el){
+				for(_pName in el[_eName]){
+					_pProperty = el[_eName][_pName];
+					for(var _i in _pProperty.arr){
+						_pPropertyArrObj = _pProperty.arr[_i];
+						_fromData = _pPropertyArrObj.rawData0===undefined ? '/':_pPropertyArrObj.rawData0;
+						_toData = _pPropertyArrObj.rawData1===undefined ? '/':_pPropertyArrObj.rawData1;
+						strTBody.push('<tr>');
+						strTBody.push([c(_eName),c(_pName),c(_fromData),c(_toData),c(_pPropertyArrObj.delay),c(_pPropertyArrObj.time),c(_pPropertyArrObj.tween)].join(''));
+						strTBody.push('</tr>');
+
+					}
+				}
+			}
+			strTBody.push('</tbody>');
+			strTable=['<table>',strTHead,strTBody.join(''),'</table>'].join('');
+			this.ConTable.innerHTML = strTable;
+			this.Con.appendChild(this.ConTable);
 		},
 		generateTitle:function() {
 			// body...
@@ -339,7 +394,7 @@
 							rawData1:[css[1][name]],
 							delay:op.TagDelay+op.TagTime,
 							time:0,
-							_delay:op.delay,
+							_delay:op.delay+op.time,
 							_time:0,
 							tween:op.tween
 						});
