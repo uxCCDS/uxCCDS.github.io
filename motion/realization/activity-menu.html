@@ -43,18 +43,19 @@ $(function(){
 		    dom: {},
 		    css:[{left:'0px',width:'60px',height:'60px'},
 		    {left:'400px',width:'40px',height:'40px'}],
-		    time:20,
-		    tween:'bounceEaseIn'
+		    time:200,
+		    tween:'easeIn'
 		},{
 			tag: 'List',
 		    dom: {},
 		    css:[{left:'0px',height:'60px'},
 		    {left:'400px',width:'40px'}],
-		    delay:10,
-		    time:20
+		    delay:100,
+		    time:200
 		}];
 
 	var ashChartInstance = new AshChart('demo1',ashArgs,{});
+	ashChartInstance.start();
 	//demo1
 });
 </script>
@@ -125,18 +126,19 @@ $(function(){
             dom: {},
             css:[{left:&#39;0px&#39;,width:&#39;60px&#39;,height:&#39;60px&#39;},
             {left:&#39;400px&#39;,width:&#39;40px&#39;,height:&#39;40px&#39;}],
-            time:20,
-            tween:&#39;bounceEaseIn&#39;
+            time:200,
+            tween:&#39;easeIn&#39;
         },{
             tag: &#39;List&#39;,
             dom: {},
             css:[{left:&#39;0px&#39;,height:&#39;60px&#39;},
             {left:&#39;400px&#39;,width:&#39;40px&#39;}],
-            delay:10,
-            time:20
+            delay:100,
+            time:200
         }];
 
     var ashChartInstance = new AshChart(&#39;demo1&#39;,ashArgs,{});
+    ashChartInstance.start();
 </code></pre><h3 id="arguments">Arguments</h3>
 <div class='demo_con'><!--demo1-->
 	<div id="demo1"></div>

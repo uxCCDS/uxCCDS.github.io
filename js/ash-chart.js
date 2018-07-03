@@ -37,31 +37,25 @@
 	ChartMotion.prototype ={
 
 	};
-	/*
-		settings ={
-			maxWidth:800,
-			lineH:4,
-			lineGap:10,
-			fontSizeLine:13,
-			fontSizeChart:15,
-			colorList:[]
-		}
-	*/
+
 	var AshChart = function(id,ashArr,settings){
 		this.Id = id;
 		this.AshArr = ashArr;
 		this.Settings = extend({
-			canvasWidth:800,
+			canvasWidth:1000,
 			contentPadding:[60,30,60,30],
 			chartPadding:[14,14,14,14],
-			lineWidth:2,
+			lineWidthIndex:2,
+			lineWidth:10,
 			lineGap:50,
 			fontLine:13,
 			fontTitle:15,
-			fontGap:4,
+			fontGap:8,
 			colors:[],
 			xIndexUnitNum:4,
-			bgFillStyle:'#9B9B9B',
+			bgFillStyle:'#aaaaaa',
+			bgLineStyle:'#dddddd',
+			timeLineStyle:'#4A90E2',
 			IfToMS:false
 		},settings,true);
 
@@ -79,9 +73,10 @@
 		this.Canvas.className = 'motionCanvas';
 		this.Ctx = this.Canvas.getContext('2d');
 		this.BgCanvas = document.createElement('CANVAS');
-		this.BgCtx = this.Canvas.getContext('2d');
+		this.BgCtx = this.BgCanvas.getContext('2d');
 
-		this.Canvas.width = this.BgCanvas.width = this.Settings.canvasWidth;
+
+		this.CanvasWidth = this.Canvas.width = this.BgCanvas.width = this.Settings.canvasWidth;
 		this.Canvas.style.width = this.BgCanvas.style.width = this.Settings.canvasWidth+'px';
 
 		this.TagCon = document.createElement('DIV');
@@ -99,20 +94,29 @@
 
 			var settings = this.Settings,
 				canvasHeight = settings.contentPadding[3]+this.Data.TimelineX.y+this._getFontSize('1',settings.fontTitle).h;
-			this.Canvas.height =  this.BgCanvas.height = canvasHeight;
+			this.CanvasHeight = this.Canvas.height =  this.BgCanvas.height = canvasHeight;
 			this.Canvas.style.height = this.BgCanvas.style.height = canvasHeight+'px';
 
 			this.generateTitle();
 			this.generateBg();
 		},
 		static:function(){
-
+			this.generateFront(this.DeadTime);
 		},
 		sync:function(){
 
 		},
 		start:function(){
-
+			var me=this,
+			_ash = new Ash.S([{
+				dom:'',
+				time:this.DeadTime,
+				delegate:function(time) {
+					me.generateFront(time);
+					me._drawLineTimeProgress(time);
+				}
+			}]);
+			_ash.repeat(Infinity);
 		},
 		stop:function(){
 
@@ -144,13 +148,13 @@
 			ctx.font = settings.fontTitle + "px Arial";
 			ctx.textAlign="left";
 			ctx.fillText("Property",data.TimelineYTitle.x,data.TimelineYTitle.y);
-			ctx.fillText((settings.IfToMS ? 'Timeline / frame':'Timeline / ms'),data.TimelineXTitle.x,data.TimelineXTitle.y);
+			ctx.fillText((settings.IfToMS ? 'Timeline / ms':'Timeline / frame'),data.TimelineXTitle.x,data.TimelineXTitle.y);
 			ctx.textAlign="center";
 			for(var _name in unit){
 				ctx.fillText(_name,unit[_name].x,unit[_name].y);
 			}
 			ctx.strokeStyle=settings.bgFillStyle;
-			ctx.lineWidth = settings.lineWidth;
+			ctx.lineWidth = settings.lineWidthIndex;
 			ctx.moveTo(data.TimelineX.x,data.TimelineX.y);
 			ctx.lineTo(data.TimelineX.x+data.TimelineX.l,data.TimelineX.y);
 			ctx.moveTo(data.TimelineY.x,data.TimelineY.y);
@@ -168,9 +172,11 @@
 
 			for(_eName in el){
 				ctx.beginPath();
-				ctx.strokeStyle = tags[_eName].color;
+				//ctx.strokeStyle = tags[_eName].color;
+				ctx.strokeStyle = settings.bgLineStyle;
 				ctx.fillStyle =tags[_eName].color;
 				ctx.font = settings.fontLine + "px Arial";
+				ctx.lineWidth = settings.lineWidth;
 				for(_pName in el[_eName]){
 					_pProperty = el[_eName][_pName];
 					ctx.textAlign="right";
@@ -185,21 +191,37 @@
 							this._drawDot(ctx,_pPropertyArrObj.rawData0,_pPropertyArrObj.x,_pProperty.y,_txtHeight,settings.fontGap);
 						//draw dot
 						}else{
-							this._drawDot(ctx,_pPropertyArrObj.rawData1,_pPropertyArrObj.x+_pPropertyArrObj.w,_pProperty.y,_txtHeight,settings.fontGap);
+							this._drawDot(ctx,_pPropertyArrObj.rawData1,_pPropertyArrObj.x+_pPropertyArrObj.w-settings.lineWidth,_pProperty.y,_txtHeight,settings.fontGap);
 						}
 					}
 				}
 				ctx.closePath();
-				//for(var )
 			}
 
 		},
+		_drawLineTimeProgress:function(time){
+			var ctx = this.Ctx,
+				data = this.Data,
+				l = this.DeadTimeXPosition * time / this.DeadTime >>0;
+			ctx.beginPath();
+			ctx.strokeStyle=this.Settings.timeLineStyle;
+			ctx.lineWidth = 5;
+			ctx.moveTo(data.TimelineX.x,data.TimelineX.y);
+			ctx.lineTo(data.TimelineX.x+l,data.TimelineX.y);
+			ctx.stroke();
+			ctx.closePath();
+		},
 		_drawDot:function(ctx,rawData,x,y,txtHeight,txtGap) {
 			ctx.textAlign="center";
-			ctx.fillText(rawData,x,y- txtHeight);
-			ctx.moveTo(x,y);
-			ctx.lineTo(x+this.Settings.lineWidth,y);
-			ctx.stroke();
+			ctx.fillText(rawData,x,y- txtHeight-txtGap);
+			this._drawDotProgress(ctx,this.DeadTime,0,x,y);
+		},
+		_drawDotProgress:function(ctx,timing,delay,x,y) {
+			if(timing>=delay){
+				ctx.moveTo(x,y);
+				ctx.lineTo(x+this.Settings.lineWidth,y);
+				ctx.stroke();
+			}
 		},
 		_drawLine:function(ctx,obj,y,txtHeight,txtGap){
 			var middleX = obj.x+obj.w/2>>0,
@@ -209,13 +231,62 @@
 			ctx.textAlign="center";
 			ctx.fillText(obj.tween,middleX,bottomY);
 			ctx.textAlign="right";
-			ctx.fillText(obj.rawData1,obj.x+obj.w-txtGap,y - txtHeight);
-			ctx.moveTo(obj.x,y);
-			ctx.lineTo(obj.x+obj.w,y);
-			ctx.stroke();
+			ctx.fillText(obj.rawData1,obj.x+obj.w-txtGap,y - txtHeight -txtGap);
+			this._drawLineProgress(ctx,this.DeadTime,obj,y);
 		},
-		generateFront:function(second,opacity) {
+		_drawLineProgress:function(ctx,timing,obj,y) {
 			// body...
+			var tweenFunction = Ash.Tween[obj.tween];
+			if(timing>obj._delay && tweenFunction){
+				var _ifFinish = timing >= (obj._delay+obj._time),
+					_movement = _ifFinish ? obj.w : tweenFunction(timing-obj._delay,0,obj.w,obj._time);
+
+				ctx.moveTo(obj.x,y);
+				ctx.lineTo(obj.x+_movement,y);
+				ctx.stroke();
+			}
+		},
+		generateFront:function(timing) {
+			var ctx = this.Ctx,
+				data = this.Data,
+				settings = this.Settings,
+				tags = data.HeadTags,
+				el = data.El;
+
+			//x title
+			var _eName,
+				_pName,
+				_pProperty,
+				_pPropertyArrObj,
+				_x0= data.TimelineX.x;
+
+			ctx.clearRect(0,0,this.CanvasWidth,this.CanvasHeight);
+
+			for(_eName in el){
+				ctx.beginPath();
+				ctx.strokeStyle = tags[_eName].color;
+				ctx.lineWidth = settings.lineWidth;
+
+				for(_pName in el[_eName]){
+					_pProperty = el[_eName][_pName];
+					for(var _i in _pProperty.arr){
+						_pPropertyArrObj = _pProperty.arr[_i];
+						//drawline
+						if(_pPropertyArrObj.rawData0!==undefined && _pPropertyArrObj.rawData1!==undefined){
+							this._drawLineProgress(ctx,timing,_pPropertyArrObj,_pProperty.y);
+						//draw dot
+						}else if(_pPropertyArrObj.rawData0!==undefined){
+							//ctx,timing,delay,x,y
+							this._drawDotProgress(ctx,timing,_pPropertyArrObj._delay,_pPropertyArrObj.x,_pProperty.y);
+						//draw dot
+						}else{
+							this._drawDotProgress(ctx,timing,_pPropertyArrObj._delay,_pPropertyArrObj.x+_pPropertyArrObj.w-settings.lineWidth,_pProperty.y);
+						}
+					}
+				}
+				ctx.closePath();
+
+			}
 		},
 		_getPropertyInfo:function(css,attr,prop) {
 			var longestWording= css.longestWording.length > attr.longestWording.length ? css.longestWording : attr.longestWording;
@@ -248,6 +319,8 @@
 						rawData0:css[0][name],
 						delay:op.TagDelay,
 						time: css[1][name]===undefined ? 0: op.TagTime,
+						_delay:op.delay,
+						_time:css[1][name]===undefined ? 0: op.time,
 						tween:op.tween
 					});
 				}
@@ -266,6 +339,8 @@
 							rawData1:[css[1][name]],
 							delay:op.TagDelay+op.TagTime,
 							time:0,
+							_delay:op.delay,
+							_time:0,
 							tween:op.tween
 						});
 					}else{
@@ -417,6 +492,8 @@ EL:{
 				xUnitStep = (this.Data.TimelineX.l - 20)/ xIndexUnitNum >>0,
 				y0Tag=_y0+settings.chartPadding[2],
 				unitLen = xUnitStep/xUnit;
+
+			this.DeadTimeXPosition = unitLen * this.TagDeadTime >>0;
 
 			//generate unit
 			this.Data.Unit={
