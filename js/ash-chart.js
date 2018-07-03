@@ -55,7 +55,8 @@
 			xIndexUnitNum:4,
 			bgFillStyle:'#aaaaaa',
 			bgLineStyle:'#dddddd',
-			timeLineStyle:'#4A90E2',
+			timeLineStyle:'#4AD4E2',
+			waitTime:60,
 			IfToMS:false
 		},settings,true);
 
@@ -119,7 +120,7 @@
 				}
 			},{
 				dom:'',
-				time:this.DeadTime+60,//stop time
+				time:this.DeadTime+this.Settings.waitTime,//stop time
 				delegate:function(time) {
 
 				}
@@ -372,8 +373,8 @@
 					//el[name]._arr.push([css[0][name]]);
 					el[name].arr.push({
 						rawData0:css[0][name],
-						delay:op.TagDelay,
-						time: css[1][name]===undefined ? 0: op.TagTime,
+						delay:op.MsDelay,
+						time: css[1][name]===undefined ? 0: op.MsTime,
 						_delay:op.delay,
 						_time:css[1][name]===undefined ? 0: op.time,
 						tween:op.tween
@@ -392,7 +393,7 @@
 					if(css[0][name]===undefined){
 						el[name].arr.push({
 							rawData1:[css[1][name]],
-							delay:op.TagDelay+op.TagTime,
+							delay:op.MsDelay+op.MsTime,
 							time:0,
 							_delay:op.delay+op.time,
 							_time:0,
@@ -415,8 +416,12 @@
 				h:size*1.5>>0
 			};
 		},
+		_convertToMs:function(frame){
+			return frame*1000/60>>0;
+		},
 		_prepare:function(arr){
 			var deadTime = 0,
+				msDeadTime = 0,
 				count = 0,
 				tempP,
 				longestWording='',
@@ -425,11 +430,20 @@
 				_p = arr[n];
 				if(this.Data.El[_p.tag]===undefined){
 					this.Data.El[_p.tag]={};
-				}	
-				_p.TagDelay = _p.delay = _p.delay || 0;
-				_p.TagTime = _p.time;
+				}
+				/* here */
+				_p.Delay = _p.delay = _p.delay || 0;
+				_p.Time = _p.time = _p.time || 0;
+
+				_p.MsDelay = _p.msDelay || this._convertToMs(_p.delay);
+				_p.MsTime = _p.msTime || this._convertToMs(_p.time);
 				_p.tween = _p.tween || 'linear';
-				deadTime = Math.max(_p.delay+_p.time);
+
+				if(deadTime<_p.delay+_p.time){
+					deadTime = _p.delay+_p.time;
+					msDeadTime = _p.MsDelay + _p.MsTime;
+				}
+
 				tempP = this._getPropertyInfo(this._getPCount(_p.css,_p,this.Data.El[_p.tag]),this._getPCount(_p.attr,_p,this.Data.El[_p.tag]),this._getPCount(_p.prop,_p,this.Data.El[_p.tag]));
 				count = count + tempP.count;
 				if(tempP.longestWording.length>longestWording.length){
@@ -437,12 +451,13 @@
 				}
 			}
 			this.ECount = arr.length || 0;
-			this.TagDeadTime = this.DeadTime = deadTime;
+			this.DeadTime = deadTime;
+			this.MsDeadTime = msDeadTime;
 			this.PLongestWording = longestWording;
 			this.PCount = count;
 
 			this._prepareColor();
-			this._prepareTimeline(arr);
+			//this._prepareTimeline(arr);
 			this._preparePosition();
 		},
 		_prepareColor:function(){
@@ -459,15 +474,17 @@
 			}
 		},
 		_prepareTimeline:function(arr){
+			/*
 			if(this.Settings.IfToMS){
 				var _p;
 				for(var n in arr){
 					_p = arr[n];
-					_p.TagDelay = Math.round(_p.delay * 16.7/10)*10;
-					_p.TagTime = Math.round(_p.time * 16.7/10)*10;
+					_p.TagDelay = _p.tagDelay!==undefined ?  _p.tagDelay : Math.round(_p.delay * 16.7/10)*10;
+					_p.TagTime = _p.tagTime!==undefined ?  _p.tagTime :Math.round(_p.time * 16.7/10)*10;
 				}
 				this.TagDeadTime = Math.round(this.DeadTime * 16.7/10)*10;
 			}
+			*/
 		},
 		_sortProperty:function(a,b){
 			if(a.time<b.time) return -1;
@@ -540,15 +557,30 @@ EL:{
 				_pPropertyArrObj,
 				_i,_l;
 
-			var maxUnitRate = settings.IfToMS ? 100 : 10,
-				maxUnit = (this.TagDeadTime/maxUnitRate>>0)*maxUnitRate,
-				xIndexUnitNum = Math.min(settings.xIndexUnitNum,Math.ceil(maxUnit/maxUnitRate)),
-				xUnit = maxUnit/xIndexUnitNum>>0,
-				xUnitStep = (this.Data.TimelineX.l - 20)/ xIndexUnitNum >>0,
-				y0Tag=_y0+settings.chartPadding[2],
-				unitLen = xUnitStep/xUnit;
+			var maxUnitRate=100,
+				maxUnit = (this.MsDeadTime/maxUnitRate>>0)*maxUnitRate,
+				msMaxUnitRate = 10,
+				msMaxUnit = (this.MsDeadTime/msMaxUnitRate>>0)*msMaxUnitRate,
+				xIndexUnitNum;
 
-			this.DeadTimeXPosition = unitLen * this.TagDeadTime >>0;
+			if(settings.IfToMS){
+				xIndexUnitNum = Math.min(settings.xIndexUnitNum,Math.ceil(msMaxUnit/msMaxUnitRate));
+			}else{
+				xIndexUnitNum = Math.min(settings.xIndexUnitNum,Math.ceil(maxUnit/maxUnitRate));
+			}
+
+				//time gap
+			var xUnit = maxUnit/xIndexUnitNum>>0,
+				msXUnit = msMaxUnit/xIndexUnitNum>>0,
+				//length gap
+				xUnitStep = (this.Data.TimelineX.l - 20)/ xIndexUnitNum >>0,
+				//
+				unitLen = xUnitStep/xUnit,
+				msUnitLen = xUnitStep/msXUnit;
+
+			var y0Tag=_y0+settings.chartPadding[2];
+
+			this.DeadTimeXPosition = settings.IfToMS ? msUnitLen * this.MsDeadTime : unitLen * this.DeadTime;
 
 			//generate unit
 			this.Data.Unit={

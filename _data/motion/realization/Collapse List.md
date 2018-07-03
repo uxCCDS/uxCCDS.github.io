@@ -4,29 +4,76 @@ Desc: Collapse List
 
 #### Desktop
 
-
-<!--demo1-->
+```
+<!--demo3-->
 	<video preload="auto" autoplay loop src='../../img/motion/CollapseList-MacOS.mov' ></video>
-<!--demo1-->
+<!--demo3-->
+```
 
-demo1
+demo3
 
 # Description
 
 ## Hover On Hand
 
-![Collapse List](../../../img_data/motion/realization/ColloapseList_handover.png)
 
-ELEMENT|PROPERTY|FROM|TO|DURATION|EASING
----|---|---|---|---|---
-LIST | Position X | 0 | - (list width) | 500ms | ease-in-out
+```
+<!--demo2-->
+	<div id="demo2"></div>
+<!--demo2-->
+```
+
+```
+	//demo2
+	var ashArgs2 = [{
+			tag: 'List',
+		    dom: {},
+		    css:[{'Position X':'0px'},
+		    {'Position X':'13px'}],
+		    time:50,
+		    msTime:500,
+		    tween:'easeInOut'
+		}];
+
+	var ashChartInstance2 = new AshChart('demo2',ashArgs2,{
+		IfToMS:true,
+		waitTime:40
+	});
+	ashChartInstance2.start();
+	//demo2
+```
+
+demo2
+
 
 ## Collapse List
 
-![Collapse List](../../../img_data/motion/realization/ColloapseList_colloapse.png)
 
-ELEMENT|PROPERTY|FROM|TO|DURATION|EASING
----|---|---|---|---|---
-HAND | Position X | 0 | - (hand width) | 300ms | ease-out
+```
+<!--demo1-->
+	<div id="demo1"></div>
+<!--demo1-->
+```
 
+```
+	//demo1
+	var ashArgs = [{
+			tag: 'List',
+		    dom: {},
+		    css:[{width:'400px'},
+		    {width:'0px'}],
+		    time:30,
+		    msTime:300,
+		    tween:'easeOut'
+		}];
 
+	var ashChartInstance = new AshChart('demo1',ashArgs,{
+		IfToMS:true,
+		colors:['#BD10E0','#4A90E2'],
+		waitTime:60
+	});
+	ashChartInstance.start();
+	//demo1
+```
+
+demo1

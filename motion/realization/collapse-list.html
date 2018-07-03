@@ -26,6 +26,8 @@
 <script type="text/javascript" src="../../js/highlight.pack.js"></script>
 <script type="text/javascript" src="../../js/ash.js"></script>
 <style type="text/css">
+
+
 </style>
 
     <link rel="stylesheet" type="text/css" href="../../css/detail.css" media="screen">
@@ -34,9 +36,46 @@
     <script type="text/javascript" src="../../js/ash-chart.js"></script>
     <script type="text/javascript" src="../../js/highlight.pack.js"></script>
     <style type="text/css">
+
+
 </style>
     <script type="text/javascript">
 $(function(){
+//demo1
+	var ashArgs = [{
+			tag: 'List',
+		    dom: {},
+		    css:[{width:'400px'},
+		    {width:'0px'}],
+		    time:30,
+		    msTime:300,
+		    tween:'easeOut'
+		}];
+
+	var ashChartInstance = new AshChart('demo1',ashArgs,{
+		IfToMS:true,
+		colors:['#BD10E0','#4A90E2'],
+		waitTime:60
+	});
+	ashChartInstance.start();
+	//demo1
+//demo2
+	var ashArgs2 = [{
+			tag: 'List',
+		    dom: {},
+		    css:[{'Position X':'0px'},
+		    {'Position X':'13px'}],
+		    time:50,
+		    msTime:500,
+		    tween:'easeInOut'
+		}];
+
+	var ashChartInstance2 = new AshChart('demo2',ashArgs2,{
+		IfToMS:true,
+		waitTime:40
+	});
+	ashChartInstance2.start();
+	//demo2
 
 });
 </script>
@@ -99,59 +138,52 @@ $(function(){
 	</header>
 	<div class='article_body'>
 		<h4 id="desktop">Desktop</h4>
-<pre><code>&lt;video preload=&quot;auto&quot; autoplay loop src=&#39;../../img/motion/CollapseList-MacOS.mov&#39; &gt;&lt;/video&gt;
-</code></pre><div class='demo_con'><!--demo1-->
+<pre><code>    &lt;video preload=&quot;auto&quot; autoplay loop src=&#39;../../img/motion/CollapseList-MacOS.mov&#39; &gt;&lt;/video&gt;
+</code></pre><div class='demo_con'><!--demo3-->
 	<video preload="auto" autoplay loop src='../../img/motion/CollapseList-MacOS.mov' ></video>
-<!--demo1--></div>
+<!--demo3--></div>
 <h1 id="description">Description</h1>
 <h2 id="hover-on-hand">Hover On Hand</h2>
-<p><img src="../../img_data/motion/realization/ColloapseList_handover.png" alt="Collapse List"/></p>
-<table>
-<thead>
-<tr>
-<th>ELEMENT</th>
-<th>PROPERTY</th>
-<th>FROM</th>
-<th>TO</th>
-<th>DURATION</th>
-<th>EASING</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>LIST</td>
-<td>Position X</td>
-<td>0</td>
-<td>- (list width)</td>
-<td>500ms</td>
-<td>ease-in-out</td>
-</tr>
-</tbody>
-</table>
+<pre><code>    &lt;div id=&quot;demo2&quot;&gt;&lt;/div&gt;
+</code></pre><pre><code>    var ashArgs2 = [{
+            tag: &#39;List&#39;,
+            dom: {},
+            css:[{&#39;Position X&#39;:&#39;0px&#39;},
+            {&#39;Position X&#39;:&#39;13px&#39;}],
+            time:50,
+            msTime:500,
+            tween:&#39;easeInOut&#39;
+        }];
+
+    var ashChartInstance2 = new AshChart(&#39;demo2&#39;,ashArgs2,{
+        IfToMS:true,
+        waitTime:40
+    });
+    ashChartInstance2.start();
+</code></pre><div class='demo_con'><!--demo2-->
+	<div id="demo2"></div>
+<!--demo2--></div>
 <h2 id="collapse-list">Collapse List</h2>
-<p><img src="../../img_data/motion/realization/ColloapseList_colloapse.png" alt="Collapse List"/></p>
-<table>
-<thead>
-<tr>
-<th>ELEMENT</th>
-<th>PROPERTY</th>
-<th>FROM</th>
-<th>TO</th>
-<th>DURATION</th>
-<th>EASING</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>HAND</td>
-<td>Position X</td>
-<td>0</td>
-<td>- (hand width)</td>
-<td>300ms</td>
-<td>ease-out</td>
-</tr>
-</tbody>
-</table>
+<pre><code>    &lt;div id=&quot;demo1&quot;&gt;&lt;/div&gt;
+</code></pre><pre><code>    var ashArgs = [{
+            tag: &#39;List&#39;,
+            dom: {},
+            css:[{width:&#39;400px&#39;},
+            {width:&#39;0px&#39;}],
+            time:30,
+            msTime:300,
+            tween:&#39;easeOut&#39;
+        }];
+
+    var ashChartInstance = new AshChart(&#39;demo1&#39;,ashArgs,{
+        IfToMS:true,
+        colors:[&#39;#BD10E0&#39;,&#39;#4A90E2&#39;],
+        waitTime:60
+    });
+    ashChartInstance.start();
+</code></pre><div class='demo_con'><!--demo1-->
+	<div id="demo1"></div>
+<!--demo1--></div>
 		
 	</div>
 	<!-- hiding pagination per Damon's feedback 

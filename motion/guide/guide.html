@@ -25,16 +25,32 @@
 <script type="text/javascript" src="../../js/jquery-2.0.0.min.js"></script>
 <script type="text/javascript" src="../../js/highlight.pack.js"></script>
 <script type="text/javascript" src="../../js/ash.js"></script>
-<style type="text/css"></style>
+<style type="text/css">
+</style>
 
     <link rel="stylesheet" type="text/css" href="../../css/detail.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../../css/motion_detail.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../../css/monokai_sublime.css" media="screen">
     <script type="text/javascript" src="../../js/ash-chart.js"></script>
     <script type="text/javascript" src="../../js/highlight.pack.js"></script>
-    <style type="text/css"></style>
+    <style type="text/css">
+</style>
     <script type="text/javascript">
 $(function(){
+//demo2
+	var ashArgsCollapse = [{
+		tag: 'Hand',
+	    dom: {},
+	    css:[{width:'400px'},
+	    {width:'0px'}],
+	    time:18,
+	    tagTime:300,
+	    tween:'easeOut'
+	}];
+
+	var ashChartCollapseInstance = new AshChart('demo2',ashArgsCollapse,{});
+	ashChartCollapseInstance.start();
+	//demo2
 });
 </script>
 </head>
@@ -92,6 +108,23 @@ $(function(){
 		<h1 id="activity-menu">Activity Menu</h1>
 <h4 id="tbd">TBD</h4>
 <h4 id="mobile">Mobile</h4>
+<pre><code>    &lt;div id=&quot;demo2&quot;&gt;&lt;/div&gt;
+</code></pre><pre><code>    var ashArgsCollapse = [{
+        tag: &#39;Hand&#39;,
+        dom: {},
+        css:[{width:&#39;400px&#39;},
+        {width:&#39;0px&#39;}],
+        time:18,
+        tagTime:300,
+        tween:&#39;easeOut&#39;
+    }];
+
+    var ashChartCollapseInstance = new AshChart(&#39;demo2&#39;,ashArgsCollapse,{});
+    ashChartCollapseInstance.start();
+</code></pre><h3 id="arguments">Arguments</h3>
+<div class='demo_con'><!--demo2-->
+	<div id="demo2"></div>
+<!--demo2--></div>
 		
 	</div>
 	<!-- hiding pagination per Damon's feedback 
