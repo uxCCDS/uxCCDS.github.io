@@ -179,20 +179,39 @@
 
 			strTBody.push('<tbody>');
 
-			for(_eName in el){
-				for(_pName in el[_eName]){
-					_pProperty = el[_eName][_pName];
-					for(var _i in _pProperty.arr){
-						_pPropertyArrObj = _pProperty.arr[_i];
-						_fromData = _pPropertyArrObj.rawData0===undefined ? '/':_pPropertyArrObj.rawData0;
-						_toData = _pPropertyArrObj.rawData1===undefined ? '/':_pPropertyArrObj.rawData1;
-						strTBody.push('<tr>');
-						strTBody.push([c(_eName),c(_pName),c(_fromData),c(_toData),c(_pPropertyArrObj.delay),c(_pPropertyArrObj.time),c(_pPropertyArrObj.Tween)].join(''));
-						strTBody.push('</tr>');
+			if(this.Settings.IfToMS){
+				for(_eName in el){
+					for(_pName in el[_eName]){
+						_pProperty = el[_eName][_pName];
+						for(var _i in _pProperty.arr){
+							_pPropertyArrObj = _pProperty.arr[_i];
+							_fromData = _pPropertyArrObj.rawData0===undefined ? '/':_pPropertyArrObj.rawData0;
+							_toData = _pPropertyArrObj.rawData1===undefined ? '/':_pPropertyArrObj.rawData1;
+							strTBody.push('<tr>');
+							strTBody.push([c(_eName),c(_pName),c(_fromData),c(_toData),c(_pPropertyArrObj.delay),c(_pPropertyArrObj.time),c(_pPropertyArrObj.Tween)].join(''));
+							strTBody.push('</tr>');
 
+						}
+					}
+				}
+			}else{
+				for(_eName in el){
+					for(_pName in el[_eName]){
+						_pProperty = el[_eName][_pName];
+						for(var _i in _pProperty.arr){
+							_pPropertyArrObj = _pProperty.arr[_i];
+							_fromData = _pPropertyArrObj.rawData0===undefined ? '/':_pPropertyArrObj.rawData0;
+							_toData = _pPropertyArrObj.rawData1===undefined ? '/':_pPropertyArrObj.rawData1;
+							strTBody.push('<tr>');
+							strTBody.push([c(_eName),c(_pName),c(_fromData),c(_toData),c(_pPropertyArrObj._delay),c(_pPropertyArrObj._time),c(_pPropertyArrObj.Tween)].join(''));
+							strTBody.push('</tr>');
+
+						}
 					}
 				}
 			}
+
+
 			strTBody.push('</tbody>');
 			strTable=['<table>',strTHead,strTBody.join(''),'</table>'].join('');
 			this.ConTable.innerHTML = strTable;
