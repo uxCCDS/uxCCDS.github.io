@@ -37,20 +37,26 @@
 </style>
     <script type="text/javascript">
 $(function(){
-//demo2
-	var ashArgsCollapse = [{
-		tag: 'Hand',
-	    dom: {},
-	    css:[{width:'400px'},
-	    {width:'0px'}],
-	    time:18,
-	    tagTime:300,
-	    tween:'easeOut'
-	}];
+//demo1
+	var ashArgs = [{
+			tag: 'Hand',
+		    dom: {},
+		    css:[{left:'0px',width:'60px',height:'60px'},
+		    {left:'400px',width:'40px',height:'40px'}],
+		    time:200,
+		    tween:'easeIn'
+		},{
+			tag: 'List',
+		    dom: {},
+		    css:[{left:'0px',height:'60px'},
+		    {left:'400px',width:'40px'}],
+		    delay:100,
+		    time:200
+		}];
 
-	var ashChartCollapseInstance = new AshChart('demo2',ashArgsCollapse,{});
-	ashChartCollapseInstance.start();
-	//demo2
+	var ashChartInstance = new AshChart('demo1',ashArgs,{});
+	ashChartInstance.start();
+	//demo1
 });
 </script>
 </head>
@@ -106,25 +112,31 @@ $(function(){
 	</header>
 	<div class='article_body'>
 		<h1 id="activity-menu">Activity Menu</h1>
-<h4 id="tbd">TBD</h4>
+<h4 id="desktop">Desktop</h4>
 <h4 id="mobile">Mobile</h4>
-<pre><code>    &lt;div id=&quot;demo2&quot;&gt;&lt;/div&gt;
-</code></pre><pre><code>    var ashArgsCollapse = [{
-        tag: &#39;Hand&#39;,
-        dom: {},
-        css:[{width:&#39;400px&#39;},
-        {width:&#39;0px&#39;}],
-        time:18,
-        tagTime:300,
-        tween:&#39;easeOut&#39;
-    }];
+<pre><code>    &lt;div id=&quot;demo1&quot;&gt;&lt;/div&gt;
+</code></pre><pre><code>    var ashArgs = [{
+            tag: &#39;Hand&#39;,
+            dom: {},
+            css:[{left:&#39;0px&#39;,width:&#39;60px&#39;,height:&#39;60px&#39;},
+            {left:&#39;400px&#39;,width:&#39;40px&#39;,height:&#39;40px&#39;}],
+            time:200,
+            tween:&#39;easeIn&#39;
+        },{
+            tag: &#39;List&#39;,
+            dom: {},
+            css:[{left:&#39;0px&#39;,height:&#39;60px&#39;},
+            {left:&#39;400px&#39;,width:&#39;40px&#39;}],
+            delay:100,
+            time:200
+        }];
 
-    var ashChartCollapseInstance = new AshChart(&#39;demo2&#39;,ashArgsCollapse,{});
-    ashChartCollapseInstance.start();
+    var ashChartInstance = new AshChart(&#39;demo1&#39;,ashArgs,{});
+    ashChartInstance.start();
 </code></pre><h3 id="arguments">Arguments</h3>
-<div class='demo_con'><!--demo2-->
-	<div id="demo2"></div>
-<!--demo2--></div>
+<div class='demo_con'><!--demo1-->
+	<div id="demo1"></div>
+<!--demo1--></div>
 		
 	</div>
 	<!-- hiding pagination per Damon's feedback 

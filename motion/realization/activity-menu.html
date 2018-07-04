@@ -38,23 +38,63 @@
     <script type="text/javascript">
 $(function(){
 //demo1
+	var mobile_tBg= document.getElementById('mobile_wt_title_bg'),
+		mobile_tArrow = document.getElementById('mobile_wt_title_arrow'),
+		mobile_card = document.getElementById('mobile_wt_card'),
+		mobile_shadow = document.getElementById('mobile_wt_card_shadow'),
+		mobile_content = document.getElementById('mobile_wt_message_content');
+
 	var ashArgs = [{
-			tag: 'Hand',
-		    dom: {},
-		    css:[{left:'0px',width:'60px',height:'60px'},
-		    {left:'400px',width:'40px',height:'40px'}],
-		    time:200,
-		    tween:'easeIn'
-		},{
-			tag: 'List',
-		    dom: {},
-		    css:[{left:'0px',height:'60px'},
-		    {left:'400px',width:'40px'}],
-		    delay:100,
-		    time:200
-		}];
+			tag:'ball_container',
+            dom:mobile_card,
+            css:[{top:'-641px'},{top:'0px'}],
+            time:30,
+            tween:"easeOut"
+        },{
+			tag:'title_container',
+            dom:mobile_tBg,
+            css:[{'background-color':'rgba(255,255,255,0.4)'},{'background-color':'rgba(231,235,235,1)'}],
+            time:30,
+            tween:'rgbaLinear'
+        },{
+        	tag:'ball_container',
+            dom:mobile_card,
+            css:[{opacity:0},{opacity:1}],
+            time:20
+        },{
+        	tag:'arrow',
+            dom:mobile_tArrow,
+            css:[{'transform':'rotateX(0deg)'},{'transform':'rotateX(180deg)'}],
+            time:10
+        },{
+        	tag:'call_panel',
+            dom:mobile_content,
+            css:[{transform:'scale(1)'},{transform:'scale(0.96)'}],
+            time:20,
+            delay:10,
+            tween:"easeIn"      
+        },{
+        	tag:'shadow',
+            dom:mobile_shadow,
+            css:[{opacity:0},{opacity:1}],
+            delay:10,
+            time:20  
+        },{
+        	notRender:true,
+        	tag:'shadow',
+            dom:mobile_shadow,
+            css:[{opacity:0},{opacity:0}],
+            time:0
+        },{
+        	notRender:true,
+        	tag:'arrow',
+            dom:mobile_tArrow,
+            css:[{'transform':'rotateX(0deg)'},{}],
+            time:0
+        }];
 
 	var ashChartInstance = new AshChart('demo1',ashArgs,{});
+	ashChartInstance.sync();
 	ashChartInstance.start();
 	//demo1
 });
@@ -118,29 +158,87 @@ $(function(){
 	</header>
 	<div class='article_body'>
 		<h1 id="activity-menu">Activity Menu</h1>
-<h4 id="desktop">Desktop</h4>
 <h4 id="mobile">Mobile</h4>
-<pre><code>    &lt;div id=&quot;demo1&quot;&gt;&lt;/div&gt;
-</code></pre><pre><code>    var ashArgs = [{
-            tag: &#39;Hand&#39;,
-            dom: {},
-            css:[{left:&#39;0px&#39;,width:&#39;60px&#39;,height:&#39;60px&#39;},
-            {left:&#39;400px&#39;,width:&#39;40px&#39;,height:&#39;40px&#39;}],
-            time:200,
-            tween:&#39;easeIn&#39;
+<pre><code>    &lt;div class=&#39;mobile_wt_con&#39;&gt;
+        &lt;div class=&#39;mobile_wt_status_bar mobile_wt_status_bar_absolute&#39;&gt;&lt;/div&gt;
+        &lt;div class=&#39;mobile_wt_title_bar mobile_wt_title_bar_absolute&#39;&gt;
+            &lt;a  class=&#39;transpart_back&#39; &gt;&lt;/a&gt;
+            &lt;span id=&#39;mobile_wt_title_bg&#39;&gt;&lt;h1 class=&quot;sub_call&quot;&gt;&lt;/h1&gt;Prototype Team&lt;i class=&#39;arrow&#39; id=&#39;mobile_wt_title_arrow&#39;&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;/div&gt;  
+        &lt;div class=&#39;mobile_wt_card&#39; id=&#39;mobile_wt_card&#39;&gt;&lt;/div&gt;
+        &lt;div class=&#39;mobile_wt_card_shadow&#39; id=&#39;mobile_wt_card_shadow&#39;&gt;&lt;/div&gt;
+        &lt;div class=&#39;mobile_wt_message_content&#39; id=&#39;mobile_wt_message_content&#39;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;demo1&quot;&gt;&lt;/div&gt;
+</code></pre><pre><code>    var mobile_tBg= document.getElementById(&#39;mobile_wt_title_bg&#39;),
+        mobile_tArrow = document.getElementById(&#39;mobile_wt_title_arrow&#39;),
+        mobile_card = document.getElementById(&#39;mobile_wt_card&#39;),
+        mobile_shadow = document.getElementById(&#39;mobile_wt_card_shadow&#39;),
+        mobile_content = document.getElementById(&#39;mobile_wt_message_content&#39;);
+
+    var ashArgs = [{
+            tag:&#39;ball_container&#39;,
+            dom:mobile_card,
+            css:[{top:&#39;-641px&#39;},{top:&#39;0px&#39;}],
+            time:30,
+            tween:&quot;easeOut&quot;
         },{
-            tag: &#39;List&#39;,
-            dom: {},
-            css:[{left:&#39;0px&#39;,height:&#39;60px&#39;},
-            {left:&#39;400px&#39;,width:&#39;40px&#39;}],
-            delay:100,
-            time:200
+            tag:&#39;title_container&#39;,
+            dom:mobile_tBg,
+            css:[{&#39;background-color&#39;:&#39;rgba(255,255,255,0.4)&#39;},{&#39;background-color&#39;:&#39;rgba(231,235,235,1)&#39;}],
+            time:30,
+            tween:&#39;rgbaLinear&#39;
+        },{
+            tag:&#39;ball_container&#39;,
+            dom:mobile_card,
+            css:[{opacity:0},{opacity:1}],
+            time:20
+        },{
+            tag:&#39;arrow&#39;,
+            dom:mobile_tArrow,
+            css:[{&#39;transform&#39;:&#39;rotateX(0deg)&#39;},{&#39;transform&#39;:&#39;rotateX(180deg)&#39;}],
+            time:10
+        },{
+            tag:&#39;call_panel&#39;,
+            dom:mobile_content,
+            css:[{transform:&#39;scale(1)&#39;},{transform:&#39;scale(0.96)&#39;}],
+            time:20,
+            delay:10,
+            tween:&quot;easeIn&quot;      
+        },{
+            tag:&#39;shadow&#39;,
+            dom:mobile_shadow,
+            css:[{opacity:0},{opacity:1}],
+            delay:10,
+            time:20  
+        },{
+            notRender:true,
+            tag:&#39;shadow&#39;,
+            dom:mobile_shadow,
+            css:[{opacity:0},{opacity:0}],
+            time:0
+        },{
+            notRender:true,
+            tag:&#39;arrow&#39;,
+            dom:mobile_tArrow,
+            css:[{&#39;transform&#39;:&#39;rotateX(0deg)&#39;},{}],
+            time:0
         }];
 
     var ashChartInstance = new AshChart(&#39;demo1&#39;,ashArgs,{});
+    ashChartInstance.sync();
     ashChartInstance.start();
-</code></pre><h3 id="arguments">Arguments</h3>
-<div class='demo_con'><!--demo1-->
+</code></pre><div class='demo_con'><!--demo1-->
+	<div class='mobile_wt_con'>
+		<div class='mobile_wt_status_bar mobile_wt_status_bar_absolute'></div>
+        <div class='mobile_wt_title_bar mobile_wt_title_bar_absolute'>
+            <a  class='transpart_back' ></a>
+            <span id='mobile_wt_title_bg'><h1 class="sub_call"></h1>Prototype Team<i class='arrow' id='mobile_wt_title_arrow'></i></span>
+        </div>  
+		<div class='mobile_wt_card' id='mobile_wt_card'></div>
+		<div class='mobile_wt_card_shadow' id='mobile_wt_card_shadow'></div>
+		<div class='mobile_wt_message_content' id='mobile_wt_message_content'></div>
+	</div>
 	<div id="demo1"></div>
 <!--demo1--></div>
 		

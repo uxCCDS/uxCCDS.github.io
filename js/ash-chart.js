@@ -52,7 +52,8 @@
 			fontTitle:15,
 			fontGap:8,
 			colors:[],
-			xIndexUnitNum:4,
+			xIndexUnitNumMin:1,
+			xIndexUnitNumMax:4,
 			bgFillStyle:'#aaaaaa',
 			bgLineStyle:'#dddddd',
 			timeLineStyle:'#4AD4E2',
@@ -122,9 +123,11 @@
 		static:function(){
 			this.generateFront(this.DeadTime);
 		},
-		sync:function(){
+		sync:function(callback){
 			this.stop();
-			this.AshInstance = new Ash.S(this.AshArr.concat(this.AshChartArr));
+			this.AshInstance = new Ash.S(this.AshArr.concat(this.AshChartArr),1,function(){
+				callback && callback();
+			});
 		},
 		unsync:function(){
 			this.stop();
@@ -184,7 +187,7 @@
 						_fromData = _pPropertyArrObj.rawData0===undefined ? '/':_pPropertyArrObj.rawData0;
 						_toData = _pPropertyArrObj.rawData1===undefined ? '/':_pPropertyArrObj.rawData1;
 						strTBody.push('<tr>');
-						strTBody.push([c(_eName),c(_pName),c(_fromData),c(_toData),c(_pPropertyArrObj.delay),c(_pPropertyArrObj.time),c(_pPropertyArrObj.tween)].join(''));
+						strTBody.push([c(_eName),c(_pName),c(_fromData),c(_toData),c(_pPropertyArrObj.delay),c(_pPropertyArrObj.time),c(_pPropertyArrObj.Tween)].join(''));
 						strTBody.push('</tr>');
 
 					}
@@ -303,7 +306,7 @@
 			ctx.textAlign="left";
 			ctx.fillText(obj.rawData0,obj.x+txtGap,y - txtHeight -txtGap);
 			ctx.textAlign="center";
-			ctx.fillText(obj.tween,middleX,bottomY);
+			ctx.fillText(obj.Tween,middleX,bottomY);
 			ctx.textAlign="right";
 			ctx.fillText(obj.rawData1,obj.x+obj.w-txtGap,y - txtHeight -txtGap);
 			this._drawLineProgress(ctx,this.DeadTime,obj,y);
@@ -395,6 +398,7 @@
 						time: css[1][name]===undefined ? 0: op.MsTime,
 						_delay:op.delay,
 						_time:css[1][name]===undefined ? 0: op.time,
+						Tween:op.Tween,
 						tween:op.tween
 					});
 				}
@@ -415,6 +419,7 @@
 							time:0,
 							_delay:op.delay+op.time,
 							_time:0,
+							Tween:op.Tween,
 							tween:op.tween
 						});
 					}else{
@@ -441,41 +446,52 @@
 			var deadTime = 0,
 				msDeadTime = 0,
 				count = 0,
+				ecount=0,
 				tempP,
 				longestWording='',
 				_p;
+
+			var regRGB = /rgba/gi,
+				regInt = /int/gi,
+				regFirstLetter = /\b(\w)|\s(\w)/;
+
 			for(var n in arr){
-				_p = arr[n];
-				if(this.Data.El[_p.tag]===undefined){
-					this.Data.El[_p.tag]={};
-				}
-				/* here */
-				_p.Delay = _p.delay = _p.delay || 0;
-				_p.Time = _p.time = _p.time || 0;
+				if(arr[n].notRender===undefined){
+					_p = arr[n];
+					if(this.Data.El[_p.tag]===undefined){
+						this.Data.El[_p.tag]={};
+						ecount++;
+					}
+					/* here */
+					_p.Delay = _p.delay = _p.delay || 0;
+					_p.Time = _p.time = _p.time || 0;
 
-				_p.MsDelay = _p.msDelay || this._convertToMs(_p.delay);
-				_p.MsTime = _p.msTime || this._convertToMs(_p.time);
-				_p.tween = _p.tween || 'linear';
+					_p.MsDelay = _p.msDelay || this._convertToMs(_p.delay);
+					_p.MsTime = _p.msTime || this._convertToMs(_p.time);
+					_p.tween = _p.tween || 'linear';
+					_p.Tween = _p.tween.replace(regRGB,'').replace(regInt,'').replace(regFirstLetter,function(m){
+						return m.toUpperCase();
+					});
 
-				if(deadTime<_p.delay+_p.time){
-					deadTime = _p.delay+_p.time;
-					msDeadTime = _p.MsDelay + _p.MsTime;
-				}
+					if(deadTime<_p.delay+_p.time){
+						deadTime = _p.delay+_p.time;
+						msDeadTime = _p.MsDelay + _p.MsTime;
+					}
 
-				tempP = this._getPropertyInfo(this._getPCount(_p.css,_p,this.Data.El[_p.tag]),this._getPCount(_p.attr,_p,this.Data.El[_p.tag]),this._getPCount(_p.prop,_p,this.Data.El[_p.tag]));
-				count = count + tempP.count;
-				if(tempP.longestWording.length>longestWording.length){
-					longestWording = tempP.longestWording;
+					tempP = this._getPropertyInfo(this._getPCount(_p.css,_p,this.Data.El[_p.tag]),this._getPCount(_p.attr,_p,this.Data.El[_p.tag]),this._getPCount(_p.prop,_p,this.Data.El[_p.tag]));
+					count = count + tempP.count;
+					if(tempP.longestWording.length>longestWording.length){
+						longestWording = tempP.longestWording;
+					}
 				}
 			}
-			this.ECount = arr.length || 0;
+			this.ECount = ecount || 0;
 			this.DeadTime = deadTime;
 			this.MsDeadTime = msDeadTime;
 			this.PLongestWording = longestWording;
 			this.PCount = count;
 
 			this._prepareColor();
-			//this._prepareTimeline(arr);
 			this._preparePosition();
 		},
 		_prepareColor:function(){
@@ -491,23 +507,38 @@
 				}
 			}
 		},
-		_prepareTimeline:function(arr){
-			/*
-			if(this.Settings.IfToMS){
-				var _p;
-				for(var n in arr){
-					_p = arr[n];
-					_p.TagDelay = _p.tagDelay!==undefined ?  _p.tagDelay : Math.round(_p.delay * 16.7/10)*10;
-					_p.TagTime = _p.tagTime!==undefined ?  _p.tagTime :Math.round(_p.time * 16.7/10)*10;
-				}
-				this.TagDeadTime = Math.round(this.DeadTime * 16.7/10)*10;
-			}
-			*/
-		},
 		_sortProperty:function(a,b){
 			if(a.time<b.time) return -1;
 			else if(a.time>b.time) return 1;
 			else return 0;
+		},
+		_getTrueUnit:function(num){
+			var len = ((num>>0)+'').length,
+				rate = Math.pow(10,len-1);
+			if(len>0){
+				return Math.ceil(num/rate)*rate;
+			}else{
+				return 10;
+			}
+		},
+		_getIndexNum:function(total){
+			var min = this.Settings.xIndexUnitNumMin,
+				max = this.Settings.xIndexUnitNumMax,
+				_u,
+				ret,
+				minUnit= Infinity;
+			for(var i=min;i<=max;i++){
+				_u = this._getTrueUnit(total/i);
+				if(minUnit>_u){
+					minUnit = _u;
+					unit=[];
+					ret ={
+						num:i,
+						unit:_u
+					};
+				}
+			}
+			return ret;
 		},
 		_preparePosition:function() {
 			var settings = this.Settings,
@@ -516,10 +547,6 @@
 				xIndexTitleW = settings.IfToMS ? this._getFontSize('Timeline / ms',settings.fontTitle).w : this._getFontSize('Timeline / frame',settings.fontTitle).w,
 				maxPwordingLen = Math.max(this._getFontSize('Property',settings.fontTitle).w,this._getFontSize(this.PLongestWording,settings.fontLine).w),
 				xIndexLen = settings.canvasWidth-settings.chartPadding[1]-settings.chartPadding[3]-settings.contentPadding[1]-settings.contentPadding[3]-xIndexTitleW-maxPwordingLen;
-			/*
-			var unitLen = (xIndexLen-20)/this.TagDeadTime;
-			this.UnitLen = unitLen;
-			*/
 
 			// body...
 			this.Data.TimelineY={
@@ -575,30 +602,36 @@ EL:{
 				_pPropertyArrObj,
 				_i,_l;
 
-			var maxUnitRate=100,
-				maxUnit = (this.MsDeadTime/maxUnitRate>>0)*maxUnitRate,
-				msMaxUnitRate = 10,
-				msMaxUnit = (this.MsDeadTime/msMaxUnitRate>>0)*msMaxUnitRate,
-				xIndexUnitNum;
+			var _ret,
+				timeline_unit,
+				timeline_num,
+				timeline_max,
+				timeline_unitLen,
+				time_max,
+				time_unitLen,
+				xLen = (this.Data.TimelineX.l - 20);
 
 			if(settings.IfToMS){
-				xIndexUnitNum = Math.min(settings.xIndexUnitNum,Math.ceil(msMaxUnit/msMaxUnitRate));
+				_ret = this._getIndexNum(this.MsDeadTime);
+				timeline_unit = _ret.unit;
+				timeline_num = _ret.num;
+				timeline_max = timeline_unit *timeline_num;
+				time_max = this.DeadTime*timeline_max/this.MsDeadTime;
+				timeline_unitLen = xLen/timeline_max;
+				time_unitLen = xLen/time_max;
+				this.DeadTimeXPosition = timeline_unitLen * this.MsDeadTime;
 			}else{
-				xIndexUnitNum = Math.min(settings.xIndexUnitNum,Math.ceil(maxUnit/maxUnitRate));
+				_ret = this._getIndexNum(this.DeadTime);
+				timeline_unit = _ret.unit;
+				timeline_num = _ret.num;
+				timeline_max = timeline_unit *timeline_num;
+				time_max = timeline_max;
+				timeline_unitLen = xLen/timeline_max;
+				time_unitLen = xLen/time_max;
+				this.DeadTimeXPosition = timeline_unitLen * this.DeadTime;
 			}
 
-				//time gap
-			var xUnit = maxUnit/xIndexUnitNum>>0,
-				msXUnit = msMaxUnit/xIndexUnitNum>>0,
-				//length gap
-				xUnitStep = (this.Data.TimelineX.l - 20)/ xIndexUnitNum >>0,
-				//
-				unitLen = xUnitStep/xUnit,
-				msUnitLen = xUnitStep/msXUnit;
-
 			var y0Tag=_y0+settings.chartPadding[2];
-
-			this.DeadTimeXPosition = settings.IfToMS ? msUnitLen * this.MsDeadTime : unitLen * this.DeadTime;
 
 			//generate unit
 			this.Data.Unit={
@@ -607,9 +640,9 @@ EL:{
 					y:y0Tag
 				}
 			};
-			for(var ui=1;ui<=xIndexUnitNum;ui++){
-				this.Data.Unit[ui*xUnit]={
-					x:_x0+ui*xUnitStep,
+			for(var ui=1;ui<=timeline_num;ui++){
+				this.Data.Unit[ui*timeline_unit]={
+					x:_x0+ui*timeline_unit*timeline_unitLen,
 					y:y0Tag
 				}
 			}
@@ -629,8 +662,8 @@ EL:{
 					_pProperty.arr.sort(this._sortProperty);
 					for(;_i<_l;_i++){
 						_pPropertyArrObj=_pProperty.arr[_i];
-						_pPropertyArrObj.x = _x0+_pPropertyArrObj.delay * unitLen >>0;
-						_pPropertyArrObj.w = _pPropertyArrObj.time * unitLen >>0;
+						_pPropertyArrObj.x = _x0+_pPropertyArrObj._delay * time_unitLen >>0;
+						_pPropertyArrObj.w = _pPropertyArrObj._time * time_unitLen >>0;
 					}
 				}
 				_ei++;

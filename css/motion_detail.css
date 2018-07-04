@@ -9,3 +9,21 @@
 .ash_chart_tag_con a{ display: inline-block;vertical-align: top; position: relative; margin-left: 30px; height: 20px; line-height: 20px;}
 .ash_chart_tag_con a *{vertical-align: top;	}
 .ash_chart_tag_con a i{display: inline-block;width: 20px; height: 20px; margin-right: 14px;}
+
+.mobile_wt_con{width: 375px; height: 667px; background:black; position: relative; box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.48); overflow: hidden; }
+.mobile_wt_status_bar{width: 100%; height: 20px; background: white url('../img/motion/mobile_status_bar.png') no-repeat center;}
+.mobile_wt_status_bar_absolute{position: absolute; top: 0px; left: 0px; z-index: 100;}
+.mobile_wt_status_bar_absolute{position: absolute; top: 0px; left: 0px; z-index: 100;}
+.mobile_wt_title_bar{width: 100%; height: 44px;line-height: 44px;background: white; position: relative;}
+.mobile_wt_title_bar_absolute{position: absolute; top: 20px; left: 0px; z-index: 100;} 
+.mobile_wt_title_bar>a{position: absolute; top: 0px; display: block; height: 44px; line-height: 44px; text-align: center; width: 24px; background-position: center; background-repeat: no-repeat; border-radius: 50%;}
+.mobile_wt_title_bar>a:first-child{left:12px;}
+.mobile_wt_title_bar>a:last-child{right:12px;}
+.mobile_wt_title_bar .transpart_back{background-image: url('../img/motion/mobile_mt_titleIcon_back.png');}
+.mobile_wt_title_bar>span{display: block; height: 34px; line-height: 34px; border:1px solid rgba(0,0,0,0.08); border-radius: 18px; background: rgba(255,255,255,0.4); color: 17px; text-align: center; font-weight: bold; padding: 0 36px; position: absolute; top: 0px; left: 50%; transform: translate(-50%,0);}
+.mobile_wt_title_bar>span h1{display: block; width: 36px;height: 34px; background-repeat: no-repeat; background-position: center; position: absolute; top: 0px; left: 0px;}
+.mobile_wt_title_bar>span .sub_call{background-image: url('../img/motion/mobile_mt_titleIcon_call.png')}
+.mobile_wt_title_bar>span i{display: block; width: 36px;height: 34px;  position: absolute; top: 0px; right: 0px; background:url('../img/motion/mobile_mt_titleIcon_arrow.png') no-repeat center;}
+.mobile_wt_card{width: 100%;height: 641px; background:url('../img/motion/mobile_mt_card.png') no-repeat center; position:  absolute; top: -641px; left: 0px; z-index: 50;}
+.mobile_wt_card_shadow{position: absolute; top: 64px;left: 0px; z-index: 49; width: 100%;height: 603px; background-color: rgba(0,0,0,0.4);}
+.mobile_wt_message_content{position: absolute; top: 64px;left: 0px; z-index: 10; width: 100%;height: 603px; background:url('../img/motion/mobile_mt_call.png') no-repeat center;}

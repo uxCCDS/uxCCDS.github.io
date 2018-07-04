@@ -6,7 +6,7 @@ Desc: Collapse List
 
 ```
 <!--demo3-->
-	<video preload="auto" autoplay loop src='../../img/motion/CollapseList-MacOS.mov' ></video>
+	<video preload="auto" autoplay loop src='../../img_data/motion/realization/CollapseList-MacOS.mov' ></video>
 <!--demo3-->
 ```
 
@@ -30,7 +30,7 @@ demo3
 		    dom: {},
 		    css:[{'Position X':'0px'},
 		    {'Position X':'13px'}],
-		    time:50,
+		    time:30,
 		    msTime:500,
 		    tween:'easeInOut'
 		}];
@@ -62,7 +62,7 @@ demo2
 		    dom: {},
 		    css:[{width:'400px'},
 		    {width:'0px'}],
-		    time:30,
+		    time:18,
 		    msTime:300,
 		    tween:'easeOut'
 		}];
