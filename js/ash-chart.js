@@ -100,18 +100,10 @@
 
 			this.generateTitle();
 			this.generateBg();
-
 			this.generateTable();
-		},
-		static:function(){
-			this.generateFront(this.DeadTime);
-		},
-		sync:function(){
 
-		},
-		start:function(){
-			var me=this,
-			_ash = new Ash.S([{
+			var me = this;
+			this.AshChartArr = [{
 				dom:'',
 				time:this.DeadTime,
 				delegate:function(time) {
@@ -124,11 +116,37 @@
 				delegate:function(time) {
 
 				}
-			}]);
-			_ash.repeat(Infinity);
+			}];
+			this.unsync();
+		},
+		static:function(){
+			this.generateFront(this.DeadTime);
+		},
+		sync:function(){
+			this.stop();
+			this.AshInstance = new Ash.S(this.AshArr.concat(this.AshChartArr));
+		},
+		unsync:function(){
+			this.stop();
+			this.AshInstance = new Ash.S(this.AshChartArr);
+		},
+		start:function(func){
+			this.AshInstance.repeat(Infinity);
 		},
 		stop:function(){
-
+			this.pause();
+			delete this.AshInstance;
+			this.AshInstance === undefined;
+		},
+		pause:function(){
+			if(this.AshInstance!==undefined){
+				this.AshInstance.stop();
+			}
+		},
+		continue:function(){
+			if(this.AshInstance!==undefined){
+				this.AshInstance.continue();
+			}	
 		},
 		_generateTagStr:function(tag,content){
 			return ['<',tag,'>',content,'</',tag,'>'].join('');
