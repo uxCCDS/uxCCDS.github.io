@@ -512,10 +512,9 @@
 			else if(a.time>b.time) return 1;
 			else return 0;
 		},
-		_getTrueUnit:function(num){
-			var len = ((num>>0)+'').length,
-				rate = Math.pow(10,len-1);
-			if(len>0){
+		_getTrueUnit:function(num,len){
+			var rate = Math.pow(10,len-1);
+			if(len>1){
 				return Math.ceil(num/rate)*rate;
 			}else{
 				return 10;
@@ -527,9 +526,18 @@
 				_u,
 				ret,
 				minUnit= Infinity;
+
+			var _len = ((total>>0)+'').length,
+				_rate = Math.pow(10,_len-1),
+				_total0 = _rate * (max/2>>0);
+
+			if(total<_total0){
+				_len = _len-1;
+			}
+
 			for(var i=min;i<=max;i++){
-				_u = this._getTrueUnit(total/i);
-				if(minUnit>_u){
+				_u = this._getTrueUnit(total/i,_len);
+				if(minUnit>_u && _u>=0){
 					minUnit = _u;
 					unit=[];
 					ret ={
