@@ -26,6 +26,7 @@
 <script type="text/javascript" src="../../js/highlight.pack.js"></script>
 <script type="text/javascript" src="../../js/ash.js"></script>
 <style type="text/css">
+
 </style>
 
     <link rel="stylesheet" type="text/css" href="../../css/detail.css" media="screen">
@@ -34,6 +35,7 @@
     <script type="text/javascript" src="../../js/ash-chart.js"></script>
     <script type="text/javascript" src="../../js/highlight.pack.js"></script>
     <style type="text/css">
+
 </style>
     <script type="text/javascript">
 $(function(){
@@ -97,6 +99,46 @@ $(function(){
 	ashChartInstance.sync();
 	ashChartInstance.start();
 	//demo1
+//demo2
+	var desktop_title_con= document.getElementById('desktop_title_con'),
+		desktop_space_title = document.getElementById('desktop_space_title'),
+		desktop_tArrow = document.getElementById('desktop_space_title_arrow'),
+		desktop_activity_con = document.getElementById('fake_activity_con');
+
+	var ashArgs2 = [{
+			tag:'ball_container',
+            dom:desktop_activity_con,
+            css:[{top:'-576px'},{top:'0px'}],
+            time:30,
+            tween:"easeOut"
+        },{
+			tag:'title_container',
+            dom:desktop_space_title,
+            css:[{'background-color':'rgba(255,255,255,0.4)'},{'background-color':'rgba(231,235,235,1)'}],
+            time:30,
+            tween:'rgbaLinear'
+        },{
+        	tag:'ball_container',
+            dom:desktop_activity_con,
+            css:[{opacity:0},{opacity:1}],
+            time:20
+        },{
+        	tag:'arrow',
+            dom:desktop_tArrow,
+            css:[{'transform':'rotateX(0deg)'},{'transform':'rotateX(180deg)'}],
+            time:10
+        },{
+        	tag:'title_bar',
+            dom:desktop_title_con,
+            css:[{'border-bottom-color':'rgba(0,0,0,0.08)'},{'border-bottom-color':'rgba(0,0,0,0)'}],
+            time:10,
+            tween:"rgbaLinear"      
+        }];
+
+	var ashChartInstance2 = new AshChart('demo2',ashArgs2,{});
+	ashChartInstance2.sync();
+	ashChartInstance2.start();
+	//demo2
 });
 </script>
 </head>
@@ -162,7 +204,7 @@ $(function(){
         &lt;div class=&#39;mobile_wt_status_bar mobile_wt_status_bar_absolute&#39;&gt;&lt;/div&gt;
         &lt;div class=&#39;mobile_wt_title_bar mobile_wt_title_bar_absolute&#39;&gt;
             &lt;a  class=&#39;transpart_back&#39; &gt;&lt;/a&gt;
-            &lt;span id=&#39;mobile_wt_title_bg&#39;&gt;&lt;h1 class=&quot;sub_call&quot;&gt;&lt;/h1&gt;Prototype Team&lt;i class=&#39;arrow&#39; id=&#39;mobile_wt_title_arrow&#39;&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;span id=&#39;mobile_wt_title_bg&#39; class=&#39;space_title&#39;&gt;&lt;h1 class=&quot;sub_call&quot;&gt;&lt;/h1&gt;Prototype Team&lt;i class=&#39;arrow&#39; id=&#39;mobile_wt_title_arrow&#39;&gt;&lt;/i&gt;&lt;/span&gt;
         &lt;/div&gt;  
         &lt;div class=&#39;mobile_wt_card&#39; id=&#39;mobile_wt_card&#39;&gt;&lt;/div&gt;
         &lt;div class=&#39;mobile_wt_card_shadow&#39; id=&#39;mobile_wt_card_shadow&#39;&gt;&lt;/div&gt;
@@ -232,7 +274,7 @@ $(function(){
 		<div class='mobile_wt_status_bar mobile_wt_status_bar_absolute'></div>
         <div class='mobile_wt_title_bar mobile_wt_title_bar_absolute'>
             <a  class='transpart_back' ></a>
-            <span id='mobile_wt_title_bg'><h1 class="sub_call"></h1>Prototype Team<i class='arrow' id='mobile_wt_title_arrow'></i></span>
+            <span id='mobile_wt_title_bg' class='space_title'><h1 class="sub_call"></h1>Prototype Team<i class='arrow' id='mobile_wt_title_arrow'></i></span>
         </div>  
 		<div class='mobile_wt_card' id='mobile_wt_card'></div>
 		<div class='mobile_wt_card_shadow' id='mobile_wt_card_shadow'></div>
@@ -240,6 +282,63 @@ $(function(){
 	</div>
 	<div id="demo1"></div>
 <!--demo1--></div>
+<h2 id="desktop">Desktop</h2>
+<pre><code>    &lt;div class=&#39;desktop_wt_con fake_chat_con&#39;&gt;
+        &lt;div class=&#39;desktop_title_con&#39; id=&#39;desktop_title_con&#39;&gt;
+            &lt;span class=&#39;space_title&#39; id=&#39;desktop_space_title&#39;&gt;&lt;h1 class=&quot;sub_chat&quot;&gt;&lt;/h1&gt;Prototype Team&lt;i class=&#39;arrow&#39; id=&#39;desktop_space_title_arrow&#39;&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;h1&gt;Engineering&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div class=&#39;fake_activity_con&#39; id=&#39;fake_activity_con&#39;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;demo2&quot;&gt;&lt;/div&gt;
+</code></pre><pre><code>    var desktop_title_con= document.getElementById(&#39;desktop_title_con&#39;),
+        desktop_space_title = document.getElementById(&#39;desktop_space_title&#39;),
+        desktop_tArrow = document.getElementById(&#39;desktop_space_title_arrow&#39;),
+        desktop_activity_con = document.getElementById(&#39;fake_activity_con&#39;);
+
+    var ashArgs2 = [{
+            tag:&#39;ball_container&#39;,
+            dom:desktop_activity_con,
+            css:[{top:&#39;-576px&#39;},{top:&#39;0px&#39;}],
+            time:30,
+            tween:&quot;easeOut&quot;
+        },{
+            tag:&#39;title_container&#39;,
+            dom:desktop_space_title,
+            css:[{&#39;background-color&#39;:&#39;rgba(255,255,255,0.4)&#39;},{&#39;background-color&#39;:&#39;rgba(231,235,235,1)&#39;}],
+            time:30,
+            tween:&#39;rgbaLinear&#39;
+        },{
+            tag:&#39;ball_container&#39;,
+            dom:desktop_activity_con,
+            css:[{opacity:0},{opacity:1}],
+            time:20
+        },{
+            tag:&#39;arrow&#39;,
+            dom:desktop_tArrow,
+            css:[{&#39;transform&#39;:&#39;rotateX(0deg)&#39;},{&#39;transform&#39;:&#39;rotateX(180deg)&#39;}],
+            time:10
+        },{
+            tag:&#39;title_bar&#39;,
+            dom:desktop_title_con,
+            css:[{&#39;border-bottom-color&#39;:&#39;rgba(0,0,0,0.08)&#39;},{&#39;border-bottom-color&#39;:&#39;rgba(0,0,0,0)&#39;}],
+            time:10,
+            tween:&quot;rgbaLinear&quot;      
+        }];
+
+    var ashChartInstance2 = new AshChart(&#39;demo2&#39;,ashArgs2,{});
+    ashChartInstance2.sync();
+    ashChartInstance2.start();
+</code></pre><div class='demo_con'><!--demo2-->
+	<div class='desktop_wt_con fake_chat_con'>
+		<div class='desktop_title_con' id='desktop_title_con'>
+			<span class='space_title' id='desktop_space_title'><h1 class="sub_chat"></h1>Prototype Team<i class='arrow' id='desktop_space_title_arrow'></i></span>
+			<h1>Engineering</h1>
+		</div>
+		<div class='fake_activity_con' id='fake_activity_con'></div>
+	</div>
+	<div id="demo2"></div>
+<!--demo2--></div>
 		
 	</div>
 	<!-- hiding pagination per Damon's feedback 

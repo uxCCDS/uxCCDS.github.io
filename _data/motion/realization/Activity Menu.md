@@ -10,7 +10,7 @@ Desc: Activity Menu
 		<div class='mobile_wt_status_bar mobile_wt_status_bar_absolute'></div>
         <div class='mobile_wt_title_bar mobile_wt_title_bar_absolute'>
             <a  class='transpart_back' ></a>
-            <span id='mobile_wt_title_bg'><h1 class="sub_call"></h1>Prototype Team<i class='arrow' id='mobile_wt_title_arrow'></i></span>
+            <span id='mobile_wt_title_bg' class='space_title'><h1 class="sub_call"></h1>Prototype Team<i class='arrow' id='mobile_wt_title_arrow'></i></span>
         </div>  
 		<div class='mobile_wt_card' id='mobile_wt_card'></div>
 		<div class='mobile_wt_card_shadow' id='mobile_wt_card_shadow'></div>
@@ -84,3 +84,67 @@ Desc: Activity Menu
 ```
 
 demo1
+
+
+
+
+## Desktop
+
+```
+<!--demo2-->
+	<div class='desktop_wt_con fake_chat_con'>
+		<div class='desktop_title_con' id='desktop_title_con'>
+			<span class='space_title' id='desktop_space_title'><h1 class="sub_chat"></h1>Prototype Team<i class='arrow' id='desktop_space_title_arrow'></i></span>
+			<h1>Engineering</h1>
+		</div>
+		<div class='fake_activity_con' id='fake_activity_con'></div>
+	</div>
+	<div id="demo2"></div>
+<!--demo2-->
+```
+```
+	//demo2
+	var desktop_title_con= document.getElementById('desktop_title_con'),
+		desktop_space_title = document.getElementById('desktop_space_title'),
+		desktop_tArrow = document.getElementById('desktop_space_title_arrow'),
+		desktop_activity_con = document.getElementById('fake_activity_con');
+
+	var ashArgs2 = [{
+			tag:'ball_container',
+            dom:desktop_activity_con,
+            css:[{top:'-576px'},{top:'0px'}],
+            time:30,
+            tween:"easeOut"
+        },{
+			tag:'title_container',
+            dom:desktop_space_title,
+            css:[{'background-color':'rgba(255,255,255,0.4)'},{'background-color':'rgba(231,235,235,1)'}],
+            time:30,
+            tween:'rgbaLinear'
+        },{
+        	tag:'ball_container',
+            dom:desktop_activity_con,
+            css:[{opacity:0},{opacity:1}],
+            time:20
+        },{
+        	tag:'arrow',
+            dom:desktop_tArrow,
+            css:[{'transform':'rotateX(0deg)'},{'transform':'rotateX(180deg)'}],
+            time:10
+        },{
+        	tag:'title_bar',
+            dom:desktop_title_con,
+            css:[{'border-bottom-color':'rgba(0,0,0,0.08)'},{'border-bottom-color':'rgba(0,0,0,0)'}],
+            time:10,
+            tween:"rgbaLinear"      
+        }];
+
+	var ashChartInstance2 = new AshChart('demo2',ashArgs2,{});
+	ashChartInstance2.sync();
+	ashChartInstance2.start();
+	//demo2
+```
+
+
+
+demo2
