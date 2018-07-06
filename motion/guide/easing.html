@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Guide</title>
+    <title>Easing</title>
 <meta charset='utf-8'>
 <link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -38,23 +38,25 @@
     <script type="text/javascript">
 $(function(){
 //demo1
-	var ashArgs = [{
-			tag: 'Hand',
-		    dom: {},
-		    css:[{left:'0px',width:'60px',height:'60px'},
-		    {left:'400px',width:'40px',height:'40px'}],
-		    time:200,
-		    tween:'easeIn'
-		},{
-			tag: 'List',
-		    dom: {},
-		    css:[{left:'0px',height:'60px'},
-		    {left:'400px',width:'40px'}],
-		    delay:100,
-		    time:200
-		}];
+	var arr=[],
+		regTest = /int|rgb/gi,
+		regCaps = /\b(\w)|\s(\w)/,
+		fnCaps=function(m){
+			return m.toUpperCase();
+		};
+	for(var name in Ash.Tween){
+		if(!regTest.test(name)){
+			arr.push({
+				tag:name.replace(regCaps,fnCaps),
+				dom:{},
+				css:[{width:0},{width:100}],
+				time:100,
+				tween:name
+			});
+		}
+	}
 
-	var ashChartInstance = new AshChart('demo1',ashArgs,{});
+	var ashChartInstance = new AshChart('demo1',arr,{});
 	ashChartInstance.start();
 	//demo1
 });
@@ -83,9 +85,9 @@ $(function(){
     <ul class='sideMenu'>
 	
 	
-		<li><a   href='easing.html'>Easing</a></li>
+		<li><a class=current  href='easing.html'>Easing</a></li>
 	
-		<li><a class=current  href='guide.html'>Guide</a></li>
+		<li><a   href='guide.html'>Guide</a></li>
 	
 	
 </ul> 
@@ -98,7 +100,11 @@ $(function(){
 		</li>
 	
 		<li>
-				<a href='../../motion/guide/guide.html' >Guide</a>
+				<a href='../../motion/guide/' >Guide</a>
+		</li>
+	
+		<li>
+				<a href='../../motion/guide/easing.html' >Easing</a>
 		</li>
 	
 </ul>
@@ -108,32 +114,32 @@ $(function(){
         <div class="section">
           <article class='article'>
 	<header class='article_header'>
-		<h1>Guide</h1>
+		<h1>Easing</h1>
 		
 		
 	</header>
 	<div class='article_body'>
-		<h1 id="activity-menu">Activity Menu</h1>
-<h4 id="desktop">Desktop</h4>
-<h4 id="mobile">Mobile</h4>
+		<h1 id="easing">Easing</h1>
 <pre><code>    &lt;div id=&quot;demo1&quot;&gt;&lt;/div&gt;
-</code></pre><pre><code>    var ashArgs = [{
-            tag: &#39;Hand&#39;,
-            dom: {},
-            css:[{left:&#39;0px&#39;,width:&#39;60px&#39;,height:&#39;60px&#39;},
-            {left:&#39;400px&#39;,width:&#39;40px&#39;,height:&#39;40px&#39;}],
-            time:200,
-            tween:&#39;easeIn&#39;
-        },{
-            tag: &#39;List&#39;,
-            dom: {},
-            css:[{left:&#39;0px&#39;,height:&#39;60px&#39;},
-            {left:&#39;400px&#39;,width:&#39;40px&#39;}],
-            delay:100,
-            time:200
-        }];
+</code></pre><pre><code>    var arr=[],
+        regTest = /int|rgb/gi,
+        regCaps = /\b(\w)|\s(\w)/,
+        fnCaps=function(m){
+            return m.toUpperCase();
+        };
+    for(var name in Ash.Tween){
+        if(!regTest.test(name)){
+            arr.push({
+                tag:name.replace(regCaps,fnCaps),
+                dom:{},
+                css:[{width:0},{width:100}],
+                time:100,
+                tween:name
+            });
+        }
+    }
 
-    var ashChartInstance = new AshChart(&#39;demo1&#39;,ashArgs,{});
+    var ashChartInstance = new AshChart(&#39;demo1&#39;,arr,{});
     ashChartInstance.start();
 </code></pre><h3 id="arguments">Arguments</h3>
 <div class='demo_con'><!--demo1-->
@@ -145,8 +151,8 @@ $(function(){
 	<footer class='article_footer'>
 
 		<div class="pagination">
-			<a  class="prev" href="easing.html">← Prev</a>
-			 	 	
+			
+			<a  class="next" href="guide.html">Next →</a> 	 	
 		</div>		
 	</footer>-->
 </article>

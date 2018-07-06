@@ -271,6 +271,7 @@
 				//ctx.strokeStyle = tags[_eName].color;
 				ctx.strokeStyle = settings.bgLineStyle;
 				ctx.fillStyle =tags[_eName].color;
+				//
 				ctx.font = settings.fontLine + "px Arial";
 				ctx.lineWidth = settings.lineWidth;
 				for(_pName in el[_eName]){
@@ -519,11 +520,32 @@
 			}else if(DefaultColors.length>= this.ECount){
 				this.Colors = DefaultColors;
 			}else{//>3
-				var step = 750/this.ECount/2 >>0;
+				/*
+				1 1 1
+				0 0 0
+				1 0 0
+				0 1 0
+				0 0 1 
+				0 1 1
+				1 1 0
+				1 0 1
+				*/
+				var step = 750/this.ECount/2 >>0,
+					template = [[1,0,0],[0,1,0],[0,0,1],[0,1,1],[1,0,1],[1,1,0]],
+					layerN = Math.max(2,Math.ceil(this.ECount/template.length)),
+					layerStep = 250/(layerN-1)>>0,
+					layerI,
+					_val,
+					_temp;
 				this.Colors=[];
-				for(var i=0;i<this.ECount;i++){
-					this.Colors.push(['rgba(',5+((i+2)/3>>0)*step,',',5+((i+1)/3>>0)*step,',',5+(i/3>>0)*step,',1)'].join(''));
+				for(var i=0;i<layerN;i++){
+					_val = i * layerStep+1;
+					for(layerI=0;layerI<template.length;layerI++){
+						_temp = template[layerI];
+						this.Colors.push(['rgba(',_val*_temp[0],',',_val*_temp[1],',',_val*_temp[2],',1)'].join(''));
+					}
 				}
+				console.log(layerN,template.length,this.Colors);
 			}
 		},
 		_sortProperty:function(a,b){
