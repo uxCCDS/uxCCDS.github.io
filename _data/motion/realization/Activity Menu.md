@@ -6,7 +6,7 @@ Desc: Activity Menu
 
 ```
 <!--demo1-->
-	<div class='mobile_wt_con'>
+	<div class='mobile_wt_con flex_none'>
 		<div class='mobile_wt_status_bar mobile_wt_status_bar_absolute'></div>
         <div class='mobile_wt_title_bar mobile_wt_title_bar_absolute'>
             <a  class='transpart_back' ></a>
@@ -16,7 +16,7 @@ Desc: Activity Menu
 		<div class='mobile_wt_card_shadow' id='mobile_wt_card_shadow'></div>
 		<div class='mobile_wt_message_content' id='mobile_wt_message_content'></div>
 	</div>
-	<div id="demo1"></div>
+	<div id="demo1" class='flex_none'></div>
 <!--demo1-->
 ```
 
@@ -77,7 +77,10 @@ Desc: Activity Menu
             time:0
         }];
 
-	var ashChartInstance = new AshChart('demo1',ashArgs,{});
+	var ashChartInstance = new AshChart('demo1',ashArgs,{
+        canvasWidth:900,
+        IfRow:true
+    });
 	ashChartInstance.sync();
 	ashChartInstance.start();
 	//demo1

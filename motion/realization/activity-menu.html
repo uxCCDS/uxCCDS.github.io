@@ -95,7 +95,10 @@ $(function(){
             time:0
         }];
 
-	var ashChartInstance = new AshChart('demo1',ashArgs,{});
+	var ashChartInstance = new AshChart('demo1',ashArgs,{
+        canvasWidth:900,
+        IfRow:true
+    });
 	ashChartInstance.sync();
 	ashChartInstance.start();
 	//demo1
@@ -200,7 +203,7 @@ $(function(){
 	</header>
 	<div class='article_body'>
 		<h2 id="mobile">Mobile</h2>
-<pre><code>    &lt;div class=&#39;mobile_wt_con&#39;&gt;
+<pre><code>    &lt;div class=&#39;mobile_wt_con flex_none&#39;&gt;
         &lt;div class=&#39;mobile_wt_status_bar mobile_wt_status_bar_absolute&#39;&gt;&lt;/div&gt;
         &lt;div class=&#39;mobile_wt_title_bar mobile_wt_title_bar_absolute&#39;&gt;
             &lt;a  class=&#39;transpart_back&#39; &gt;&lt;/a&gt;
@@ -210,7 +213,7 @@ $(function(){
         &lt;div class=&#39;mobile_wt_card_shadow&#39; id=&#39;mobile_wt_card_shadow&#39;&gt;&lt;/div&gt;
         &lt;div class=&#39;mobile_wt_message_content&#39; id=&#39;mobile_wt_message_content&#39;&gt;&lt;/div&gt;
     &lt;/div&gt;
-    &lt;div id=&quot;demo1&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;demo1&quot; class=&#39;flex_none&#39;&gt;&lt;/div&gt;
 </code></pre><pre><code>    var mobile_tBg= document.getElementById(&#39;mobile_wt_title_bg&#39;),
         mobile_tArrow = document.getElementById(&#39;mobile_wt_title_arrow&#39;),
         mobile_card = document.getElementById(&#39;mobile_wt_card&#39;),
@@ -266,11 +269,14 @@ $(function(){
             time:0
         }];
 
-    var ashChartInstance = new AshChart(&#39;demo1&#39;,ashArgs,{});
+    var ashChartInstance = new AshChart(&#39;demo1&#39;,ashArgs,{
+        canvasWidth:900,
+        IfRow:true
+    });
     ashChartInstance.sync();
     ashChartInstance.start();
 </code></pre><div class='demo_con'><!--demo1-->
-	<div class='mobile_wt_con'>
+	<div class='mobile_wt_con flex_none'>
 		<div class='mobile_wt_status_bar mobile_wt_status_bar_absolute'></div>
         <div class='mobile_wt_title_bar mobile_wt_title_bar_absolute'>
             <a  class='transpart_back' ></a>
@@ -280,7 +286,7 @@ $(function(){
 		<div class='mobile_wt_card_shadow' id='mobile_wt_card_shadow'></div>
 		<div class='mobile_wt_message_content' id='mobile_wt_message_content'></div>
 	</div>
-	<div id="demo1"></div>
+	<div id="demo1" class='flex_none'></div>
 <!--demo1--></div>
 <h2 id="desktop">Desktop</h2>
 <pre><code>    &lt;div class=&#39;desktop_wt_con fake_chat_con&#39;&gt;

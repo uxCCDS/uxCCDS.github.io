@@ -8,6 +8,13 @@ a:hover {color:#666;}
 h1, h2, h3, h4, h5,h6{ margin-top: 0;}
 ul,li{list-style: none; margin: 0px;}
 
+.con_flex_column{ display: -webkit-flex; -webkit-flex-flow: column;}
+.con_flex_row{ display: -webkit-flex; -webkit-flex-flow: row;}
+.flex_none{-webkit-flex:none;}
+.flex_1{-webkit-flex:1;}
+
+.con_flex_row>div{margin-top: 0px !important;}
+
 .container { width: 100%;  display:flex;  flex-flow: row;  display: -webkit-flex; -webkit-flex-flow: row;margin:0 auto;  position: relative;}
 .wrapper{ width: 1044px; margin:10px auto; padding:0 20px;}
 

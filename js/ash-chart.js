@@ -58,13 +58,15 @@
 			bgLineStyle:'#dddddd',
 			timeLineStyle:'#4AD4E2',
 			waitTime:60,
-			IfToMS:false
+			IfToMS:false,
+			IfRow:false
 		},settings,true);
 
 		this.Data={
 			El:{},
 			HeadTags:{}
 		};
+
 		this.Con = document.getElementById(id);
 		this.Con.style.minWidth = this.Settings.canvasWidth+'px';
 		this.Con.style.marginTop = '40px';
@@ -87,6 +89,11 @@
 		this.Con.appendChild(this.CanvasCon);
 		this.CanvasCon.appendChild(this.Canvas);
 		this.CanvasCon.appendChild(this.BgCanvas);
+
+		this.ParentNode = this.Con.parentNode;
+		if(this.Settings.IfRow){
+			this.ParentNode.className += ' con_flex_row';
+		}
 	
 		this.init();
 	};
