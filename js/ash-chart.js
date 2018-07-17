@@ -130,9 +130,10 @@
 		static:function(){
 			this.generateFront(this.DeadTime);
 		},
-		sync:function(callback){
+		sync:function(moreAsh,callback){
+			var moreAsh = moreAsh || [];
 			this.stop();
-			this.AshInstance = new Ash.S(this.AshArr.concat(this.AshChartArr),1,function(){
+			this.AshInstance = new Ash.S(this.AshArr.concat(this.AshChartArr).concat(moreAsh),1,function(){
 				callback && callback();
 			});
 		},
