@@ -4,6 +4,8 @@ Desc: Search
 
 ## Search Bar
 
+### Focus on input box
+
 ```
 <!--demo1-->
 	<div class='search_con flex_none'>
