@@ -58,7 +58,7 @@
 			bgLineStyle:'#dddddd',
 			timeLineStyle:'#4AD4E2',
 			waitTime:60,
-			waitTimeBefore:60,
+			waitTimeBefore:40,
 			IfToMS:false,
 			IfRow:false
 		},settings,true);
@@ -121,7 +121,7 @@
 				}
 			},{
 				dom:'',
-				time:this.DeadTime+this.Settings.waitTime,//stop time
+				time:this.DeadTime+this.Settings.waitTime+this.Settings.waitTimeBefore,//stop time
 				delegate:function(time) {
 
 				}
@@ -135,7 +135,7 @@
 			var arr = this.AshArr,
 				ret = [],
 				startTime = this.DeadTime+this.Settings.waitTime,
-				time = this.DeadTime+this.Settings.waitTimeBefore,
+				time = this.Settings.waitTimeBefore,
 				_ai,
 				o;
 			if(time>0){
@@ -144,7 +144,7 @@
 					_ai =arr[i];
 					o={
 						delay:startTime,
-						time:time,
+						time:1,
 						dom:_ai.dom
 					};
 					if(_ai.css && _ai.css.length>0){
