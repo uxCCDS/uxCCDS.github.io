@@ -63,19 +63,22 @@ Desc: Activity Menu
             css:[{opacity:0},{opacity:1}],
             delay:10,
             time:20  
-        },{
-        	notRender:true,
-        	tag:'shadow',
+        }];
+        /*
+        ,{
+            notRender:true,
+            tag:'shadow',
             dom:mobile_shadow,
             css:[{opacity:0},{opacity:0}],
             time:0
         },{
-        	notRender:true,
-        	tag:'arrow',
+            notRender:true,
+            tag:'arrow',
             dom:mobile_tArrow,
             css:[{'transform':'rotateX(0deg)'},{}],
             time:0
-        }];
+        }
+        */
 
 	var ashChartInstance = new AshChart('demo1',ashArgs,{
         canvasWidth:900,

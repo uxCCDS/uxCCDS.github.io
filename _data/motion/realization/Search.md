@@ -67,41 +67,6 @@ Desc: Search
             css:[{opacity:0},{opacity:1}],
             time:10,
             tween:"easeInOut"    
-        },{
-            notRender:true,
-            tag:'avatar',
-            dom:search_avatar,
-            css:[{opacity:1},{opacity:1}],
-            time:20,
-            delay:40
-        },{
-            notRender:true,
-            tag:'input',
-            dom:search_input,
-            css:[{'width':'239px'},{'width':'239px'}],
-            time:20,
-            delay:40
-        },{
-            notRender:true,
-            tag:'magnifier',
-            dom:search_magnifier,
-            css:[{left:'178px'},{left:'178px'}],
-            time:20,
-            delay:40
-        },{
-            notRender:true,
-            tag:'icon_more',
-            dom:search_add,
-            css:[{'opacity':1},{'opacity':1}],
-            time:20,
-            delay:40
-        },{
-            notRender:true,
-            tag:'btn_cancel',
-            dom:search_cancel,
-            css:[{opacity:0},{opacity:0}],
-            time:20,
-            delay:40  
         }];
 
     var ashSearchInstance = new AshChart('demo1',ashArgs,{});

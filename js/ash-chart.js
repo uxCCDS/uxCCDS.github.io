@@ -58,6 +58,7 @@
 			bgLineStyle:'#dddddd',
 			timeLineStyle:'#4AD4E2',
 			waitTime:60,
+			waitTimeBefore:60,
 			IfToMS:false,
 			IfRow:false
 		},settings,true);
@@ -130,10 +131,40 @@
 		static:function(){
 			this.generateFront(this.DeadTime);
 		},
+		freezeFirstFrame:function(){
+			var arr = this.AshArr,
+				ret = [],
+				startTime = this.DeadTime+this.Settings.waitTime,
+				time = this.DeadTime+this.Settings.waitTimeBefore,
+				_ai,
+				o;
+			if(time>0){
+				//css,attr,prop
+				for(var i in arr){
+					_ai =arr[i];
+					o={
+						delay:startTime,
+						time:time,
+						dom:_ai.dom
+					};
+					if(_ai.css && _ai.css.length>0){
+						o.css=[_ai.css[0],_ai.css[0]];
+					}
+					if(_ai.attr && _ai.attr.length>0){
+						o.attr=[_ai.attr[0],_ai.attr[0]];
+					}
+					if(_ai.prop && _ai.prop.length>0){
+						o.prop=[_ai.prop[0],_ai.prop[0]];
+					}				
+					ret.push(o);
+				}
+			}
+			return ret;
+		},
 		sync:function(moreAsh,callback){
 			var moreAsh = moreAsh || [];
 			this.stop();
-			this.AshInstance = new Ash.S(this.AshArr.concat(this.AshChartArr).concat(moreAsh),1,function(){
+			this.AshInstance = new Ash.S(this.AshArr.concat(this.AshChartArr).concat(moreAsh).concat(this.freezeFirstFrame()),1,function(){
 				callback && callback();
 			});
 		},
