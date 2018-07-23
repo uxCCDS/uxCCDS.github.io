@@ -341,7 +341,7 @@
 				l = this.DeadTimeXPosition * time / this.DeadTime >>0;
 			ctx.beginPath();
 			ctx.strokeStyle=this.Settings.timeLineStyle;
-			ctx.lineWidth = 5;
+			ctx.lineWidth =this.Settings.lineWidthIndex;
 			ctx.moveTo(data.TimelineX.x,data.TimelineX.y);
 			ctx.lineTo(data.TimelineX.x+l,data.TimelineX.y);
 			ctx.stroke();
