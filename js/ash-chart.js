@@ -123,7 +123,10 @@
 				dom:'',
 				time:this.DeadTime+this.Settings.waitTime+this.Settings.waitTimeBefore,//stop time
 				delegate:function(time) {
-
+					if(time == me.DeadTime+me.Settings.waitTime){
+						me.generateFront(0);
+						me._drawLineTimeProgress(0);	
+					}
 				}
 			}];
 			this.unsync();
