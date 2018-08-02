@@ -54,7 +54,8 @@
     <script type="text/javascript">
 $(function(){
 //demo1
-    var search_avatar = document.getElementById('search_avatar'),
+    var search_con = document.getElementById('search_con'),
+        search_avatar = document.getElementById('search_avatar'),
         search_input = document.getElementById('search_input'),
         search_add = document.getElementById('search_add'),
         search_cancel = document.getElementById('search_cancel'),
@@ -90,7 +91,19 @@ $(function(){
             tween:"easeInOut"    
         }];
 
-    var ashSearchInstance = new AshChart('demo1',ashArgs,{});
+    var ashSearchInstance = new AshChart('demo1',ashArgs,{
+        actionsCon:search_con,
+        actions:{
+            click:[{
+                delay:0,
+                position:{
+                    dom:search_input,
+                    x:10,
+                    y:6
+                }
+            }]
+        }
+    });
     ashSearchInstance.sync();
     ashSearchInstance.start();
 	//demo1
@@ -158,7 +171,7 @@ $(function(){
 	<div class='article_body'>
 		<h2 id="search-bar">Search Bar</h2>
 <h3 id="focus-on-input-box">Focus on input box</h3>
-<pre><code>    &lt;div class=&#39;search_con flex_none&#39;&gt;
+<pre><code>    &lt;div class=&#39;search_con flex_none&#39; id=&#39;search_con&#39;&gt;
         &lt;a id=&#39;search_avatar&#39; class=&#39;avatar&#39;&gt;&lt;/a&gt;
         &lt;input id=&#39;search_input&#39; disabled=&quot;disabled&quot; type=&#39;text&#39; /&gt;
         &lt;a id=&#39;search_add&#39; class=&#39;search_add&#39;&gt;&lt;/a&gt;
@@ -173,7 +186,8 @@ $(function(){
     .search_con input{border:none; width: 239px; height: 36px; line-height: 36px; position: absolute; top: 10px; right: 68px; background-color: rgba(255,255,255,0.24); border: none; text-indent: 18px; border-radius: 18px; color: white; text-align: left; user-select:none;outline:none;}
     .search_con .search_magnifier{ display: block; width: 18px; height: 18px; background: url(&#39;../../img/motion/h_search.svg&#39;) no-repeat center; position: absolute; top: 19px;  left: 178px;}
     .search_con&gt;span{display: block; width: 60px; height: 56px; line-height: 56px; position: absolute; top: 0px; right: 4px; color: white;text-align: center; font-size: 17px; opacity:0;}
-</code></pre><pre><code>    var search_avatar = document.getElementById(&#39;search_avatar&#39;),
+</code></pre><pre><code>    var search_con = document.getElementById(&#39;search_con&#39;),
+        search_avatar = document.getElementById(&#39;search_avatar&#39;),
         search_input = document.getElementById(&#39;search_input&#39;),
         search_add = document.getElementById(&#39;search_add&#39;),
         search_cancel = document.getElementById(&#39;search_cancel&#39;),
@@ -209,11 +223,23 @@ $(function(){
             tween:&quot;easeInOut&quot;    
         }];
 
-    var ashSearchInstance = new AshChart(&#39;demo1&#39;,ashArgs,{});
+    var ashSearchInstance = new AshChart(&#39;demo1&#39;,ashArgs,{
+        actionsCon:search_con,
+        actions:{
+            click:[{
+                delay:0,
+                position:{
+                    dom:search_input,
+                    x:10,
+                    y:6
+                }
+            }]
+        }
+    });
     ashSearchInstance.sync();
     ashSearchInstance.start();
 </code></pre><div class='demo_con'><!--demo1-->
-	<div class='search_con flex_none'>
+	<div class='search_con flex_none' id='search_con'>
         <a id='search_avatar' class='avatar'></a>
         <input id='search_input' disabled="disabled" type='text' />
         <a id='search_add' class='search_add'></a>

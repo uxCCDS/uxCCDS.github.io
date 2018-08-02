@@ -38,6 +38,195 @@
 
 	};
 
+	/*
+		actions:{
+			swipe:[{
+				delay:0
+			}]
+		}
+	*/
+
+	var ACTIONOPTIONS = {};
+	(function(){
+		var getRGB = function(str){
+			var rgb=[0,0,0],
+				strRgb='rgb(',
+				strRgba='rgba(';
+			if(str.indexOf('#')!==-1){
+				rgb = [parseInt(str.substring(1,3),16),parseInt(str.substring(3,5),16),parseInt(str.substring(5,7),16)];
+			}else if(str.indexOf(strRgb)!==-1){
+				rgb = str.replace(/^rgb\(/,'').replace(/\)$/,'').split(',');
+			}else if(str.indexOf(strRgba)!==-1){
+				rgb = str.replace(/^rgba\(/,'').replace(/\)$/,'').split(',');
+			}
+			return rgb;
+		};
+		var getDomPosition=function (pObj,conNode) {
+            var _left =  0,
+                _top = 0;
+            while (pObj && pObj!=conNode) {
+                _left += pObj.offsetLeft;
+                _top += pObj.offsetTop;
+                pObj = pObj.offsetParent;
+            }
+            return { x: _left, y: _top };
+        };
+        var _regPercentage =/(\d+)%$/;
+        var getPercentageNum = function(n){
+        	return (+n.match(_regPercentage)[1]) * 0.01;
+        };
+		var getPosition=function(position,root){
+			if(position.dom==null){
+				return [position.x,position.y];
+			}else{
+				var dom = position.dom;
+				if(typeof dom ==='string'){
+					dom = document.getElementById(dom);
+				}
+				if(dom.nodeType &&  dom.nodeType===1){
+					var _pos = getDomPosition(dom,root),
+						_x = _regPercentage.test(position.x) ? dom.offsetWidth * getPercentageNum(position.x) : position.x,
+						_y = _regPercentage.test(position.y) ? dom.offsetHeight * getPercentageNum(position.y) : position.y;
+					return [_pos.x+_x>>0,_pos.y+_y>>0];
+				}else{
+					return [position.x,position.y];
+				}
+			}
+		};
+
+		var Click = function(parentNode,opt){
+			this.ParentNode = parentNode;
+			this.Opt = extend({
+				position:{
+					dom:null,
+					x:0,
+					y:0
+				},
+				color:'#E91E63',
+				colorOpacity:0.4,
+				border:2,
+				diameter:20,
+				delay:0,
+				time:[4,12,6]//opacity,color,stop
+			},opt);
+			var _rgb = getRGB(this.Opt.color);
+			this.Opt.colorRgba0 = ['rgba(',_rgb[0],',',_rgb[1],',',_rgb[2],',',this.Opt.colorOpacity,')'].join('');
+			this.Opt.colorRgba1 = ['rgba(',_rgb[0],',',_rgb[1],',',_rgb[2],',',1,')'].join('');
+			var _pos = getPosition(this.Opt.position,this.ParentNode);
+			this.Opt.positionX = _pos[0];
+			this.Opt.positionY = _pos[1];
+			this.PreTime = this.Opt.delay === 0 ? (this.Opt.time[1]*2+this.Opt.time[2]) : 0;
+			this.init();
+		};
+		Click.prototype={
+			init:function(){
+				this.createDom();
+				this.createAshArr();
+			},
+			createDom:function(){
+				this.Dom = document.createElement('DIV');
+				var styleTxt = [];
+				styleTxt.push('background-color:',this.Opt.colorRgba0,';');
+				styleTxt.push('border:',this.Opt.border,'px solid ',this.Opt.color,';');
+				styleTxt.push('border-radius:','50%;');
+				styleTxt.push('width:',this.Opt.diameter,'px;');
+				styleTxt.push('height:',this.Opt.diameter,'px;');
+				styleTxt.push('position:','absolute;');
+				styleTxt.push('left:',this.Opt.positionX,'px;');
+				styleTxt.push('top:',this.Opt.positionY,'px;');
+				styleTxt.push('opacity:','0;');
+				styleTxt.push('display:','none;');
+				this.Dom.style = styleTxt.join('');
+				this.ParentNode.appendChild(this.Dom);
+			},
+			createAshArr:function(){
+				var me = this,
+					time = me.Opt.time;
+				this.AshArr = [{
+					dom:me.Dom,
+					css:[{display:'',opacity:0},{opacity:1}],
+					delay:me.Opt.delay,
+					time:time[0]
+				},{
+					dom:me.Dom,
+					css:[{opacity:1},{display:'none',opacity:0}],
+					delay:me.Opt.delay+time[1]*2+time[2]-time[0],
+					time:time[0]
+				},{
+					dom:me.Dom,
+					css:[{'background-color':me.Opt.colorRgba0},{'background-color':me.Opt.colorRgba1}],
+					tween:'rgbaLinear',					
+					delay:me.Opt.delay,
+					time:time[1]
+				},{
+					dom:me.Dom,
+					css:[{'background-color':me.Opt.colorRgba1},{'background-color':me.Opt.colorRgba0}],
+					tween:'rgbaLinear',
+					delay:me.Opt.delay+time[1]+time[2],
+					time:time[1]
+				}];
+			}
+		};
+
+		ACTIONOPTIONS = {
+			click:Click,
+			tap:Click
+		};
+
+	})();
+
+	/*
+	1. Default Option
+	2. Create Dom
+	*/
+
+	var ActionFactory = function(parentNode,opt){
+		this.ParentNode = parentNode;
+		this.Opt = opt;
+		this.Instance = [];
+		this.AshArr=[];
+		this.PreTime = 0;
+		this.init();
+	};
+	ActionFactory.prototype={
+		init:function(){
+			this.create();
+		},
+		create:function(){
+			var _action,
+				_options,
+				_instance;
+			for(var aname in this.Opt){
+				_action = ACTIONOPTIONS[aname];
+				_options = this.Opt[aname];
+				if(_action!==null){
+					for(var n in _options){
+						_instance = new _action(this.ParentNode,_options[n]);
+						this.Instance.push(_instance);
+						this.PreTime = Math.max(this.PreTime,_instance.PreTime);
+					}
+				}
+			}
+			if(this.PreTime>0){
+				for(var n in this.Instance){
+					_instance = this.Instance[n];
+					if(_instance.Opt.delay!==0 || _instance.PreTime!==this.PreTime){
+						if(_instance.Opt.delay===0){
+							for(var _i in _instance.AshArr){
+								_instance.AshArr[_i].delay = _instance.AshArr[_i].delay + this.PreTime - _instance.PreTime;
+							}
+						}else{
+							for(var _i in _instance.AshArr){
+								_instance.AshArr[_i].delay = _instance.AshArr[_i].delay+ this.PreTime;
+							}
+						}
+					}
+					this.AshArr = this.AshArr.concat(_instance.AshArr);
+				}
+			}
+		}
+	};
+
 	var AshChart = function(id,ashArr,settings){
 		this.Id = id;
 		this.AshArr = ashArr;
@@ -60,7 +249,10 @@
 			waitTime:60,
 			waitTimeBefore:40,
 			IfToMS:false,
-			IfRow:false
+			IfRow:false,
+			actions:{
+
+			}
 		},settings,true);
 
 		this.Data={
@@ -100,6 +292,13 @@
 	};
 	AshChart.prototype={
 		init:function(){
+			if(this.Settings.actionsCon && this.Settings.actions){
+				this.ActionArrFactory = new ActionFactory(this.Settings.actionsCon,this.Settings.actions);
+				this.PreTime = this.ActionArrFactory.PreTime;
+			}else{
+				this.PreTime = 0;
+			}
+
 			this._prepare(this.AshArr);
 
 			var settings = this.Settings,
@@ -114,19 +313,27 @@
 			var me = this;
 			this.AshChartArr = [{
 				dom:'',
-				time:this.DeadTime,
+				delay:me.PreTime,
+				time:me.DeadTime,
 				delegate:function(time) {
+					//var _time = time - me.PreTime;
 					me.generateFront(time);
 					me._drawLineTimeProgress(time);
 				}
 			},{
 				dom:'',
-				time:this.DeadTime+this.Settings.waitTime+this.Settings.waitTimeBefore,//stop time
+				delay:me.PreTime+this.DeadTime+this.Settings.waitTime,
+				time:0,//stop time
 				delegate:function(time) {
-					if(time == me.DeadTime+me.Settings.waitTime){
-						me.generateFront(0);
-						me._drawLineTimeProgress(0);	
-					}
+					me.generateFront(0);
+					me._drawLineTimeProgress(0);	
+				}
+			},{
+				dom:'',
+				delay:me.PreTime+this.DeadTime+this.Settings.waitTime+this.Settings.waitTimeBefore,
+				time:0,//stop time
+				delegate:function(time) {
+	
 				}
 			}];
 			this.unsync();
@@ -137,7 +344,7 @@
 		freezeFirstFrame:function(){
 			var arr = this.AshArr,
 				ret = [],
-				startTime = this.DeadTime+this.Settings.waitTime,
+				startTime = this.PreTime+this.DeadTime+this.Settings.waitTime,
 				time = this.Settings.waitTimeBefore,
 				_ai,
 				o;
@@ -164,10 +371,23 @@
 			}
 			return ret;
 		},
+		updateDelayInAsh:function(){
+			if(!this.HasAdjustDelay){
+				for(var n in this.AshArr){
+					this.AshArr[n].delay = this.AshArr[n].delay==null ? this.PreTime : this.PreTime +this.AshArr[n].delay;
+				}
+				this.HasAdjustDelay = true;
+			}
+		},
 		sync:function(moreAsh,callback){
 			var moreAsh = moreAsh || [];
 			this.stop();
-			this.AshInstance = new Ash.S(this.AshArr.concat(this.AshChartArr).concat(moreAsh).concat(this.freezeFirstFrame()),1,function(){
+			this.updateDelayInAsh();
+			var _arr = this.AshArr.concat(this.AshChartArr).concat(moreAsh).concat(this.freezeFirstFrame());
+			if(this.ActionArrFactory && this.ActionArrFactory.AshArr){
+				_arr = _arr.concat(this.ActionArrFactory.AshArr);
+			}
+			this.AshInstance = new Ash.S(_arr,1,function(){
 				callback && callback();
 			});
 		},
@@ -191,7 +411,7 @@
 		continue:function(){
 			if(this.AshInstance!==undefined){
 				this.AshInstance.continue();
-			}	
+			}
 		},
 		_generateTagStr:function(tag,content){
 			return ['<',tag,'>',content,'</',tag,'>'].join('');

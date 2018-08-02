@@ -8,7 +8,7 @@ Desc: Search
 
 ```
 <!--demo1-->
-	<div class='search_con flex_none'>
+	<div class='search_con flex_none' id='search_con'>
         <a id='search_avatar' class='avatar'></a>
         <input id='search_input' disabled="disabled" type='text' />
         <a id='search_add' class='search_add'></a>
@@ -33,7 +33,8 @@ Desc: Search
 
 ```
 	//demo1
-    var search_avatar = document.getElementById('search_avatar'),
+    var search_con = document.getElementById('search_con'),
+        search_avatar = document.getElementById('search_avatar'),
         search_input = document.getElementById('search_input'),
         search_add = document.getElementById('search_add'),
         search_cancel = document.getElementById('search_cancel'),
@@ -69,7 +70,19 @@ Desc: Search
             tween:"easeInOut"    
         }];
 
-    var ashSearchInstance = new AshChart('demo1',ashArgs,{});
+    var ashSearchInstance = new AshChart('demo1',ashArgs,{
+        actionsCon:search_con,
+        actions:{
+            click:[{
+                delay:0,
+                position:{
+                    dom:search_input,
+                    x:10,
+                    y:6
+                }
+            }]
+        }
+    });
     ashSearchInstance.sync();
     ashSearchInstance.start();
 	//demo1

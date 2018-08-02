@@ -82,7 +82,17 @@ Desc: Activity Menu
 
 	var ashChartInstance = new AshChart('demo1',ashArgs,{
         canvasWidth:900,
-        IfRow:true
+        IfRow:true,
+        actionsCon:mobile_tBg,
+        actions:{
+            click:[{
+                delay:0,
+                position:{
+                    x:50,
+                    y:6
+                }
+            }]
+        }
     });
 	ashChartInstance.sync();
 	ashChartInstance.start();
@@ -145,7 +155,18 @@ demo1
             tween:"rgbaLinear"      
         }];
 
-	var ashChartInstance2 = new AshChart('demo2',ashArgs2,{});
+	var ashChartInstance2 = new AshChart('demo2',ashArgs2,{
+            actionsCon:desktop_space_title,
+            actions:{
+                click:[{
+                    delay:0,
+                    position:{
+                        x:80,
+                        y:6
+                    }
+                }]
+            }
+        });
 	ashChartInstance2.sync();
 	ashChartInstance2.start();
 	//demo2
