@@ -115,7 +115,7 @@
 			var _pos = getPosition(this.Opt.position,this.ParentNode);
 			this.Opt.positionX = _pos[0];
 			this.Opt.positionY = _pos[1];
-			this.PreTime = this.Opt.delay === 0 ? (this.Opt.time[1]*2+this.Opt.time[2]) : 0;
+			this.PreTime = this.Opt.delay === 0 ? (this.Opt.time[1]+this.Opt.time[2]) : 0;
 			this.init();
 		};
 		Click.prototype={
