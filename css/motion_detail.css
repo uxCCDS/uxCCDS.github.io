@@ -4,7 +4,7 @@
 
 .ash_chart_con{position: relative;}
 .ash_chart_con canvas{min-width: 500px; }
-.ash_chart_con .motionCanvas{position: absolute; top: 0px; left: 0px;}
+.ash_chart_con .motionCanvas{position: absolute; top: 0px; left: 0px; }
 
 .ash_chart_tag_con a{ display: inline-block;vertical-align: top; position: relative; margin-left: 30px; height: 20px; line-height: 20px; margin-top:10px!important;}
 .ash_chart_tag_con a *{vertical-align: top;	}

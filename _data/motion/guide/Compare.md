@@ -6,7 +6,7 @@ Desc: Compare
 
 ```
 <!--demo1-->
-    <div class='demo_con con_flex_row'  style='margin-top:60px;'>
+    <div class='demo_con con_flex_row' id='compare_con'  style='margin-top:60px; position: relative;'>
         <div class='mobile_wt_con flex_none'>
             <h1 class='mobile_wt_ctagh1'>Easing</h1>
             <div class='mobile_wt_status_bar mobile_wt_status_bar_absolute'></div>
@@ -18,7 +18,7 @@ Desc: Compare
             <div class='mobile_wt_card_shadow' id='mobile_wt_card_shadow'></div>
             <div class='mobile_wt_message_content' id='mobile_wt_message_content'></div>
         </div>
-        <div class='mobile_wt_con flex_none' style='margin-left:10px;'>
+        <div class='mobile_wt_con flex_none' id='mobile_wt_con2' style='margin-left:10px;'>
             <h1 class='mobile_wt_ctagh1'>Linear</h1>
             <div class='mobile_wt_status_bar mobile_wt_status_bar_absolute'></div>
             <div class='mobile_wt_title_bar mobile_wt_title_bar_absolute'>
@@ -141,13 +141,19 @@ Desc: Compare
 	var ashChartInstance = new AshChart('demo1',ashArgs,{
         canvasWidth:900,
         //IfRow:true,
-        actionsCon:mobile_tBg,
+        actionsCon:document.getElementById('compare_con'),
         actions:{
             click:[{
                 delay:0,
                 position:{
-                    x:50,
-                    y:6
+                    x:50+150,
+                    y:26
+                }
+            },{
+                delay:0,
+                position:{
+                    x:375+10+50+150,
+                    y:26
                 }
             }]
         }

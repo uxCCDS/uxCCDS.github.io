@@ -136,6 +136,7 @@
 				styleTxt.push('top:',this.Opt.positionY,'px;');
 				styleTxt.push('opacity:','0;');
 				styleTxt.push('display:','none;');
+				styleTxt.push('z-index:','100000;');
 				this.Dom.style = styleTxt.join('');
 				this.ParentNode.appendChild(this.Dom);
 			},
