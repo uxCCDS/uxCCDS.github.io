@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compare</title>
+<meta charset='utf-8'>
+<link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="../../css/public.css" media="screen">
+<!--
+<link rel="stylesheet" type="text/css" href="../../css/github_gist.css" media="screen"> -->
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+<script>
+  if(location.host == 'uxccds.github.io'){
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-99987509-1', 'auto');
+	  ga('send', 'pageview');  	
+  }
+</script>
+<script type="text/javascript" src="../../js/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="../../js/highlight.pack.js"></script>
+<script type="text/javascript" src="../../js/ash.js"></script>
+<style type="text/css">
+</style>
+
+    <link rel="stylesheet" type="text/css" href="../../css/detail.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../../css/motion_detail.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../../css/monokai_sublime.css" media="screen">
+    <script type="text/javascript" src="../../js/ash-chart.js"></script>
+    <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+    <style type="text/css">
+</style>
+    <script type="text/javascript">
+$(function(){
+//demo1
+	var mobile_tBg= document.getElementById('mobile_wt_title_bg'),
+		mobile_tArrow = document.getElementById('mobile_wt_title_arrow'),
+		mobile_card = document.getElementById('mobile_wt_card'),
+		mobile_shadow = document.getElementById('mobile_wt_card_shadow'),
+		mobile_content = document.getElementById('mobile_wt_message_content'),
+        mobile_tBg2= document.getElementById('mobile_wt_title_bg2'),
+        mobile_tArrow2 = document.getElementById('mobile_wt_title_arrow2'),
+        mobile_card2 = document.getElementById('mobile_wt_card2'),
+        mobile_shadow2 = document.getElementById('mobile_wt_card_shadow2'),
+        mobile_content2 = document.getElementById('mobile_wt_message_content2');
+
+	var ashArgs = [{
+			tag:'ball_container',
+            dom:mobile_card,
+            css:[{top:'-641px'},{top:'0px'}],
+            time:30,
+            tween:"easeOut"
+        },{
+			tag:'title_container',
+            dom:mobile_tBg,
+            css:[{'background-color':'rgba(255,255,255,0.4)'},{'background-color':'rgba(231,235,235,1)'}],
+            time:30,
+            tween:'rgbaLinear'
+        },{
+        	tag:'ball_container',
+            dom:mobile_card,
+            css:[{opacity:0},{opacity:1}],
+            time:20
+        },{
+        	tag:'arrow',
+            dom:mobile_tArrow,
+            css:[{'transform':'rotateX(0deg)'},{'transform':'rotateX(180deg)'}],
+            time:10
+        },{
+        	tag:'call_panel',
+            dom:mobile_content,
+            css:[{transform:'scale(1)'},{transform:'scale(0.96)'}],
+            time:20,
+            delay:10,
+            tween:"easeIn"      
+        },{
+        	tag:'shadow',
+            dom:mobile_shadow,
+            css:[{opacity:0},{opacity:1}],
+            delay:10,
+            time:20  
+        },{
+            notRender:true,
+            tag:'ball_container',
+            dom:mobile_card2,
+            css:[{top:'-641px'},{top:'0px'}],
+            time:30
+        },{
+            notRender:true,
+            tag:'title_container',
+            dom:mobile_tBg2,
+            css:[{'background-color':'rgba(255,255,255,0.4)'},{'background-color':'rgba(231,235,235,1)'}],
+            time:30,
+            tween:'rgbaLinear'
+        },{
+            notRender:true,
+            tag:'ball_container',
+            dom:mobile_card2,
+            css:[{opacity:0},{opacity:1}],
+            time:20
+        },{
+            notRender:true,
+            tag:'arrow',
+            dom:mobile_tArrow2,
+            css:[{'transform':'rotateX(0deg)'},{'transform':'rotateX(180deg)'}],
+            time:10
+        },{
+            notRender:true,
+            tag:'call_panel',
+            dom:mobile_content2,
+            css:[{transform:'scale(1)'},{transform:'scale(0.96)'}],
+            time:20,
+            delay:10     
+        },{
+            notRender:true,
+            tag:'shadow',
+            dom:mobile_shadow2,
+            css:[{opacity:0},{opacity:1}],
+            delay:10,
+            time:20  
+        }];
+        /*
+        ,{
+            notRender:true,
+            tag:'shadow',
+            dom:mobile_shadow,
+            css:[{opacity:0},{opacity:0}],
+            time:0
+        },{
+            notRender:true,
+            tag:'arrow',
+            dom:mobile_tArrow,
+            css:[{'transform':'rotateX(0deg)'},{}],
+            time:0
+        }
+        */
+
+	var ashChartInstance = new AshChart('demo1',ashArgs,{
+        canvasWidth:900,
+        //IfRow:true,
+        actionsCon:mobile_tBg,
+        actions:{
+            click:[{
+                delay:0,
+                position:{
+                    x:50,
+                    y:6
+                }
+            }]
+        }
+    });
+	ashChartInstance.sync();
+	ashChartInstance.start();
+	//demo1
+});
+</script>
+</head>
+<body>
+  <!-- nav -->
+  <header class="header">
+  	<div class="NavContent">
+	    <a href="/" class="logo"><img src="../../img/20170808/logo.svg"><span>Prototype//:&nbsp;</span><span class="orange">Depot</span></a>
+	    <input class="menu-btn" type="checkbox" id="menu-btn" />
+	    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+		<ul class="Nav">
+			<li><a href='../../motion/guide/guide.html'>Guide</a></li>
+			<li><a href='../../motion/realization/activity-menu.html'>Realization</a></li>
+		</ul>    
+    </div>
+</header>
+
+
+
+
+
+  <div class='container'>
+    <!--main content -->
+    <ul class='sideMenu'>
+	
+	
+		<li><a class=current  href='compare.html'>Compare</a></li>
+	
+		<li><a   href='easing.html'>Easing</a></li>
+	
+		<li><a   href='guide.html'>Guide</a></li>
+	
+	
+</ul> 
+    <div class="main motion_main">
+      <!-- <ul class="breadcrumbs">
+	<li><a href="../../index.html">Home</a></li> 
+	
+		<li>
+				<a href='../../motion/' >Motion</a>
+		</li>
+	
+		<li>
+				<a href='../../motion/guide/' >Guide</a>
+		</li>
+	
+		<li>
+				<a href='../../motion/guide/compare.html' >Compare</a>
+		</li>
+	
+</ul>
+ -->
+      <!-- article -->
+      <div class="content">     
+        <div class="section">
+          <article class='article'>
+	<header class='article_header'>
+		<h1>Compare</h1>
+		
+		
+	</header>
+	<div class='article_body'>
+		<h2 id="mobile">Mobile</h2>
+<pre><code>    &lt;div class=&#39;demo_con con_flex_row&#39;  style=&#39;margin-top:60px;&#39;&gt;
+        &lt;div class=&#39;mobile_wt_con flex_none&#39;&gt;
+            &lt;h1 class=&#39;mobile_wt_ctagh1&#39;&gt;Easing&lt;/h1&gt;
+            &lt;div class=&#39;mobile_wt_status_bar mobile_wt_status_bar_absolute&#39;&gt;&lt;/div&gt;
+            &lt;div class=&#39;mobile_wt_title_bar mobile_wt_title_bar_absolute&#39;&gt;
+                &lt;a  class=&#39;transpart_back&#39; &gt;&lt;/a&gt;
+                &lt;span id=&#39;mobile_wt_title_bg&#39; class=&#39;space_title&#39;&gt;&lt;h1 class=&quot;sub_call&quot;&gt;&lt;/h1&gt;Prototype Team&lt;i class=&#39;arrow&#39; id=&#39;mobile_wt_title_arrow&#39;&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;/div&gt;  
+            &lt;div class=&#39;mobile_wt_card&#39; id=&#39;mobile_wt_card&#39;&gt;&lt;/div&gt;
+            &lt;div class=&#39;mobile_wt_card_shadow&#39; id=&#39;mobile_wt_card_shadow&#39;&gt;&lt;/div&gt;
+            &lt;div class=&#39;mobile_wt_message_content&#39; id=&#39;mobile_wt_message_content&#39;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#39;mobile_wt_con flex_none&#39; style=&#39;margin-left:10px;&#39;&gt;
+            &lt;h1 class=&#39;mobile_wt_ctagh1&#39;&gt;Linear&lt;/h1&gt;
+            &lt;div class=&#39;mobile_wt_status_bar mobile_wt_status_bar_absolute&#39;&gt;&lt;/div&gt;
+            &lt;div class=&#39;mobile_wt_title_bar mobile_wt_title_bar_absolute&#39;&gt;
+                &lt;a  class=&#39;transpart_back&#39; &gt;&lt;/a&gt;
+                &lt;span id=&#39;mobile_wt_title_bg2&#39; class=&#39;space_title&#39;&gt;&lt;h1 class=&quot;sub_call&quot;&gt;&lt;/h1&gt;Prototype Team&lt;i class=&#39;arrow&#39; id=&#39;mobile_wt_title_arrow2&#39;&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;/div&gt;  
+            &lt;div class=&#39;mobile_wt_card&#39; id=&#39;mobile_wt_card2&#39;&gt;&lt;/div&gt;
+            &lt;div class=&#39;mobile_wt_card_shadow&#39; id=&#39;mobile_wt_card_shadow2&#39;&gt;&lt;/div&gt;
+            &lt;div class=&#39;mobile_wt_message_content&#39; id=&#39;mobile_wt_message_content2&#39;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;demo1&quot; class=&#39;flex_none&#39;&gt;&lt;/div&gt;
+</code></pre><pre><code>    var mobile_tBg= document.getElementById(&#39;mobile_wt_title_bg&#39;),
+        mobile_tArrow = document.getElementById(&#39;mobile_wt_title_arrow&#39;),
+        mobile_card = document.getElementById(&#39;mobile_wt_card&#39;),
+        mobile_shadow = document.getElementById(&#39;mobile_wt_card_shadow&#39;),
+        mobile_content = document.getElementById(&#39;mobile_wt_message_content&#39;),
+        mobile_tBg2= document.getElementById(&#39;mobile_wt_title_bg2&#39;),
+        mobile_tArrow2 = document.getElementById(&#39;mobile_wt_title_arrow2&#39;),
+        mobile_card2 = document.getElementById(&#39;mobile_wt_card2&#39;),
+        mobile_shadow2 = document.getElementById(&#39;mobile_wt_card_shadow2&#39;),
+        mobile_content2 = document.getElementById(&#39;mobile_wt_message_content2&#39;);
+
+    var ashArgs = [{
+            tag:&#39;ball_container&#39;,
+            dom:mobile_card,
+            css:[{top:&#39;-641px&#39;},{top:&#39;0px&#39;}],
+            time:30,
+            tween:&quot;easeOut&quot;
+        },{
+            tag:&#39;title_container&#39;,
+            dom:mobile_tBg,
+            css:[{&#39;background-color&#39;:&#39;rgba(255,255,255,0.4)&#39;},{&#39;background-color&#39;:&#39;rgba(231,235,235,1)&#39;}],
+            time:30,
+            tween:&#39;rgbaLinear&#39;
+        },{
+            tag:&#39;ball_container&#39;,
+            dom:mobile_card,
+            css:[{opacity:0},{opacity:1}],
+            time:20
+        },{
+            tag:&#39;arrow&#39;,
+            dom:mobile_tArrow,
+            css:[{&#39;transform&#39;:&#39;rotateX(0deg)&#39;},{&#39;transform&#39;:&#39;rotateX(180deg)&#39;}],
+            time:10
+        },{
+            tag:&#39;call_panel&#39;,
+            dom:mobile_content,
+            css:[{transform:&#39;scale(1)&#39;},{transform:&#39;scale(0.96)&#39;}],
+            time:20,
+            delay:10,
+            tween:&quot;easeIn&quot;      
+        },{
+            tag:&#39;shadow&#39;,
+            dom:mobile_shadow,
+            css:[{opacity:0},{opacity:1}],
+            delay:10,
+            time:20  
+        },{
+            notRender:true,
+            tag:&#39;ball_container&#39;,
+            dom:mobile_card2,
+            css:[{top:&#39;-641px&#39;},{top:&#39;0px&#39;}],
+            time:30
+        },{
+            notRender:true,
+            tag:&#39;title_container&#39;,
+            dom:mobile_tBg2,
+            css:[{&#39;background-color&#39;:&#39;rgba(255,255,255,0.4)&#39;},{&#39;background-color&#39;:&#39;rgba(231,235,235,1)&#39;}],
+            time:30,
+            tween:&#39;rgbaLinear&#39;
+        },{
+            notRender:true,
+            tag:&#39;ball_container&#39;,
+            dom:mobile_card2,
+            css:[{opacity:0},{opacity:1}],
+            time:20
+        },{
+            notRender:true,
+            tag:&#39;arrow&#39;,
+            dom:mobile_tArrow2,
+            css:[{&#39;transform&#39;:&#39;rotateX(0deg)&#39;},{&#39;transform&#39;:&#39;rotateX(180deg)&#39;}],
+            time:10
+        },{
+            notRender:true,
+            tag:&#39;call_panel&#39;,
+            dom:mobile_content2,
+            css:[{transform:&#39;scale(1)&#39;},{transform:&#39;scale(0.96)&#39;}],
+            time:20,
+            delay:10     
+        },{
+            notRender:true,
+            tag:&#39;shadow&#39;,
+            dom:mobile_shadow2,
+            css:[{opacity:0},{opacity:1}],
+            delay:10,
+            time:20  
+        }];
+        /*
+        ,{
+            notRender:true,
+            tag:&#39;shadow&#39;,
+            dom:mobile_shadow,
+            css:[{opacity:0},{opacity:0}],
+            time:0
+        },{
+            notRender:true,
+            tag:&#39;arrow&#39;,
+            dom:mobile_tArrow,
+            css:[{&#39;transform&#39;:&#39;rotateX(0deg)&#39;},{}],
+            time:0
+        }
+        */
+
+    var ashChartInstance = new AshChart(&#39;demo1&#39;,ashArgs,{
+        canvasWidth:900,
+        //IfRow:true,
+        actionsCon:mobile_tBg,
+        actions:{
+            click:[{
+                delay:0,
+                position:{
+                    x:50,
+                    y:6
+                }
+            }]
+        }
+    });
+    ashChartInstance.sync();
+    ashChartInstance.start();
+</code></pre><div class='demo_con'><!--demo1-->
+    <div class='demo_con con_flex_row'  style='margin-top:60px;'>
+        <div class='mobile_wt_con flex_none'>
+            <h1 class='mobile_wt_ctagh1'>Easing</h1>
+            <div class='mobile_wt_status_bar mobile_wt_status_bar_absolute'></div>
+            <div class='mobile_wt_title_bar mobile_wt_title_bar_absolute'>
+                <a  class='transpart_back' ></a>
+                <span id='mobile_wt_title_bg' class='space_title'><h1 class="sub_call"></h1>Prototype Team<i class='arrow' id='mobile_wt_title_arrow'></i></span>
+            </div>  
+            <div class='mobile_wt_card' id='mobile_wt_card'></div>
+            <div class='mobile_wt_card_shadow' id='mobile_wt_card_shadow'></div>
+            <div class='mobile_wt_message_content' id='mobile_wt_message_content'></div>
+        </div>
+        <div class='mobile_wt_con flex_none' style='margin-left:10px;'>
+            <h1 class='mobile_wt_ctagh1'>Linear</h1>
+            <div class='mobile_wt_status_bar mobile_wt_status_bar_absolute'></div>
+            <div class='mobile_wt_title_bar mobile_wt_title_bar_absolute'>
+                <a  class='transpart_back' ></a>
+                <span id='mobile_wt_title_bg2' class='space_title'><h1 class="sub_call"></h1>Prototype Team<i class='arrow' id='mobile_wt_title_arrow2'></i></span>
+            </div>  
+            <div class='mobile_wt_card' id='mobile_wt_card2'></div>
+            <div class='mobile_wt_card_shadow' id='mobile_wt_card_shadow2'></div>
+            <div class='mobile_wt_message_content' id='mobile_wt_message_content2'></div>
+        </div>
+    </div>
+	<div id="demo1" class='flex_none'></div>
+<!--demo1--></div>
+		
+	</div>
+	<!-- hiding pagination per Damon's feedback 
+	<footer class='article_footer'>
+
+		<div class="pagination">
+			
+			<a  class="next" href="easing.html">Next →</a> 	 	
+		</div>		
+	</footer>-->
+</article>
+       	
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- footer --> 
+ <div class="footerWrap">
+ <footer class='copyright'>
+	<p>The Design Group Prototype Team (For Internal Use Only)<br>Cisco Systems ©2016-2018 <a target="_blank" href="https://en.wikipedia.org/wiki/MIT_License" class='license'>MIT license</a></p>
+</footer>
+<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+ </div>
+ <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
