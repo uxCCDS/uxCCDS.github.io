@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="20px" viewBox="0 0 10 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-left_24</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-8-guest-1.0" transform="translate(-19.000000, -32.000000)" fill="#000000">
+            <g id="App">
+                <g id="top-bar">
+                    <g id="ios-bar" transform="translate(0.000000, 20.000000)">
+                        <g id="navigation/arrow-left_24" transform="translate(12.000000, 10.000000)">
+                            <g id="arrow-left_24" transform="translate(7.000000, 2.000000)">
+                                <g id="icon">
+                                    <path d="M9.5002,20.0003 C9.3672,20.0003 9.2352,19.9483 9.1372,19.8443 L0.1372,10.3443 C-0.0458,10.1513 -0.0458,9.8493 0.1372,9.6563 L9.1372,0.1563 C9.3262,-0.0437 9.6432,-0.0537 9.8442,0.1373 C10.0442,0.3273 10.0532,0.6443 9.8632,0.8443 L1.1882,10.0003 L9.8632,19.1563 C10.0532,19.3563 10.0442,19.6733 9.8442,19.8633 C9.7472,19.9553 9.6232,20.0003 9.5002,20.0003" id="fill"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

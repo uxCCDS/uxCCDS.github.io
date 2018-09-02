@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>chat_28_w</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="core/buttons/activities/small/chat/normal" transform="translate(-21.000000, -21.000000)" fill="#FFFFFF">
+            <g id="activity">
+                <g id="activities/chat_28_w" transform="translate(20.000000, 20.000000)">
+                    <g id="chat_28_w" transform="translate(1.000000, 1.000000)">
+                        <g id="icon">
+                            <path d="M6.763,23.3218 C6.85,23.3218 6.936,23.3448 7.013,23.3888 C8.837,24.4428 10.908,24.9998 13,24.9998 C19.617,24.9998 25,19.6168 25,12.9998 C25,6.3838 19.617,0.9998 13,0.9998 C6.383,0.9998 1,6.3838 1,12.9998 C1,15.0928 1.557,17.1628 2.611,18.9868 C2.678,19.1018 2.696,19.2388 2.661,19.3668 L1.207,24.7928 L6.634,23.3388 C6.676,23.3278 6.72,23.3218 6.763,23.3218 M0.5,25.9998 C0.369,25.9998 0.242,25.9488 0.147,25.8538 C0.02,25.7278 -0.029,25.5428 0.017,25.3708 L1.642,19.3058 C0.567,17.3738 0,15.1988 0,12.9998 C0,5.8318 5.832,-0.0002 13,-0.0002 C20.168,-0.0002 26,5.8318 26,12.9998 C26,20.1678 20.168,25.9998 13,25.9998 C10.802,25.9998 8.626,25.4328 6.695,24.3578 L0.629,25.9828 C0.587,25.9948 0.543,25.9998 0.5,25.9998" id="fill"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

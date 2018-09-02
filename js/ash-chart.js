@@ -380,11 +380,14 @@
 				this.HasAdjustDelay = true;
 			}
 		},
-		sync:function(moreAsh,callback){
+		sync:function(moreAsh,callback,ifNoFreeze){
 			var moreAsh = moreAsh || [];
 			this.stop();
 			this.updateDelayInAsh();
-			var _arr = this.AshArr.concat(this.AshChartArr).concat(moreAsh).concat(this.freezeFirstFrame());
+			var _arr = this.AshArr.concat(this.AshChartArr).concat(moreAsh);
+			if(!ifNoFreeze){
+				_arr = _arr.concat(this.freezeFirstFrame());
+			}
 			if(this.ActionArrFactory && this.ActionArrFactory.AshArr){
 				_arr = _arr.concat(this.ActionArrFactory.AshArr);
 			}
@@ -739,7 +742,7 @@
 				regFirstLetter = /\b(\w)|\s(\w)/;
 
 			for(var n in arr){
-				if(arr[n].notRender===undefined){
+				if(arr[n].notRender===undefined || arr[n].notRender!=true){
 					_p = arr[n];
 					if(this.Data.El[_p.tag]===undefined){
 						this.Data.El[_p.tag]={};
