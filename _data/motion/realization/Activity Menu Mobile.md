@@ -307,3 +307,122 @@ demo1
 
 demo2
 
+
+## Select Activity Menu
+
+```
+<!--demo3-->
+    <div class='mobile_wt_con flex_none' id='mobile_con3'>
+        <div class='mobile_bg_call'></div>
+        <div class="mobile_wt_status_bar mobile_wt_status_bar_absolute"></div>
+        <div class='mobile_activity_balls_con' id='mobile_activity_balls_con3'>
+            <div class='mobile_activity_balls_message'><a><i></i></a><span>Message</span></div>
+            <div class='mobile_activity_balls_call'><a id='mobile_activity_balls_call' style='z-index:9999'><i></i></a><span id='mobile_activity_balls_call_txt'>Call</span></div>
+            <div class='mobile_activity_balls_whiteboard'><a><i></i></a><span>Whiteboard</span></div>
+            <div class='mobile_activity_balls_meetings'><a><i></i></a><span>Meetings</span></div>
+            <div class='mobile_activity_balls_files'><a><i></i></a><span>Files</span></div>
+            <div class='mobile_activity_balls_info'><a><i></i></a><span>Info</span></div>
+        </div>
+        <div class='btn_activity_back' id='btn_activity_back3' style='opacity:0'></div>
+        <div class='btn_activity_menu' id='btn_activity_menu3'></div>
+        <div class='btn_activity_menu' id='btn_activity_menu3_2' style='opacity:0'></div>
+    </div>
+    <div id="demo3" class='flex_none'></div>
+<!--demo3-->
+```
+
+```
+    //demo3
+    var btn_activity_menu3 = $('#btn_activity_menu3'),
+        btn_activity_menu3_2 = $('#btn_activity_menu3_2'),
+        btn_activity_back3 = $('#btn_activity_back3'),
+        mobile_con3 = $('#mobile_con3'),
+        mobile_activity_balls_con3 = $('#mobile_activity_balls_con3');
+
+    var MBTN3 = new MenuBtn(btn_activity_menu3,SecondClickTime,true),
+        _ashTemp3 = new Ash.S(MBTN3.AshArrayEnter),
+        _ball3 = $('#mobile_activity_balls_call'),
+        _ball3Icon = _ball3.find('i'),
+        _ball3Txt = $('#mobile_activity_balls_call_txt');
+
+    var MBTN3_2 = new MenuBtn(btn_activity_menu3_2,SecondClickTime,true);
+    var BigR = Math.ceil(Math.sqrt(375*375+667*667)),
+        _r0 = BigR/2>>0,
+        _x0 = 375/2-_r0-136>>0,
+        _y0 = 667/2-_r0-234>>0;
+    _ashTemp3.state(_ashTemp3.DeadTime);
+
+    var ashArgs3 = [{
+        tag:'ball_icon',
+        dom:_ball3Icon,
+        css:[{opacity:1},{opacity:0}],
+        time:10
+    },{
+        tag:'ball_txt',
+        dom:_ball3Txt,
+        css:[{opacity:1},{opacity:0}],
+        time:10
+    },{
+        tag:'ball',
+        dom:_ball3,
+        css:[{'background-color':'rgba(46,213,87,1)'},{'background-color':'rgba(255,255,255,1)'}],
+        tween:'rgbaLinear',
+        time:20,
+    },{
+        tag:'ball',
+        dom:_ball3,
+        css:[{width:'68px',height:'68px',left:'13px'},{width:BigR+'px',height:BigR+'px',left:_x0+'px'}],
+        time:20
+    },{
+        tag:'ball',
+        dom:_ball3,
+        css:[{top:'0px'},{top:_y0+'px'}],
+        tween:'easeOut',
+        delay:4,
+        time:20
+    },{
+        tag:'balls_con',
+        dom:mobile_activity_balls_con3,
+        css:[{opacity:1},{opacity:0}],
+        delay:24,
+        time:10
+    },{
+        notRender:true,
+        dom:btn_activity_back3,
+        css:[{opacity:0},{opacity:1}],
+        delay:24,
+        time:1
+    },{
+        notRender:true,
+        dom:btn_activity_menu3,
+        css:[{opacity:1},{opacity:0}],
+        delay:24,
+        time:1
+    },{
+        notRender:true,
+        dom:btn_activity_menu3_2,
+        css:[{opacity:0},{opacity:1}],
+        delay:24,
+        time:1
+    }];
+
+    var ashChartInstance3 = new AshChart('demo3',ashArgs3,{
+            actionsCon:mobile_con3[0],
+            actions:{
+                click:[{
+                    delay:0,
+                    position:{
+                        x:184,
+                        y:264
+                    }
+                }]
+            }
+        });
+    ashChartInstance3.sync();
+    ashChartInstance3.start();
+
+    //demo3
+```
+
+demo3
+
