@@ -488,12 +488,28 @@
 			var tags = this.Data.HeadTags,
 				fontSize = this.Settings.fontTitle,
 				li;
+
+			//console.log(tags);
+
 			for(var name in tags){
 				li = document.createElement('A');
 				li.style.color = tags[name].color;
 				li.style.fontSize = fontSize;
 				li.innerHTML=['<i style=\'background-color:',tags[name].color,'\'></i>',name].join('');
 				this.TagCon.appendChild(li);
+				this.bindAshTaggerting(li,tags[name].dom);
+			}
+		},
+		bindAshTaggerting:function(li,dom){
+			if(jQuery!=null){
+				var _jDom = $(li),
+					_jTar = $(dom);
+				_jDom.bind('mouseenter',function(){
+					_jTar.addClass('ashTaggerting');
+				});
+				_jDom.bind('mouseleave',function(){
+					_jTar.removeClass('ashTaggerting');
+				});
 			}
 		},
 		generateBg:function() {
@@ -670,7 +686,8 @@
 				for(name in css[0]){
 					if(el[name]===undefined){
 						el[name]={
-							arr:[]
+							arr:[],
+							dom:op.dom
 						};
 						if(name.length>longestWording.length){
 							longestWording = name;
@@ -964,7 +981,10 @@ EL:{
 			for(_eName in el){
 				pEl = el[_eName];//--->element point
 				_ecolor = this.Colors[_ei];
-				tags[_eName]={color:_ecolor};
+				tags[_eName]={
+					color:_ecolor,
+					dom:this._getElDom(pEl)
+				};
 				for(_pName in pEl){ 
 					_pProperty = pEl[_pName]// property point
 					//->
@@ -983,8 +1003,14 @@ EL:{
 				_ei++;
 			}
 
+			//console.log(this.Data);
 			
-			
+		},
+		_getElDom:function(el){
+			//console.log(el);
+			for(var name in el){
+				return el[name].dom;
+			}
 		}
 	};
 

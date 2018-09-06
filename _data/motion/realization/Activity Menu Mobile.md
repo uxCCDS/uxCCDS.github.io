@@ -239,6 +239,8 @@ Desc: Activity Menu Mobile
     var ashArgs = ashOpen.concat(ashClose);
 
     var ashChartInstance = new AshChart('demo1',ashArgs,{
+            canvasWidth:1000,
+            IfRow:true,
             actionsCon:mobile_con,
             actions:{
                 click:[{
@@ -407,6 +409,8 @@ demo2
     }];
 
     var ashChartInstance3 = new AshChart('demo3',ashArgs3,{
+            canvasWidth:1000,
+            IfRow:true,
             actionsCon:mobile_con3[0],
             actions:{
                 click:[{

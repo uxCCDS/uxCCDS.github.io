@@ -9,7 +9,7 @@ Desc: Activity Menu
 	<div class='mobile_wt_con flex_none'>
 		<div class='mobile_wt_status_bar mobile_wt_status_bar_absolute'></div>
         <div class='mobile_wt_title_bar mobile_wt_title_bar_absolute'>
-            <a  class='transpart_back' ></a>
+            <a class='transpart_back' ></a>
             <span id='mobile_wt_title_bg' class='space_title'><h1 class="sub_call"></h1>Prototype Team<i class='arrow' id='mobile_wt_title_arrow'></i></span>
         </div>  
 		<div class='mobile_wt_card' id='mobile_wt_card'></div>

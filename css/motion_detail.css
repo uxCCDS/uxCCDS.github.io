@@ -1,3 +1,6 @@
+.ashTaggerting{position: relative;}
+.ashTaggerting::before{content: '';position: absolute; top: 0px; left: 0px; display: block; width:100%; height:100%; background: transparent; border: 2px solid #E91E63;z-index: 10000000;}
+
 .article_body pre{display: none;}
 .article_body .demo_con{margin-top: 14px; }
 .article_body table{margin-left: 30px;}
@@ -6,6 +9,7 @@
 .ash_chart_con canvas{min-width: 500px; }
 .ash_chart_con .motionCanvas{position: absolute; top: 0px; left: 0px; }
 
+.ash_chart_tag_con{max-width: 1000px;}
 .ash_chart_tag_con a{ display: inline-block;vertical-align: top; position: relative; margin-left: 30px; height: 20px; line-height: 20px; margin-top:10px!important;}
 .ash_chart_tag_con a *{vertical-align: top;	}
 .ash_chart_tag_con a i{display: inline-block;width: 20px; height: 20px; margin-right: 14px;}
