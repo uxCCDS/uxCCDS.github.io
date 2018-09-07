@@ -523,6 +523,37 @@
             bounceEaseInOut:function(t,b,c,d){
                 if (t < d/2) return tween.bounceEaseIn(t*2, 0, c, d) * .5 + b;
                 else return tween.bounceEaseOut(t*2-d, 0, c, d) * .5 + c*.5 + b;
+            },
+            elasticEaseIn: function(t, b, c, d, a, p) {
+                if(t == 0) return b;
+                if((t /= d) == 1) return b + c;
+                if(!p) p = d * .3;
+                if(!a || a < Math.abs(c)) {
+                    a = c;
+                    var s = p / 4;
+                } else var s = p / (2 * Math.PI) * Math.asin(c / a);
+                return -(a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
+            },
+            elasticEaseOut: function(t, b, c, d, a, p) {
+                if(t == 0) return b;
+                if((t /= d) == 1) return b + c;
+                if(!p) p = d * .3;
+                if(!a || a < Math.abs(c)) {
+                    a = c;
+                    var s = p / 4;
+                } else var s = p / (2 * Math.PI) * Math.asin(c / a);
+                return(a * Math.pow(2, -10 * t) * Math.sin((t * d - s) * (2 * Math.PI) / p) + c + b);
+            },
+            elasticEaseInOut: function(t, b, c, d, a, p) {
+                if(t == 0) return b;
+                if((t /= d / 2) == 2) return b + c;
+                if(!p) p = d * (.3 * 1.5);
+                if(!a || a < Math.abs(c)) {
+                    a = c;
+                    var s = p / 4;
+                } else var s = p / (2 * Math.PI) * Math.asin(c / a);
+                if(t < 1) return -.5 * (a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
+                return a * Math.pow(2, -10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p) * .5 + c + b;
             }
         };
         // Expose API

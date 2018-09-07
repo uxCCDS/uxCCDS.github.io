@@ -74,3 +74,36 @@
 .mobile_wt_card{width: 100%;height: 641px; background:url('../img/motion/mobile_mt_card.png') no-repeat center; position:  absolute; top: -641px; left: 0px; z-index: 50;}
 .mobile_wt_card_shadow{position: absolute; top: 64px;left: 0px; z-index: 49; width: 100%;height: 603px; background-color: rgba(0,0,0,0.4);}
 .mobile_wt_message_content{position: absolute; top: 64px;left: 0px; z-index: 10; width: 100%;height: 603px; background:url('../img/motion/mobile_mt_call.png') no-repeat center;}
+
+.desktop_wt_con{width: 1089px; height: 573px; background: url('../img/motion/desktop_mt_team_chat_con.png') no-repeat; background-size: contain; position: relative; box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.48); overflow: hidden; }
+.desktop_btn_activity_bg{position: absolute; top: 12px; right: 15px; display: block; width: 40px; height: 40px; background: #f0f0f0; border-radius:50%; box-shadow: 0 0 1px rgba(0,0,0,0.2) inset;}
+.desktop_btn_activity_menu{position: absolute; top: 12px; right: 15px; display: block; width: 40px; height: 40px; background: url('../img/motion/waffle_dot.svg') no-repeat center;}
+.desktop_btn_activity_back{position: absolute; top: 12px; right: 15px; display: block; width: 40px; height: 40px; background: url('../img/motion/waffle_x.svg') no-repeat center;}
+
+.desktop_activity_balls_con{position: absolute; top: 0; right: -346px; width: 346px; height: 100%;background:white; border-left:1px solid rgba(0,0,0,.1);}
+.desktop_activity_balls_con>div{width: 80px; height:100px;position: absolute; }
+.desktop_activity_balls_con>div>a{display: block;border-radius: 50%; width: 68px; height: 68px;position: absolute; top: 0px; left:13px; max-width: none;}
+.desktop_activity_balls_con>div>a>i{display: block; width:100%; height:100%; background-position: center; background-repeat: no-repeat;}
+.desktop_activity_balls_con>div>span{width: 100%; height: 18px; line-height: 18px; position: absolute; bottom: 0px; left: 0px; font-size: 13px; color: #000; text-align: center; }
+
+.desktop_activity_balls_message{top: 90px; left: 20px;}
+.desktop_activity_balls_call{top: 90px;left: 126px;}
+.desktop_activity_balls_whiteboard{top: 90px;left: 232px;}
+.desktop_activity_balls_meetings{top: 210px;left: 20px;}
+.desktop_activity_balls_people{top: 210px;left: 126px;}
+.desktop_activity_balls_files{top: 210px;left: 232px;}
+
+.desktop_activity_balls_message>a{background-color: #07C1E4;}
+.desktop_activity_balls_call>a{background-color: #2ED557;}
+.desktop_activity_balls_meetings>a{background-color: #FF7033;}
+.desktop_activity_balls_whiteboard>a{background-color: #D540D8;}
+.desktop_activity_balls_people>a{background-color: #00dbb1;}
+.desktop_activity_balls_files>a{background-color: #FFB400;}
+
+.desktop_activity_balls_message>a>i{background-image: url('../img/motion/icon_message.svg');}
+.desktop_activity_balls_call>a>i{background-image: url('../img/motion/icon_call.svg');}
+.desktop_activity_balls_meetings>a>i{background-image: url('../img/motion/icon_schedule.svg');}
+.desktop_activity_balls_whiteboard>a>i{background-image: url('../img/motion/icon_whiteboard.svg');}
+.desktop_activity_balls_people>a>i{background-image: url('../img/motion/icon_people.svg');}
+.desktop_activity_balls_files>a>i{background-image: url('../img/motion/icon_files.svg');}
+

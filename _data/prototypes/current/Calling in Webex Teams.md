@@ -17,7 +17,7 @@ Our research objective is to evaluate and understand users perception of what a 
 
 # Links
 
-[https://uxccds.github.io/Spark-Hype-MVO/MeetVSCall.html](https://uxccds.github.io/Spark-Hype-MVO/MeetVSCall.html)
+[https://uxprototype.cisco.com/projects/Reskin/wap/MeetVsCall/MeetVSCall.html](https://uxprototype.cisco.com/projects/Reskin/wap/MeetVsCall/MeetVSCall.html)
 
 # Instructions
 

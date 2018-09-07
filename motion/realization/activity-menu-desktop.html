@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Activity Menu Desktop</title>
+<meta charset='utf-8'>
+<link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="../../css/public.css" media="screen">
+<!--
+<link rel="stylesheet" type="text/css" href="../../css/github_gist.css" media="screen"> -->
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+<script>
+  if(location.host == 'uxccds.github.io'){
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-99987509-1', 'auto');
+	  ga('send', 'pageview');  	
+  }
+</script>
+<script type="text/javascript" src="../../js/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="../../js/highlight.pack.js"></script>
+<script type="text/javascript" src="../../js/ash.js"></script>
+<style type="text/css">
+</style>
+
+    <link rel="stylesheet" type="text/css" href="../../css/detail.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../../css/motion_detail.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../../css/monokai_sublime.css" media="screen">
+    <script type="text/javascript" src="../../js/ash-chart.js"></script>
+    <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+    <style type="text/css">
+</style>
+    <script type="text/javascript">
+$(function(){
+//demo1
+    var desktop_btn_activity_menu = $('#desktop_btn_activity_menu'),
+        desktop_btn_activity_back = $('#desktop_btn_activity_back'),
+        desktop_activity_balls_con = $('#desktop_activity_balls_con'),
+        ballsCon = desktop_activity_balls_con.find('>DIV'),
+        balls = desktop_activity_balls_con.find('>DIV>A'),
+        ballsText = desktop_activity_balls_con.find('>DIV>SPAN'),
+        desktop_con = $('#desktop_con')[0],
+        ballsTag = ['message','call','whiteboard','meetings','people','files'];
+
+    var AshBallsEnter = [],
+        _delay=0,
+        _ballDelay={
+            0:2,
+            1:1,
+            2:0,
+            3:3,
+            4:2,
+            5:1
+        };
+
+    for(var _i=0 ;_i<ballsTag.length;_i++){
+        _delay = _ballDelay[_i]*4+16;
+        AshBallsEnter = AshBallsEnter.concat([{
+            tag:ballsTag[_i]+'_ball',
+            dom:balls[_i],
+            css:[{transform:'scale(0.4)'},{transform:'scale(1)'}],
+            time:72,
+            delay:_delay,
+            tween:'elasticEaseOut'
+        },{
+            tag:ballsTag[_i]+'_container',
+            dom:balls[_i],
+            css:[{opacity:0},{opacity:1}],
+            time:24,
+            delay:_delay,
+        },{
+            notRender:true,
+            dom:ballsText[_i],
+            css:[{opacity:0},{opacity:1}],
+            time:24,
+            delay:_delay,
+        },{
+            notRender:true,
+            dom:balls[_i],
+            css:[{opacity:0},{opacity:0}],
+            time:1
+        },{
+            notRender:true,
+            dom:ballsText[_i],
+            css:[{opacity:0},{opacity:0}],
+            time:1
+        }]);
+    }
+
+	var MenuBtn = function(dom,closeDelay,needRender){
+        this.Dom = dom;
+
+        this.init();
+    };
+    MenuBtn.prototype={
+        init:function(){
+            var me = this;
+
+            
+        },
+
+    };
+
+    var SecondClickTime = 120;
+
+
+    var ashOpen = AshBallsEnter.concat([{
+            notRender:true,
+            tag:'button_menu',
+            dom:desktop_btn_activity_menu,
+            css:[{opacity:0},{opacity:1}],
+            time:1
+        },{
+            notRender:true,
+            tag:'button_back',
+            dom:desktop_btn_activity_back,
+            css:[{opacity:1},{opacity:0}],
+            time:1
+        },{
+            tag:'container_balls',
+            dom:desktop_activity_balls_con,
+            css:[{right:'-346px'},{right:'0px'}],
+            time:20,
+            tween:'easeInOut'
+        }]);
+    var ashClose = [{
+            notRender:true,
+            tag:'button_menu',
+            dom:desktop_btn_activity_menu,
+            css:[{opacity:1},{opacity:0}],
+            time:1,
+            delay:SecondClickTime
+        },{
+            notRender:true, 
+            tag:'button_back',
+            dom:desktop_btn_activity_back,
+            css:[{opacity:0},{opacity:1}],
+            time:1,
+            delay:SecondClickTime
+        },{
+            tag:'container_balls',
+            dom:desktop_activity_balls_con,
+            css:[{right:'0px'},{right:'-346px'}],
+            time:20,
+            tween:'easeInOut',
+            delay:SecondClickTime
+        }];
+
+    var ashArgs = ashOpen.concat(ashClose);
+
+    var ashChartInstance = new AshChart('demo1',ashArgs,{
+            canvasWidth:1000,
+            IfRow:false,
+            actionsCon:desktop_con,
+            actions:{
+                click:[{
+                    delay:0,
+                    position:{
+                        x:1042,
+                        y:19
+                    }
+                },{
+                    delay:SecondClickTime,
+                    position:{
+                        x:1042,
+                        y:19
+                    }
+                }]
+            }
+        });
+    ashChartInstance.sync({},undefined,true);
+    ashChartInstance.start();
+
+	//demo1
+});
+</script>
+</head>
+<body>
+  <!-- nav -->
+  <header class="header">
+  	<div class="NavContent">
+	    <a href="/" class="logo"><img src="../../img/20170808/logo.svg"><span>Prototype//:&nbsp;</span><span class="orange">Depot</span></a>
+	    <input class="menu-btn" type="checkbox" id="menu-btn" />
+	    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+		<ul class="Nav">
+			<li><a href='../../motion/guide/guide.html'>Guide</a></li>
+			<li><a href='../../motion/realization/activity-menu.html'>Realization</a></li>
+		</ul>    
+    </div>
+</header>
+
+
+
+
+
+  <div class='container'>
+    <!--main content -->
+    <ul class='sideMenu'>
+	
+	
+		<li><a class=current  href='activity-menu-desktop.html'>Activity Menu Desktop</a></li>
+	
+		<li><a   href='activity-menu-mobile.html'>Activity Menu Mobile</a></li>
+	
+		<li><a   href='activity-menu.html'>Activity Menu</a></li>
+	
+		<li><a   href='collapse-list.html'>Collapse List</a></li>
+	
+		<li><a   href='search.html'>Search</a></li>
+	
+	
+</ul> 
+    <div class="main motion_main">
+      <!-- <ul class="breadcrumbs">
+	<li><a href="../../index.html">Home</a></li> 
+	
+		<li>
+				<a href='../../motion/' >Motion</a>
+		</li>
+	
+		<li>
+				<a href='../../motion/realization/' >Realization</a>
+		</li>
+	
+		<li>
+				<a href='../../motion/realization/activity-menu-desktop.html' >Activity Menu Desktop</a>
+		</li>
+	
+</ul>
+ -->
+      <!-- article -->
+      <div class="content">     
+        <div class="section">
+          <article class='article'>
+	<header class='article_header'>
+		<h1>Activity Menu Desktop</h1>
+		
+		
+	</header>
+	<div class='article_body'>
+		<h2 id="open-activity-menu">Open Activity Menu</h2>
+<pre><code>    &lt;div class=&#39;desktop_wt_con flex_none&#39; id=&#39;desktop_con&#39;&gt;
+        &lt;div class=&#39;desktop_bg_call&#39;&gt;&lt;/div&gt;
+        &lt;div class=&quot;desktop_wt_status_bar desktop_wt_status_bar_absolute&quot;&gt;&lt;/div&gt;
+        &lt;div class=&#39;desktop_activity_balls_con&#39; id=&#39;desktop_activity_balls_con&#39;&gt;
+            &lt;div class=&#39;desktop_activity_balls_message&#39;&gt;&lt;a&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;&lt;span&gt;Message&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&#39;desktop_activity_balls_call&#39;&gt;&lt;a&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;&lt;span&gt;Call&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&#39;desktop_activity_balls_whiteboard&#39;&gt;&lt;a&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;&lt;span&gt;Whiteboard&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&#39;desktop_activity_balls_meetings&#39;&gt;&lt;a&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;&lt;span&gt;Meetings&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&#39;desktop_activity_balls_people&#39;&gt;&lt;a&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;&lt;span&gt;People&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&#39;desktop_activity_balls_files&#39;&gt;&lt;a&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;&lt;span&gt;Files&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#39;desktop_btn_activity_bg&#39; id=&#39;desktop_btn_activity_bg&#39;&gt;&lt;/div&gt;
+        &lt;div class=&#39;desktop_btn_activity_back&#39; id=&#39;desktop_btn_activity_back&#39;&gt;&lt;/div&gt;
+        &lt;div class=&#39;desktop_btn_activity_menu&#39; id=&#39;desktop_btn_activity_menu&#39;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;demo1&quot; class=&#39;flex_none&#39;&gt;&lt;/div&gt;
+</code></pre><pre><code>    var desktop_btn_activity_menu = $(&#39;#desktop_btn_activity_menu&#39;),
+        desktop_btn_activity_back = $(&#39;#desktop_btn_activity_back&#39;),
+        desktop_activity_balls_con = $(&#39;#desktop_activity_balls_con&#39;),
+        ballsCon = desktop_activity_balls_con.find(&#39;&gt;DIV&#39;),
+        balls = desktop_activity_balls_con.find(&#39;&gt;DIV&gt;A&#39;),
+        ballsText = desktop_activity_balls_con.find(&#39;&gt;DIV&gt;SPAN&#39;),
+        desktop_con = $(&#39;#desktop_con&#39;)[0],
+        ballsTag = [&#39;message&#39;,&#39;call&#39;,&#39;whiteboard&#39;,&#39;meetings&#39;,&#39;people&#39;,&#39;files&#39;];
+
+    var AshBallsEnter = [],
+        _delay=0,
+        _ballDelay={
+            0:2,
+            1:1,
+            2:0,
+            3:3,
+            4:2,
+            5:1
+        };
+
+    for(var _i=0 ;_i&lt;ballsTag.length;_i++){
+        _delay = _ballDelay[_i]*4+16;
+        AshBallsEnter = AshBallsEnter.concat([{
+            tag:ballsTag[_i]+&#39;_ball&#39;,
+            dom:balls[_i],
+            css:[{transform:&#39;scale(0.4)&#39;},{transform:&#39;scale(1)&#39;}],
+            time:72,
+            delay:_delay,
+            tween:&#39;elasticEaseOut&#39;
+        },{
+            tag:ballsTag[_i]+&#39;_container&#39;,
+            dom:balls[_i],
+            css:[{opacity:0},{opacity:1}],
+            time:24,
+            delay:_delay,
+        },{
+            notRender:true,
+            dom:ballsText[_i],
+            css:[{opacity:0},{opacity:1}],
+            time:24,
+            delay:_delay,
+        },{
+            notRender:true,
+            dom:balls[_i],
+            css:[{opacity:0},{opacity:0}],
+            time:1
+        },{
+            notRender:true,
+            dom:ballsText[_i],
+            css:[{opacity:0},{opacity:0}],
+            time:1
+        }]);
+    }
+
+    var MenuBtn = function(dom,closeDelay,needRender){
+        this.Dom = dom;
+
+        this.init();
+    };
+    MenuBtn.prototype={
+        init:function(){
+            var me = this;
+
+
+        },
+
+    };
+
+    var SecondClickTime = 120;
+
+
+    var ashOpen = AshBallsEnter.concat([{
+            notRender:true,
+            tag:&#39;button_menu&#39;,
+            dom:desktop_btn_activity_menu,
+            css:[{opacity:0},{opacity:1}],
+            time:1
+        },{
+            notRender:true,
+            tag:&#39;button_back&#39;,
+            dom:desktop_btn_activity_back,
+            css:[{opacity:1},{opacity:0}],
+            time:1
+        },{
+            tag:&#39;container_balls&#39;,
+            dom:desktop_activity_balls_con,
+            css:[{right:&#39;-346px&#39;},{right:&#39;0px&#39;}],
+            time:20,
+            tween:&#39;easeInOut&#39;
+        }]);
+    var ashClose = [{
+            notRender:true,
+            tag:&#39;button_menu&#39;,
+            dom:desktop_btn_activity_menu,
+            css:[{opacity:1},{opacity:0}],
+            time:1,
+            delay:SecondClickTime
+        },{
+            notRender:true, 
+            tag:&#39;button_back&#39;,
+            dom:desktop_btn_activity_back,
+            css:[{opacity:0},{opacity:1}],
+            time:1,
+            delay:SecondClickTime
+        },{
+            tag:&#39;container_balls&#39;,
+            dom:desktop_activity_balls_con,
+            css:[{right:&#39;0px&#39;},{right:&#39;-346px&#39;}],
+            time:20,
+            tween:&#39;easeInOut&#39;,
+            delay:SecondClickTime
+        }];
+
+    var ashArgs = ashOpen.concat(ashClose);
+
+    var ashChartInstance = new AshChart(&#39;demo1&#39;,ashArgs,{
+            canvasWidth:1000,
+            IfRow:false,
+            actionsCon:desktop_con,
+            actions:{
+                click:[{
+                    delay:0,
+                    position:{
+                        x:1042,
+                        y:19
+                    }
+                },{
+                    delay:SecondClickTime,
+                    position:{
+                        x:1042,
+                        y:19
+                    }
+                }]
+            }
+        });
+    ashChartInstance.sync({},undefined,true);
+    ashChartInstance.start();
+
+</code></pre><div class='demo_con'><!--demo1-->
+	<div class='desktop_wt_con flex_none' id='desktop_con'>
+        <div class='desktop_bg_call'></div>
+        <div class="desktop_wt_status_bar desktop_wt_status_bar_absolute"></div>
+        <div class='desktop_activity_balls_con' id='desktop_activity_balls_con'>
+            <div class='desktop_activity_balls_message'><a><i></i></a><span>Message</span></div>
+            <div class='desktop_activity_balls_call'><a><i></i></a><span>Call</span></div>
+            <div class='desktop_activity_balls_whiteboard'><a><i></i></a><span>Whiteboard</span></div>
+            <div class='desktop_activity_balls_meetings'><a><i></i></a><span>Meetings</span></div>
+            <div class='desktop_activity_balls_people'><a><i></i></a><span>People</span></div>
+            <div class='desktop_activity_balls_files'><a><i></i></a><span>Files</span></div>
+        </div>
+        <div class='desktop_btn_activity_bg' id='desktop_btn_activity_bg'></div>
+        <div class='desktop_btn_activity_back' id='desktop_btn_activity_back'></div>
+        <div class='desktop_btn_activity_menu' id='desktop_btn_activity_menu'></div>
+    </div>
+    <div id="demo1" class='flex_none'></div>
+<!--demo1--></div>
+		
+	</div>
+	<!-- hiding pagination per Damon's feedback 
+	<footer class='article_footer'>
+
+		<div class="pagination">
+			
+			<a  class="next" href="activity-menu-mobile.html">Next →</a> 	 	
+		</div>		
+	</footer>-->
+</article>
+       	
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- footer --> 
+ <div class="footerWrap">
+ <footer class='copyright'>
+	<p>The Design Group Prototype Team (For Internal Use Only)<br>Cisco Systems ©2016-2018 <a target="_blank" href="https://en.wikipedia.org/wiki/MIT_License" class='license'>MIT license</a></p>
+</footer>
+<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+ </div>
+ <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
