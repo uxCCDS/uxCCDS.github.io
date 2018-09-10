@@ -7,7 +7,7 @@ Cover: prototypes/cover/Spark Message List.png
 
 #### Desktop Prototype
 
-[https://uxccds.github.io/Spark-Hype-MVO/message-list.html](https://uxccds.github.io/Spark-Hype-MVO/message-list.html)
+[https://uxprototype.cisco.com/projects/Reskin/wap/hype/message-list.html](https://uxprototype.cisco.com/projects/Reskin/wap/hype/message-list.html)
 
 
 # Instructions 

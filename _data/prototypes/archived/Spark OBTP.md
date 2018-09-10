@@ -11,7 +11,7 @@ Cover: prototypes/cover/Spark OBTP_Cover.png
 
 #### Desktop Prototype
 
-[https://uxccds.github.io/Spark-Hype-MVO/OBTP-Prototype.html](https://uxccds.github.io/Spark-Hype-MVO/OBTP-Prototype.html)
+[https://uxprototype.cisco.com/projects/Reskin/wap/hype/OBTP-Prototype.html](https://uxprototype.cisco.com/projects/Reskin/wap/hype/OBTP-Prototype.html)
 
 #### MX800 Prototype
 

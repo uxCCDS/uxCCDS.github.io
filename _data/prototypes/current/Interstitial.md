@@ -9,7 +9,7 @@ IS_DRAFT: true
 
 * New IA Version 2 (Most recent)
 
-[https://uxccds.github.io/Spark-Hype-MVO/IA-UserTesting.html](https://uxccds.github.io/Spark-Hype-MVO/IA-UserTesting.html)
+[https://uxprototype.cisco.com/projects/Reskin/wap/hype/IA-UserTesting.html](https://uxprototype.cisco.com/projects/Reskin/wap/hype/IA-UserTesting.html)
 
 This version compares 3 different interaction elements with either 1 or 2 action buttons
 
@@ -19,7 +19,7 @@ This version compares 3 different interaction elements with either 1 or 2 action
 
 * New IA version 1
 
-[https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-interstitial.html](https://uxprototype.cisco.com/projects/Reskin/wap/IA/IA-interstitial.html)
+[https://uxprototype.cisco.com/projects/Reskin/wap/hype/IA-interstitial.html](https://uxprototype.cisco.com/projects/Reskin/wap/hype/IA-interstitial.html)
 
 This version compares 3 differnt visual layouts with 2 action buttons
 

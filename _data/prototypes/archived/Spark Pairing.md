@@ -10,7 +10,7 @@ Cover: prototypes/cover/Spark Pairing_Cover.png
 
 #### Desktop Prototype
 
-[https://uxccds.github.io/Spark-Hype-MVO/devicepairing-desktop.html](https://uxccds.github.io/Spark-Hype-MVO/devicepairing-desktop.html)
+[https://uxprototype.cisco.com/projects/Reskin/wap/devicepairing-desktop.html](https://uxprototype.cisco.com/projects/Reskin/wap/hype/devicepairing-desktop.html)
 
 #### SparkBoard Prototype
 

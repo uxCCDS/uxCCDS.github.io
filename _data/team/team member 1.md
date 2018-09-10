@@ -21,7 +21,7 @@ Date: 2017-1-20
 
 ## link
 
-[https://uxccds.github.io/Spark-Hype-MVO/OBTP-Prototype.html](https://uxccds.github.io/Spark-Hype-MVO/OBTP-Prototype.html)
+[https://uxprototype.cisco.com/projects/Reskin/wap/hype/OBTP-Prototype.html](https://uxprototype.cisco.com/projects/Reskin/wap/hype/OBTP-Prototype.html)
 
 ## usage
 

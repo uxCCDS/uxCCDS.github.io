@@ -14,9 +14,9 @@ In this user testing session, we tested two versions of pairing function with di
 
 ### Desktop 
 
-[https://uxccds.github.io/Spark-Hype-MVO/IA-DevicePairingA.html](https://uxccds.github.io/Spark-Hype-MVO/IA-DevicePairingA.html)
+[https://uxprototype.cisco.com/projects/Reskin/wap/IA-DevicePairingA.html](https://uxprototype.cisco.com/projects/Reskin/wap/hype/IA-DevicePairingA.html)
 
-[https://uxccds.github.io/Spark-Hype-MVO/IA-DevicePairingB.html](https://uxccds.github.io/Spark-Hype-MVO/IA-DevicePairingB.html)
+[https://uxprototype.cisco.com/projects/Reskin/wap/IA-DevicePairingB.html](https://uxprototype.cisco.com/projects/Reskin/wap/hype/IA-DevicePairingB.html)
 
 ![Version A](../../../img_data/prototypes/IA-DevicePairingA.png)
 ![Version B](../../../img_data/prototypes/IA-DevicePairingB.png)

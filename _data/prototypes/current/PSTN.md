@@ -9,11 +9,11 @@ IS_DRAFT: true
 
 
 **Phase 2 (New IA)** 
-1. [https://uxccds.github.io/Spark-Hype-MVO/IA-PSTN.html](https://uxccds.github.io/Spark-Hype-MVO/IA-PSTN.html)
+1. [https://uxprototype.cisco.com/projects/Reskin/wap/hype/IA-PSTN.html](https://uxprototype.cisco.com/projects/Reskin/wap/hype/IA-PSTN.html)
 
 ![Screenshot](../../../img_data/prototypes/IA-PSTN2018Feb.png)
 
-2. [https://uxccds.github.io/Spark-Hype-MVO/IA-PSTN110117.html](https://uxccds.github.io/Spark-Hype-MVO/IA-PSTN110117.html)
+2. [https://uxprototype.cisco.com/projects/Reskin/wap/hype/IA-PSTN110117.html](https://uxprototype.cisco.com/projects/Reskin/wap/hype/IA-PSTN110117.html)
 
 
 3. ![Option 1](../../../img_data/prototypes/IA-PSTN-P2-Option1.png)
@@ -21,7 +21,7 @@ IS_DRAFT: true
 
 
 **Phase 1 (Currnet Spark Release)**
-1. [https://uxccds.github.io/Spark-Hype-MVO/PSTN-Interstitial.html](https://uxccds.github.io/Spark-Hype-MVO/PSTN-Interstitial.html)
+1. [https://uxprototype.cisco.com/projects/Reskin/wap/hype/PSTN-Interstitial.html](https://uxprototype.cisco.com/projects/Reskin/wap/hype/PSTN-Interstitial.html)
 2. ![Phase1](../../../img_data/prototypes/IA-PSTN-P1.png)
 
 #### Mobile Prototype
